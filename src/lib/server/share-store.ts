@@ -12,12 +12,12 @@ export const SHARE_LIFETIME_MS = 7 * 24 * 60 * 60 * 1000;
 type Snapshot = ReturnType<typeof publicSnapshot>;
 type Resolution = ReturnType<typeof resolveCase>;
 // Old shares contain only Korean and English. Their stored words remain immutable.
-type FrozenCase = { snapshots: Partial<Record<Locale, Snapshot>>; results: Partial<Record<Locale, Record<SuspectId, Resolution>>> };
-type ShareRow = { id: string; private_json: string; image: Uint8Array; width: number; height: number; owner_hash: string; expires_at: number };
-type PlayRow = { id: string; share_id: string; token_hash: string; accusation: SuspectId | null; resolved_at: number | null };
+export type FrozenCase = { snapshots: Partial<Record<Locale, Snapshot>>; results: Partial<Record<Locale, Record<SuspectId, Resolution>>> };
+export type ShareRow = { id: string; private_json: string; image: Uint8Array; width: number; height: number; owner_hash: string; expires_at: number };
+export type PlayRow = { id: string; share_id: string; token_hash: string; accusation: SuspectId | null; resolved_at: number | null };
 export type PublicShare = Snapshot & { id: string; schemaVersion: 1; availableLocales: Locale[]; scene: { url: string; width: number; height: number }; expiresAt: string; isOwner: boolean };
 
-function storedLocale(frozen: FrozenCase, requested: Locale): Locale {
+export function storedLocale(frozen: FrozenCase, requested: Locale): Locale {
   if (!isLocale(requested)) throw new ServiceError(400, "invalid_locale");
   const available = (locale: Locale) => Boolean(frozen.snapshots[locale] && frozen.results[locale]);
   if (available(requested)) return requested;
@@ -39,11 +39,11 @@ export interface ShareStore {
 
 export function newToken(): string { return randomBytes(24).toString("base64url"); }
 export function hash(value: string): string { return createHash("sha256").update(value).digest("hex"); }
-function owns(token: string | undefined, expected: string): boolean {
+export function owns(token: string | undefined, expected: string): boolean {
   if (!token || token.length > 256) return false;
   return timingSafeEqual(Buffer.from(hash(token)), Buffer.from(expected));
 }
-function validId(value: string): void {
+export function validId(value: string): void {
   if (!/^[A-Za-z0-9_-]{32}$/.test(value)) throw new ServiceError(404, "not_found");
 }
 

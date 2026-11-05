@@ -3,6 +3,7 @@ import { DatabaseSync } from 'node:sqlite';
 import { mkdirSync,chmodSync } from 'node:fs';
 import { dirname,resolve } from 'node:path';
 import type { ChatAnswer } from './provider.server';
+import { getRemoteChatBudget } from '../server/app-store';
 /** Stores only hashes and bounded plans, never player text/photos. */
 export class ChatBudget {
  private db:DatabaseSync;
@@ -24,4 +25,4 @@ export class ChatBudget {
  close(){this.db.close();}
 }
 const globalChat=globalThis as typeof globalThis&{__chatBudget?:ChatBudget};
-export function getChatBudget(){return globalChat.__chatBudget??=new ChatBudget(process.env.CHAT_DB_PATH||resolve('.data/chat.sqlite'));}
+export function getChatBudget(){return getRemoteChatBudget() ?? (globalChat.__chatBudget??=new ChatBudget(process.env.CHAT_DB_PATH||resolve('.data/chat.sqlite')));}

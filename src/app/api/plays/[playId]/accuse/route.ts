@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
-import { getStore } from "../../../../../lib/server/share-store";
+import { getAppStore } from "../../../../../lib/server/app-store";
+
 import { failure, json, PLAY_COOKIE, rateLimit, readJson, readLocale, sameOrigin } from "../../../../../lib/server/http";
 import { ServiceError } from "../../../../../lib/server/errors";
 import type { SuspectId } from "../../../../../lib/game";
@@ -12,6 +13,6 @@ export async function POST(request: NextRequest, context: { params: Promise<{ pl
     if (typeof body.suspectId !== "string" || !["s0", "s1", "s2"].includes(body.suspectId)) throw new ServiceError(400, "invalid_suspect");
     if (body.locale !== undefined && typeof body.locale !== "string") throw new ServiceError(400, "invalid_locale");
     const { playId } = await context.params;
-    return json(getStore().accuse(playId, request.cookies.get(PLAY_COOKIE)?.value ?? "", body.suspectId as SuspectId, readLocale(body.locale as string | undefined)));
+    return json(await getAppStore().accuse(playId, request.cookies.get(PLAY_COOKIE)?.value ?? "", body.suspectId as SuspectId, readLocale(body.locale as string | undefined)));
   } catch (error) { return failure(error); }
 }

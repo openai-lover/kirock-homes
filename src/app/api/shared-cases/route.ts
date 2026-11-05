@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
-import { getStore, newToken } from "../../../lib/server/share-store";
+import { getAppStore } from "../../../lib/server/app-store";
+import { newToken } from "../../../lib/server/share-store";
 import { sanitizeImage } from "../../../lib/server/image";
 import { ServiceError } from "../../../lib/server/errors";
 import { failure, json, OWNER_COOKIE, rateLimit, readJson, sameOrigin, setPrivateCookie } from "../../../lib/server/http";
@@ -19,7 +20,7 @@ export async function POST(request: NextRequest) {
     if (scene.width !== image.width || scene.height !== image.height) throw new ServiceError(400, "image_dimensions_mismatch");
     const existingOwner = request.cookies.get(OWNER_COOKIE)?.value;
     const token = existingOwner && /^[A-Za-z0-9_-]{32}$/.test(existingOwner) ? existingOwner : newToken();
-    const created = getStore().create(draft, image, token);
+    const created = await getAppStore().create(draft, image, token);
     const response = json({ ...created, url: `/s/${created.id}` }, 201);
     setPrivateCookie(response, request, OWNER_COOKIE, token);
     return response;

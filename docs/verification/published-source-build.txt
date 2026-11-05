@@ -1,0 +1,62 @@
+
+> room-of-suspects@1.0.0 build
+> next build
+
+▲ Next.js 16.4.3 (Turbopack)
+✓ Running next.config.ts took 11ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 896ms
+  Running TypeScript ...
+  Finished TypeScript in 1154ms ...
+  Collecting page data using 9 workers ...
+  Generating static pages using 9 workers (0/7) ...
+  Generating static pages using 9 workers (1/7) 
+  Generating static pages using 9 workers (3/7) 
+  Generating static pages using 9 workers (5/7) 
+✓ Generating static pages using 9 workers (7/7) in 124ms
+Turbopack build encountered 1 warning:
+./src/lib/chat/provider.server.ts:60:127
+Warning: Dynamic filesystem access causes tracing of the whole project
+  [90m58 |[0m ...
+  [90m59 |[0m ...
+[33m[1m>[0m [90m60 |[0m ...[33mTH[0m,env.[33mKIRO_HOME[0m,resolve(env.[33mCHAT_KIRO_WORKDIR[0m||[32m'.data/chat-runtime'[0m));
+  [90m   |[0m                     [33m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m61 |[0m ... [33mURL[0m(env.[33mCHAT_BASE_URL[0m).protocol===[32m'https:'[0m)[36mreturn[0m [36mnew[0m [33mCompatibleChatProvider[0m({baseUrl:...
+  [90m62 |[0m ...
+  [90m63 |[0m ...
+
+Static analysis determined that this filesystem access causes the whole project to be traced and included in the output.
+This is usually unintentional and leads to all source files (including the public folder) to be deployed as part of the server code.
+This can slow down deployments or lead to failures when size limits are exceeded.
+To resolve this, you can
+- make sure the path is statically scoped to some subfolder, for example path.join(process.cwd(), 'data', bar), or
+- only use them in development, or
+- opt out by adding an ignore comment to the highlighted call: path.resolve(/*turbopackIgnore: true*/ ...), or
+- remove them.
+
+Import trace:
+  App Route:
+    ./src/lib/chat/provider.server.ts
+    ./src/app/api/chat/route.ts
+
+
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/analyze
+├ ƒ /api/chat
+├ ƒ /api/plays/[playId]/accuse
+├ ƒ /api/shared-cases
+├ ƒ /api/shared-cases/[shareId]
+├ ƒ /api/shared-cases/[shareId]/image
+├ ƒ /api/shared-cases/[shareId]/plays
+├ ○ /credits
+└ ƒ /s/[shareId]
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

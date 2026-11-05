@@ -1,0 +1,9 @@
+.data
+.env*
+!.env.example
+docs/demo
+docs/verification
+dist
+test-results
+playwright-report
+.git

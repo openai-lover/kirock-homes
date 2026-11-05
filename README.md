@@ -12,7 +12,7 @@ The intro now prepares its photograph and character before the sweep, shows a br
 
 ## Run
 
-Node.js **22.13.0+** is required for SQLite. Actual execution used **Node 25.9.0**, Next.js **16.4.3**, React **19.3.1**, TypeScript **5.9.3** and the included `package-lock.json`.
+Use **Node.js 24 LTS** (the Vercel target); SQLite requires at least 22.13.0. Actual execution used **Node 25.9.0**, Next.js **16.4.3**, React **19.3.1**, TypeScript **5.9.3** and the included `package-lock.json`.
 
 ```bash
 npm ci
@@ -74,15 +74,15 @@ New cases use version 2, **conditional alibis**, instead of one witness simply n
 
 ## Sharing and storage
 
-The included SQLite adapter runs on one persistent Node host. The owner must review the exact photo and approve sharing. A shared case freezes the photo, faces, official statements, authored character lines, interrogation material and answer in its supported languages. Each friend gets an independent play session. Free questions are individual conversations about that fixed material, not additional official evidence. Public responses contain no answer, confession, structural claims or explanation before accusation. Repeated accusations return the first recorded verdict.
+The local SQLite adapter runs on one persistent Node host. Vercel uses the remote Turso/libSQL adapter selected by `TURSO_DATABASE_URL` and `TURSO_AUTH_TOKEN`. The owner must review the exact photo and approve sharing. A shared case freezes the photo, faces, official statements, authored character lines, interrogation material and answer in its supported languages. Each friend gets an independent play session. Free questions are individual conversations about that fixed material, not additional official evidence. Public responses contain no answer, confession, structural claims or explanation before accusation. Repeated accusations return the first recorded verdict.
 
 Links expire in seven days. Owner-cookie deletion removes the photo and case. Startup/hourly cleanup removes expired data while the server runs; use `npm run cleanup` under an external scheduler if continuous deletion is required while the game process is stopped. A stopped computer cannot perform cleanup. Copies saved by recipients cannot be recalled. Deletion authority cannot be recovered from another device.
 
-**127.0.0.1 is local only.** A friend on another computer needs a reachable, persistent host, HTTPS, durable disk and `APP_ORIGIN`. No public deployment is provided. The local SQLite adapter is not appropriate as-is for ephemeral serverless storage or distributed instances. Deployment and production monitoring remain operator work.
+**127.0.0.1 is local only.** See [Vercel deployment](docs/vercel-deployment.md) for the remote storage adapter, cleanup scheduler and production checks. Serverless deployments fail closed if storage credentials are missing; they never use disposable local files for shared cases.
 
 ## Submission review
 
-[Actual local demo video](docs/demo/kirock-homes-review.webm) (85.56 seconds), [English captions](docs/demo/kirock-homes-review.en.srt), and [English submission draft](docs/submission.md) are included. The recording shows a different real photo and a live Kiro-interpreted question; it is not yet published on YouTube. A public app/build and public source repository must still be provided before contest submission.
+[Actual local demo video](docs/demo/kirock-homes-review.webm) (85.56 seconds), [English captions](docs/demo/kirock-homes-review.en.srt), and [English submission draft](docs/submission.md) are included. The recording shows a different real photo and a live Kiro-interpreted question; it is [published on YouTube](https://youtu.be/zGdqdS0ssVY). The [public source repository](https://github.com/openai-lover/kirock-homes) is available. The final Devpost submission is separate from publishing these materials.
 
 ## Source and evidence
 
