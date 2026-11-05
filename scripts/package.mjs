@@ -17,7 +17,7 @@ for (const entry of entries) {
   if (!existsSync(join(root, entry))) throw new Error(`Missing release file: ${entry}`);
   cpSync(join(root, entry), join(project, entry), {
     recursive: true,
-    filter: (path) => !path.split('/').includes('node_modules') && !path.endsWith('.DS_Store') && !path.endsWith('.tsbuildinfo') && !['vercel-storage-review.png', 'youtube-upload-review.png', 'youtube-published.png'].includes(path.split('/').pop()),
+    filter: (path) => !path.split('/').includes('node_modules') && !path.endsWith('.DS_Store') && !path.endsWith('.tsbuildinfo') && !['vercel-storage-review.png', 'youtube-upload-review.png', 'youtube-published.png', 'youtube-captions-published.png', 'devpost-review.png', 'devpost-submitted.png'].includes(path.split('/').pop()),
   });
 }
 const manifest = [];

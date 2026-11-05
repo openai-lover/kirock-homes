@@ -8,6 +8,9 @@ Executed on macOS, Node 24, Kiro CLI 2.37.0 and official Kiro Crew 0.11.2. These
 | Main Chromium suite | 63 tests passed |
 | Final chat UI regression after closing the AI settings popover by default | 20 tests passed, including ten locales and four widths |
 | Final type check and production build | Passed; `/crew` included |
+| Standalone Crew source install | Fresh `npm ci --ignore-scripts`, build and backend tests passed in the separate publication checkout |
+| Updated public deployment | Home, Crew guide and AI status return 200; public providers remain disabled |
+| Public API release rerun | 11 checks passed: consent, exact photo/evidence/dialogue, ten locales, no premature solution, independent friend sessions, concurrent/repeated verdict, ownership and deletion, manual fallback, guide and disabled public AI |
 | Kiro-authored performance tests | 107 passed after one recorded correction |
 | Final actual Kiro verification | 131 tests passed, including both engine families and live-performance integration |
 | Real photo analysis | Licensed work-desk photo recognized as Laptop, Headphones and Potted Plant; approximate faces were editable |
@@ -18,6 +21,8 @@ Executed on macOS, Node 24, Kiro CLI 2.37.0 and official Kiro Crew 0.11.2. These
 | Tool isolation probe | A controlled random canary file was not read or returned; no tool calls occurred. Unexpected prose was rejected by strict JSON parsing |
 
 Evidence is in `docs/kiro/live-dialogue`, `docs/demo/crew-recording.json`, and `docs/verification/crew/mobile.json`. The new public recording is https://youtu.be/7gknqGSknDk. Earlier validation records remain historical rather than being silently rewritten.
+
+Public API results are in `docs/verification/production-crew-release.json`. This final rerun did not retrieve production secrets or force database timestamps. Earlier physical cleanup/expiry execution remains in `docs/verification/production-api.json`; expiry is also covered by the server suite. The YouTube English subtitle track was visibly published on November 5.
 
 ## Fixes found during execution
 
