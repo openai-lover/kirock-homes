@@ -1,0 +1,228 @@
+{
+  "environment": "Next.js production server http://127.0.0.1:3000, local Chrome 156.0.8078.74, macOS",
+  "recordedOn": "2026-10-31",
+  "timezone": "Asia/Seoul",
+  "stats": {
+    "startTime": "2026-10-31T05:43:04.438Z",
+    "duration": 54169.801,
+    "expected": 13,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "title": "sample correct verdict and wrong verdict both complete without API keys",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 4528
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "sample can be completed using only keyboard navigation and subtitles",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 2258
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "mobile/tablet 360px keeps photo faces and statements within the viewport",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 2225
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "mobile/tablet 390px keeps photo faces and statements within the viewport",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 2215
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "mobile/tablet 768px keeps photo faces and statements within the viewport",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 2251
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "landscape, portrait, EXIF rotation and manual clockwise rotation preserve photo coordinates",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 2996
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "unsupported and corrupted photo files give usable errors and sample remains playable",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 2307
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "missing AI key falls back to manual selection with explicit analysis consent",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 2584
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "invalid AI output and real client timeout both retain a completable manual path",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 13902
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "valid AI candidates use displayName and a late response cannot overwrite manual choices",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 3738
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "corrupted JSON and malformed ready responses never crash the casting screen",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 5020
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "English sample has translated testimony, verdict, and explanation",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 2299
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "sharing preserves the case, hides answers, supports independent one-shot play, and deletes for the owner",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 7170
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Mobile checks use simulated viewports, not physical iPhone/Android hardware.",
+    "AI failures, timeout and candidate success are simulated transport responses; missing-key fallback uses the actual local API.",
+    "No live AI account, external deployment, human usability test, or Kiro execution was performed."
+  ]
+}

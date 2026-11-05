@@ -1,0 +1,47 @@
+
+Running 1 test using 1 worker
+
+(node:73804) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/preflight.spec.ts:3:5 › cold opening waits for the desk photo and always shows a branded first frame (1.6s)
+
+
+  1) tests/e2e/preflight.spec.ts:3:5 › cold opening waits for the desk photo and always shows a branded first frame 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('opening-poster')
+    Expected: visible
+    Timeout: 1000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByTestId('opening-poster') with timeout 1000ms
+      - waiting for getByTestId('opening-poster')
+
+
+       5 |  await page.route('**/sample-desk.jpg',async route=>{await new Promise(resolve=>setTimeout(resolve,2200));await route.continue();});
+       6 |  await page.goto('/',{waitUntil:'domcontentloaded'});
+    >  7 |  await expect(page.getByTestId('opening-poster')).toBeVisible({timeout:1000});
+         |                                                   ^
+       8 |  await expect(page.getByTestId('opening-sequence')).toHaveAttribute('data-state','preparing');
+       9 |  await expect(page.getByTestId('opening-sequence').getByRole('button')).toHaveCount(1);
+      10 |  await page.screenshot({path:'docs/screenshots/preflight/cold-first-frame.png'});
+        at /Users/kyumin/Documents/ChatGPT/kiro/tests/e2e/preflight.spec.ts:7:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/preflight-cold-opening-wai-20ccc-shows-a-branded-first-frame/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/preflight-cold-opening-wai-20ccc-shows-a-branded-first-frame/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/preflight-cold-opening-wai-20ccc-shows-a-branded-first-frame/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/preflight-cold-opening-wai-20ccc-shows-a-branded-first-frame/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/e2e/preflight.spec.ts:3:5 › cold opening waits for the desk photo and always shows a branded first frame 

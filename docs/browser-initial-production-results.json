@@ -1,0 +1,223 @@
+{
+  "environment": "Local production Next.js, Chrome 156, macOS",
+  "stats": {
+    "startTime": "2026-10-31T05:39:32.022Z",
+    "duration": 58990.951,
+    "expected": 11,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "title": "sample correct verdict and wrong verdict both complete without API keys",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 4487
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "sample can be completed using only keyboard navigation and subtitles",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 2186
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "mobile/tablet 360px keeps photo faces and statements within the viewport",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 2223
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "mobile/tablet 390px keeps photo faces and statements within the viewport",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 2224
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "mobile/tablet 768px keeps photo faces and statements within the viewport",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 2205
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "landscape, portrait, EXIF rotation and manual clockwise rotation preserve photo coordinates",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 3031
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "unsupported and corrupted photo files give usable errors and sample remains playable",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 2278
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "missing AI key falls back to manual selection with explicit analysis consent",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 2564
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "invalid AI output and real client timeout both retain a completable manual path",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 13800
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "valid AI candidates use displayName and a late response cannot overwrite manual choices",
+      "file": "game.spec.ts",
+      "passed": false,
+      "tests": [
+        {
+          "status": "unexpected",
+          "results": [
+            {
+              "status": "failed",
+              "durationMs": 10459,
+              "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('button', { name: '물건 후보 추천' })\nExpected: enabled\nReceived: disabled\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeEnabled\" getByRole('button', { name: '물건 후보 추천' }) with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: '물건 후보 추천' })\u001b[22m\n\u001b[2m    18 × locator resolved to <button disabled>물건 후보 추천</button>\u001b[22m\n\u001b[2m       - unexpected value \"disabled\"\u001b[22m\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "corrupted JSON and malformed ready responses never crash the casting screen",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 5101
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "English sample has translated testimony, verdict, and explanation",
+      "file": "game.spec.ts",
+      "passed": true,
+      "tests": [
+        {
+          "status": "expected",
+          "results": [
+            {
+              "status": "passed",
+              "durationMs": 2311
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "sharing preserves the case, hides answers, supports independent one-shot play, and deletes for the owner",
+      "file": "game.spec.ts",
+      "passed": false,
+      "tests": [
+        {
+          "status": "unexpected",
+          "results": [
+            {
+              "status": "failed",
+              "durationMs": 4885,
+              "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m500\u001b[39m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

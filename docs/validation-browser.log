@@ -1,0 +1,24 @@
+
+> room-of-suspects@1.0.0 test:e2e
+> playwright test
+
+
+Running 13 tests using 1 worker
+
+(node:10772) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/game.spec.ts:67:5 › sample correct verdict and wrong verdict both complete without API keys (4.5s)
+  ✓   2 tests/e2e/game.spec.ts:80:5 › sample can be completed using only keyboard navigation and subtitles (2.3s)
+  ✓   3 tests/e2e/game.spec.ts:99:7 › mobile/tablet 360px keeps photo faces and statements within the viewport (2.2s)
+  ✓   4 tests/e2e/game.spec.ts:99:7 › mobile/tablet 390px keeps photo faces and statements within the viewport (2.2s)
+  ✓   5 tests/e2e/game.spec.ts:99:7 › mobile/tablet 768px keeps photo faces and statements within the viewport (2.3s)
+  ✓   6 tests/e2e/game.spec.ts:115:5 › landscape, portrait, EXIF rotation and manual clockwise rotation preserve photo coordinates (3.0s)
+  ✓   7 tests/e2e/game.spec.ts:162:5 › unsupported and corrupted photo files give usable errors and sample remains playable (2.3s)
+  ✓   8 tests/e2e/game.spec.ts:172:5 › missing AI key falls back to manual selection with explicit analysis consent (2.6s)
+  ✓   9 tests/e2e/game.spec.ts:191:5 › invalid AI output and real client timeout both retain a completable manual path (13.9s)
+  ✓  10 tests/e2e/game.spec.ts:214:5 › valid AI candidates use displayName and a late response cannot overwrite manual choices (3.7s)
+  ✓  11 tests/e2e/game.spec.ts:238:5 › corrupted JSON and malformed ready responses never crash the casting screen (5.0s)
+  ✓  12 tests/e2e/game.spec.ts:258:5 › English sample has translated testimony, verdict, and explanation (2.3s)
+  ✓  13 tests/e2e/game.spec.ts:273:5 › sharing preserves the case, hides answers, supports independent one-shot play, and deletes for the owner (7.2s)
+
+  13 passed (54.2s)

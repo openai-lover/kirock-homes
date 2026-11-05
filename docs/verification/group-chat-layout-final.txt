@@ -1,0 +1,27 @@
+
+Running 20 tests using 1 worker
+
+(node:71819) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/chat.spec.ts:9:43 › chat in en: sequential evidence, free input, replies and verdict (1.0s)
+  ✓   2 tests/e2e/chat.spec.ts:9:43 › chat in ko: sequential evidence, free input, replies and verdict (820ms)
+  ✓   3 tests/e2e/chat.spec.ts:9:43 › chat in es: sequential evidence, free input, replies and verdict (758ms)
+  ✓   4 tests/e2e/chat.spec.ts:9:43 › chat in fr: sequential evidence, free input, replies and verdict (760ms)
+  ✓   5 tests/e2e/chat.spec.ts:9:43 › chat in de: sequential evidence, free input, replies and verdict (726ms)
+  ✓   6 tests/e2e/chat.spec.ts:9:43 › chat in pt: sequential evidence, free input, replies and verdict (720ms)
+  ✓   7 tests/e2e/chat.spec.ts:9:43 › chat in ja: sequential evidence, free input, replies and verdict (825ms)
+  ✓   8 tests/e2e/chat.spec.ts:9:43 › chat in zh: sequential evidence, free input, replies and verdict (778ms)
+  ✓   9 tests/e2e/chat.spec.ts:9:43 › chat in ar: sequential evidence, free input, replies and verdict (787ms)
+  ✓  10 tests/e2e/chat.spec.ts:9:43 › chat in hi: sequential evidence, free input, replies and verdict (741ms)
+  ✓  11 tests/e2e/chat.spec.ts:15:43 › chat at 360px has reachable composer, readable photo and no overflow (613ms)
+  ✓  12 tests/e2e/chat.spec.ts:15:43 › chat at 390px has reachable composer, readable photo and no overflow (592ms)
+  ✓  13 tests/e2e/chat.spec.ts:15:43 › chat at 768px has reachable composer, readable photo and no overflow (644ms)
+  ✓  14 tests/e2e/chat.spec.ts:15:43 › chat at 1440px has reachable composer, readable photo and no overflow (767ms)
+  ✓  15 tests/e2e/chat.spec.ts:23:5 › photo story uses one real photo and its shutter opens the same actual game scene (715ms)
+  ✓  16 tests/e2e/chat.spec.ts:28:5 › AI plan uses the player target and recent history, interjects and preserves evidence (516ms)
+  ✓  17 tests/e2e/chat.spec.ts:32:5 › malformed chat and user-cancelled slow AI both fall back and allow accusation (485ms)
+  ✓  18 tests/e2e/chat.spec.ts:36:5 › Arabic mobile retains evidence across language change, traps accusation focus and allows cancellation (652ms)
+  ✓  19 tests/e2e/chat.spec.ts:39:5 › mobile photo expansion preserves original coordinates and closes with Escape (543ms)
+  ✓  20 tests/e2e/chat.spec.ts:42:5 › a typed direct address is passed as an explicit recipient and wrong-speaker output falls back (426ms)
+
+  20 passed (14.9s)

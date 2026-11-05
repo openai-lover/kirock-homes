@@ -1,0 +1,52 @@
+
+> room-of-suspects@1.0.0 test:e2e
+> playwright test tests/e2e/game.spec.ts tests/e2e/languages.spec.ts tests/e2e/novel-visual.spec.ts tests/e2e/sherlock-visual.spec.ts tests/e2e/ui-redesign.spec.ts --reporter=list --output=/private/tmp/simple-entry-game-results
+
+
+Running 41 tests using 1 worker
+
+(node:66679) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/game.spec.ts:66:5 › sample correct verdict and wrong verdict both complete without API keys (19.1s)
+  ✓   2 tests/e2e/game.spec.ts:79:5 › sample can be completed using only keyboard navigation and subtitles (9.7s)
+  ✓   3 tests/e2e/game.spec.ts:99:7 › mobile/tablet 360px keeps photo faces and statements within the viewport (9.7s)
+  ✓   4 tests/e2e/game.spec.ts:99:7 › mobile/tablet 390px keeps photo faces and statements within the viewport (9.8s)
+  ✓   5 tests/e2e/game.spec.ts:99:7 › mobile/tablet 768px keeps photo faces and statements within the viewport (9.8s)
+  ✓   6 tests/e2e/game.spec.ts:115:5 › landscape, portrait, EXIF rotation and manual clockwise rotation preserve photo coordinates (10.6s)
+  ✓   7 tests/e2e/game.spec.ts:162:5 › unsupported and corrupted photo files give usable errors and sample remains playable (9.9s)
+  ✓   8 tests/e2e/game.spec.ts:172:5 › missing AI key falls back to manual selection with explicit analysis consent (10.2s)
+  ✓   9 tests/e2e/game.spec.ts:191:5 › invalid AI output and real client timeout both retain a completable manual path (29.0s)
+  ✓  10 tests/e2e/game.spec.ts:214:5 › valid AI candidates use displayName and a late response cannot overwrite manual choices (11.3s)
+  ✓  11 tests/e2e/game.spec.ts:238:5 › corrupted JSON and malformed ready responses never crash the casting screen (20.1s)
+  ✓  12 tests/e2e/game.spec.ts:258:5 › English sample has translated testimony, verdict, and explanation (9.8s)
+  ✓  13 tests/e2e/game.spec.ts:274:5 › sharing preserves the case, hides answers, supports independent one-shot play, and deletes for the owner (30.3s)
+  ✓  14 tests/e2e/languages.spec.ts:8:7 › complete the sample mystery in en at mobile width (965ms)
+  ✓  15 tests/e2e/languages.spec.ts:8:7 › complete the sample mystery in ko at mobile width (889ms)
+  ✓  16 tests/e2e/languages.spec.ts:8:7 › complete the sample mystery in es at mobile width (893ms)
+  ✓  17 tests/e2e/languages.spec.ts:8:7 › complete the sample mystery in fr at mobile width (902ms)
+  ✓  18 tests/e2e/languages.spec.ts:8:7 › complete the sample mystery in de at mobile width (965ms)
+  ✓  19 tests/e2e/languages.spec.ts:8:7 › complete the sample mystery in pt at mobile width (872ms)
+  ✓  20 tests/e2e/languages.spec.ts:8:7 › complete the sample mystery in ja at mobile width (961ms)
+  ✓  21 tests/e2e/languages.spec.ts:8:7 › complete the sample mystery in zh at mobile width (971ms)
+  ✓  22 tests/e2e/languages.spec.ts:8:7 › complete the sample mystery in ar at mobile width (1.0s)
+  ✓  23 tests/e2e/languages.spec.ts:8:7 › complete the sample mystery in hi at mobile width (994ms)
+  ✓  24 tests/e2e/languages.spec.ts:44:5 › language changes preserve cross-examination notes, eliminations and photo coordinates (1.0s)
+  ✓  25 tests/e2e/languages.spec.ts:64:5 › keyboard language selection persists and an invalid saved language defaults to English (374ms)
+  ✓  26 tests/e2e/languages.spec.ts:78:5 › credits and privacy follow the language choice across all ten locales (428ms)
+  ✓  27 tests/e2e/languages.spec.ts:93:5 › a failed shared verdict translation can retry without a second accusation (1.2s)
+  ✓  28 tests/e2e/languages.spec.ts:133:5 › an older shared case keeps English evidence direction inside an Arabic interface (928ms)
+  ✓  29 tests/e2e/novel-visual.spec.ts:53:5 › the novel homepage offers readable copy and keyboard access to its sample on desktop (718ms)
+  ✓  30 tests/e2e/novel-visual.spec.ts:70:5 › the 360px homepage keeps ten languages readable and actions reachable (1.3s)
+  ✓  31 tests/e2e/novel-visual.spec.ts:86:5 › mobile evidence and rebuttals remain readable and usable through a complete confrontation (840ms)
+  ✓  32 tests/e2e/novel-visual.spec.ts:109:5 › responsive layout and translated reading panels preserve the photograph and face positions (803ms)
+  ✓  33 tests/e2e/sherlock-visual.spec.ts:19:7 › consulting-room layout stays usable in en at 1440px (1.8s)
+  ✓  34 tests/e2e/sherlock-visual.spec.ts:19:7 › consulting-room layout stays usable in en at 360px (370ms)
+  ✓  35 tests/e2e/sherlock-visual.spec.ts:19:7 › consulting-room layout stays usable in ko at 390px (466ms)
+  ✓  36 tests/e2e/sherlock-visual.spec.ts:19:7 › consulting-room layout stays usable in ar at 360px (358ms)
+  ✓  37 tests/e2e/ui-redesign.spec.ts:17:5 › share preview traps forward/reverse focus and restores its opener on Escape (965ms)
+  ✓  38 tests/e2e/ui-redesign.spec.ts:41:5 › all three cross-examinations gate the verdict and cite only the existing named testimony (1.0s)
+  ✓  39 tests/e2e/ui-redesign.spec.ts:91:5 › casting rejects normalized duplicate names and long edge labels fit a 360px photo (674ms)
+  ✓  40 tests/e2e/ui-redesign.spec.ts:125:5 › six-world hypothesis cards are reversible personal notes and never judge the remaining world (1.2s)
+  ✓  41 tests/e2e/ui-redesign.spec.ts:164:5 › cancelling a face pointer drag clears movement state (420ms)
+
+  41 passed (3.6m)

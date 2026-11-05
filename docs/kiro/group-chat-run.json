@@ -1,0 +1,9 @@
+{
+  "startedAt": "2026-11-05T05:18:13.001Z",
+  "endedAt": "2026-11-05T05:20:44.330Z",
+  "exitCode": 0,
+  "agent": "group-chat-routing",
+  "cliVersion": "2.37.0",
+  "engine": "v2",
+  "prompt": "group-chat-task-prompt.txt"
+}

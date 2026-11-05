@@ -1,0 +1,24 @@
+Command executed successfully:
+npx playwright test tests/e2e/opening.spec.ts -g compact --reporter=list --output=/private/tmp/kirock-opening-compact-results
+
+The successful command's captured tool output is transcribed below. This run was
+separate from the full 47-test production suite; no test was rerun to create this record.
+Exit code: 0
+
+Running 1 test using 1 worker
+
+(node:21727) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+compact en: {"copy":{"x":25.203125,"y":79,"width":309.59375,"height":206.1875},"dialogue":{"x":25.203125,"y":237.1875,"width":300,"height":48},"character":{"x":153.234375,"y":342,"width":169.1875,"height":169.1875},"skip":{"x":237.265625,"y":20,"width":102.734375,"height":45.796875},"enter":{"x":25.1875,"y":564.609375,"width":117.71875,"height":51.390625}}
+compact ko: {"copy":{"x":25.203125,"y":79,"width":309.59375,"height":220.8125},"dialogue":{"x":25.203125,"y":245.4375,"width":300,"height":54.375},"character":{"x":153.234375,"y":349.3125,"width":169.1875,"height":169.1875},"skip":{"x":213.453125,"y":20,"width":126.546875,"height":45.796875},"enter":{"x":25.1875,"y":564.609375,"width":113,"height":51.390625}}
+compact es: {"copy":{"x":25.203125,"y":79,"width":309.59375,"height":206.1875},"dialogue":{"x":25.203125,"y":237.1875,"width":300,"height":48},"character":{"x":153.234375,"y":342,"width":169.1875,"height":169.1875},"skip":{"x":192.015625,"y":20,"width":147.984375,"height":45.796875},"enter":{"x":25.1875,"y":564.609375,"width":137.734375,"height":51.390625}}
+compact fr: {"copy":{"x":25.203125,"y":79,"width":309.59375,"height":206.1875},"dialogue":{"x":25.203125,"y":237.1875,"width":300,"height":48},"character":{"x":153.234375,"y":342,"width":169.1875,"height":169.1875},"skip":{"x":184.0625,"y":20,"width":155.9375,"height":45.796875},"enter":{"x":25.1875,"y":564.609375,"width":152.40625,"height":51.390625}}
+compact de: {"copy":{"x":25.203125,"y":79,"width":309.59375,"height":206.1875},"dialogue":{"x":25.203125,"y":237.1875,"width":300,"height":48},"character":{"x":153.234375,"y":342,"width":169.1875,"height":169.1875},"skip":{"x":193.84375,"y":20,"width":146.15625,"height":45.796875},"enter":{"x":25.1875,"y":564.609375,"width":185.0625,"height":51.390625}}
+compact pt: {"copy":{"x":25.203125,"y":79,"width":309.59375,"height":206.1875},"dialogue":{"x":25.203125,"y":237.1875,"width":300,"height":48},"character":{"x":153.234375,"y":342,"width":169.1875,"height":169.1875},"skip":{"x":203.015625,"y":20,"width":136.984375,"height":45.796875},"enter":{"x":25.1875,"y":564.609375,"width":138.375,"height":51.390625}}
+compact ja: {"copy":{"x":25.203125,"y":79,"width":309.59375,"height":206.1875},"dialogue":{"x":25.203125,"y":237.1875,"width":300,"height":48},"character":{"x":153.234375,"y":342,"width":169.1875,"height":169.1875},"skip":{"x":178.453125,"y":20,"width":161.546875,"height":45.796875},"enter":{"x":25.1875,"y":564.609375,"width":90.53125,"height":51.390625}}
+compact zh: {"copy":{"x":25.203125,"y":79,"width":309.59375,"height":206.1875},"dialogue":{"x":25.203125,"y":237.1875,"width":300,"height":48},"character":{"x":153.234375,"y":342,"width":169.1875,"height":169.1875},"skip":{"x":240.609375,"y":20,"width":99.390625,"height":45.796875},"enter":{"x":25.1875,"y":564.609375,"width":81.765625,"height":51.390625}}
+compact ar: {"copy":{"x":25.203125,"y":79,"width":309.59375,"height":186.234375},"dialogue":{"x":34.796875,"y":239.734375,"width":300,"height":25.5},"character":{"x":25.203125,"y":332.015625,"width":169.1875,"height":169.1875},"skip":{"x":20,"y":20,"width":105.265625,"height":45.796875},"enter":{"x":223.671875,"y":564.609375,"width":111.140625,"height":51.390625}}
+compact hi: {"copy":{"x":25.203125,"y":79,"width":309.59375,"height":225.328125},"dialogue":{"x":25.203125,"y":239.734375,"width":300,"height":64.59375},"character":{"x":153.234375,"y":351.5625,"width":169.1875,"height":169.1875},"skip":{"x":236.21875,"y":20,"width":103.78125,"height":45.796875},"enter":{"x":25.1875,"y":564.609375,"width":124.78125,"height":51.390625}}
+  ✓  1 tests/e2e/opening.spec.ts:164:5 › compact static replay keeps dialogue, character and controls separate in all ten languages (1.9s)
+
+  1 passed (2.6s)

@@ -1,0 +1,85 @@
+
+> room-of-suspects@1.0.0 test:e2e
+> playwright test tests/e2e/novel-visual.spec.ts --reporter=list --output=/private/tmp/novel-visual-results
+
+
+Running 4 tests using 1 worker
+
+(node:22458) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/novel-visual.spec.ts:50:5 › the novel homepage offers readable copy and keyboard access to its sample on desktop (439ms)
+(node:22470) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/e2e/novel-visual.spec.ts:67:5 › the 360px homepage keeps ten languages readable and actions reachable (386ms)
+(node:22486) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 tests/e2e/novel-visual.spec.ts:83:5 › mobile evidence and rebuttals remain readable and usable through a complete confrontation (947ms)
+  ✓  4 tests/e2e/novel-visual.spec.ts:106:5 › responsive layout and translated reading panels preserve the photograph and face positions (911ms)
+
+
+  1) tests/e2e/novel-visual.spec.ts:50:5 › the novel homepage offers readable copy and keyboard access to its sample on desktop 
+
+    Error: expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 187
+    Received:    204
+
+      26 |     }));
+      27 |     expect(size.contentWidth).toBeLessThanOrEqual(size.width + 1);
+    > 28 |     expect(size.contentHeight).toBeLessThanOrEqual(size.height + 1);
+         |                                ^
+      29 |   }
+      30 | }
+      31 |
+        at readableText (/Users/kyumin/Documents/ChatGPT/kiro/tests/e2e/novel-visual.spec.ts:28:32)
+        at /Users/kyumin/Documents/ChatGPT/kiro/tests/e2e/novel-visual.spec.ts:55:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../private/tmp/novel-visual-results/novel-visual-the-novel-hom-c54d6-ss-to-its-sample-on-desktop/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../private/tmp/novel-visual-results/novel-visual-the-novel-hom-c54d6-ss-to-its-sample-on-desktop/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../../private/tmp/novel-visual-results/novel-visual-the-novel-hom-c54d6-ss-to-its-sample-on-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../../private/tmp/novel-visual-results/novel-visual-the-novel-hom-c54d6-ss-to-its-sample-on-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/e2e/novel-visual.spec.ts:67:5 › the 360px homepage keeps ten languages readable and actions reachable 
+
+    Error: expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 137
+    Received:    149
+
+      26 |     }));
+      27 |     expect(size.contentWidth).toBeLessThanOrEqual(size.width + 1);
+    > 28 |     expect(size.contentHeight).toBeLessThanOrEqual(size.height + 1);
+         |                                ^
+      29 |   }
+      30 | }
+      31 |
+        at readableText (/Users/kyumin/Documents/ChatGPT/kiro/tests/e2e/novel-visual.spec.ts:28:32)
+        at /Users/kyumin/Documents/ChatGPT/kiro/tests/e2e/novel-visual.spec.ts:75:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../private/tmp/novel-visual-results/novel-visual-the-360px-hom-30395-dable-and-actions-reachable/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../private/tmp/novel-visual-results/novel-visual-the-360px-hom-30395-dable-and-actions-reachable/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../../../../private/tmp/novel-visual-results/novel-visual-the-360px-hom-30395-dable-and-actions-reachable/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../../../../private/tmp/novel-visual-results/novel-visual-the-360px-hom-30395-dable-and-actions-reachable/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    tests/e2e/novel-visual.spec.ts:50:5 › the novel homepage offers readable copy and keyboard access to its sample on desktop 
+    tests/e2e/novel-visual.spec.ts:67:5 › the 360px homepage keeps ten languages readable and actions reachable 
+  2 passed (4.1s)

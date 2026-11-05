@@ -1,0 +1,61 @@
+
+> room-of-suspects@1.0.0 test:e2e
+> playwright test
+
+
+Running 18 tests using 1 worker
+
+(node:12937) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/game.spec.ts:61:5 › sample correct verdict and wrong verdict both complete without API keys (19.7s)
+  ✓   2 tests/e2e/game.spec.ts:74:5 › sample can be completed using only keyboard navigation and subtitles (9.9s)
+  ✓   3 tests/e2e/game.spec.ts:94:7 › mobile/tablet 360px keeps photo faces and statements within the viewport (9.9s)
+  ✓   4 tests/e2e/game.spec.ts:94:7 › mobile/tablet 390px keeps photo faces and statements within the viewport (9.9s)
+  ✓   5 tests/e2e/game.spec.ts:94:7 › mobile/tablet 768px keeps photo faces and statements within the viewport (10.0s)
+  ✓   6 tests/e2e/game.spec.ts:110:5 › landscape, portrait, EXIF rotation and manual clockwise rotation preserve photo coordinates (10.7s)
+  ✓   7 tests/e2e/game.spec.ts:157:5 › unsupported and corrupted photo files give usable errors and sample remains playable (10.0s)
+  ✓   8 tests/e2e/game.spec.ts:167:5 › missing AI key falls back to manual selection with explicit analysis consent (10.3s)
+  ✓   9 tests/e2e/game.spec.ts:186:5 › invalid AI output and real client timeout both retain a completable manual path (29.2s)
+  ✓  10 tests/e2e/game.spec.ts:209:5 › valid AI candidates use displayName and a late response cannot overwrite manual choices (11.5s)
+  ✓  11 tests/e2e/game.spec.ts:233:5 › corrupted JSON and malformed ready responses never crash the casting screen (20.3s)
+  ✓  12 tests/e2e/game.spec.ts:253:5 › English sample has translated testimony, verdict, and explanation (10.0s)
+  ✘  13 tests/e2e/game.spec.ts:269:5 › sharing preserves the case, hides answers, supports independent one-shot play, and deletes for the owner (10.6s)
+(node:13314) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  14 tests/e2e/ui-redesign.spec.ts:12:5 › share preview traps forward/reverse focus and restores its opener on Escape (1.2s)
+  ✓  15 tests/e2e/ui-redesign.spec.ts:36:5 › all three cross-examinations gate the verdict and cite only the existing named testimony (1.2s)
+  ✓  16 tests/e2e/ui-redesign.spec.ts:86:5 › casting rejects normalized duplicate names and long edge labels fit a 360px photo (857ms)
+  ✓  17 tests/e2e/ui-redesign.spec.ts:120:5 › six-world hypothesis cards are reversible personal notes and never judge the remaining world (1.3s)
+  ✓  18 tests/e2e/ui-redesign.spec.ts:159:5 › cancelling a face pointer drag clears movement state (498ms)
+
+
+  1) tests/e2e/game.spec.ts:269:5 › sharing preserves the case, hides answers, supports independent one-shot play, and deletes for the owner 
+
+    TypeError: Cannot convert undefined or null to object
+
+      289 |   const publicCase = await publicResponse.json();
+      290 |   expect(publicCase.statements.map((item: { text: string }) => item.text)).toEqual(local.texts);
+    > 291 |   expect(Object.keys(publicCase.interrogations).sort()).toEqual([...suspectIds]);
+          |                 ^
+      292 |   expect(publicCase.factLabels).toHaveLength(2);
+      293 |   const prohibited = ['culpritId', 'confession', 'proofSteps', 'roleAssignment', 'factInverted', 'private_json'];
+      294 |   for (const key of prohibited) expect(JSON.stringify(publicCase)).not.toContain(`"${key}"`);
+        at /Users/kyumin/Documents/ChatGPT/kiro/tests/e2e/game.spec.ts:291:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/game-sharing-preserves-the-d419c-y-and-deletes-for-the-owner/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/game-sharing-preserves-the-d419c-y-and-deletes-for-the-owner/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/game-sharing-preserves-the-d419c-y-and-deletes-for-the-owner/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/game-sharing-preserves-the-d419c-y-and-deletes-for-the-owner/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/e2e/game.spec.ts:269:5 › sharing preserves the case, hides answers, supports independent one-shot play, and deletes for the owner 
+  17 passed (3.0m)

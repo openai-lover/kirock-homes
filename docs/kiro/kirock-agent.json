@@ -1,0 +1,60 @@
+{
+  "name": "kirock-voice",
+  "description": "Codex-prepared scoped agent for an actual Kiro-authored detective voice module and aside component.",
+  "prompt": "The user authorizes only the Kirock voice task described in the supplied prompt. Create only its five owned implementation/spec files. Existing source has both Codex and prior Kiro contributions; attribute precisely. Never read credentials, private photographs, .env, .data or unrelated home files. Never use network/MCP tools, install packages, change subscriptions or perform Git mutations. Do not pre-mark planned tasks complete.",
+  "tools": [
+    "fs_read",
+    "fs_write",
+    "execute_bash"
+  ],
+  "allowedTools": [],
+  "toolsSettings": {
+    "fs_read": {
+      "allowedPaths": [
+        "<project>/AGENTS.md",
+        "<project>/package.json",
+        "<project>/tsconfig.json",
+        "<project>/src/lib/game/types.ts",
+        "<project>/src/components/Game.tsx",
+        "<project>/src/components/HypothesisBoard.tsx",
+        "<project>/src/components/DetectiveAside.tsx",
+        "<project>/src/lib/ui/detective-voice.ts",
+        "<project>/docs/kirolock-branding.md",
+        "<project>/node_modules/next/dist/docs/**",
+        "<project>/.kiro/steering/game-invariants.md",
+        "<project>/.kiro/specs/kirock-voice/**"
+      ],
+      "deniedPaths": [
+        "**/.env",
+        "**/.env.*",
+        "**/.data/**",
+        "**/public/**",
+        "**/.aws/**",
+        "**/.ssh/**",
+        "**/room-of-suspects-kiro-state/**"
+      ],
+      "denyByDefault": true
+    },
+    "fs_write": {
+      "allowedPaths": [
+        "<project>/src/lib/ui/detective-voice.ts",
+        "<project>/src/components/DetectiveAside.tsx",
+        "<project>/.kiro/specs/kirock-voice/requirements.md",
+        "<project>/.kiro/specs/kirock-voice/design.md",
+        "<project>/.kiro/specs/kirock-voice/tasks.md"
+      ],
+      "denyByDefault": true
+    },
+    "execute_bash": {
+      "allowedCommands": [
+        "^node node_modules/typescript/bin/tsc --noEmit$"
+      ],
+      "deniedCommands": [
+        ".*(?:curl|wget|sudo|rm |git |npm install|npm publish|printenv).*"
+      ],
+      "denyByDefault": true
+    }
+  },
+  "resources": [],
+  "mcpServers": {}
+}

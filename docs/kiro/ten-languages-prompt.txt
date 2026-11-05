@@ -1,0 +1,14 @@
+Implement the secondary UI localization for Kirock Homes now, not just advice. Read AGENTS.md and relevant installed Next client docs. Follow only these owned files:
+src/lib/i18n/secondary-ui.ts
+src/lib/ui/detective-voice.ts
+src/components/CrossExamination.tsx
+src/components/HypothesisBoard.tsx
+src/components/DetectiveAside.tsx
+tests/secondary-i18n.test.ts
+.kiro/specs/ten-languages/requirements.md
+.kiro/specs/ten-languages/design.md
+.kiro/specs/ten-languages/tasks.md
+The root agent has created src/lib/i18n/locales.ts with supported locales en ko es fr de pt ja zh ar hi, default en, Locale/isLocale/getDirection. Other agents implement Game.tsx, game engine, server and main UI catalogue. Do NOT edit their files.
+Translate every static user-visible/ARIA string in CrossExamination.tsx, HypothesisBoard.tsx and DetectiveAside.tsx and all six stages in detective-voice.ts into ALL TEN languages. Preserve existing Korean/English text where possible. Use native, natural, concise translations. No runtime AI, no English-only fallback masquerading as localization. Kirock Homes can remain the Latin brand name. A new secondary-ui.ts catalogue with a typed lookup and named placeholders is appropriate; avoid translating dynamic interpolated keys, pass {name}, {remaining}, {total} as variables. Do not change the puzzle or invent evidence. Quotes of official testimony must remain byte-identical to incoming snapshot statements. Cross-examination selected turn, notebook notes and manual hypothesis elimination must remain on locale change (component keys stable, no locale reset). Guidance must depend only on stage and language, with no culprit or outcome access. For mixed-script proper names use safe text rendering, not HTML injection. Ensure all ten catalogues cover every required key with placeholder parity.
+Preserve original Kiro/Codex authorship headers and add that the ten-language secondary UI extension was implemented by Kiro in this run. Write short requirements/design/tasks with accurate chronology, no premature passed marks. Add tests/secondary-i18n.test.ts covering ten-language completeness, named placeholder preservation, all six stage copies, and proper interpolation of a hostile-looking object name as plain string. Run EXACTLY: node --import tsx --conditions=react-server --test tests/secondary-i18n.test.ts
+Do not run global typecheck while other agents are editing. Record your real test output in final and actual task status. Root Codex will perform integration review, browser checks, typecheck and build. Finish implementation completely.

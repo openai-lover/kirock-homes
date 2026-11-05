@@ -1,0 +1,35 @@
+
+> room-of-suspects@1.0.0 build
+> next build
+
+▲ Next.js 16.4.3 (Turbopack)
+✓ Running next.config.ts took 11ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 190ms
+  Running TypeScript ...
+  Finished TypeScript in 799ms ...
+  Collecting page data using 9 workers ...
+  Generating static pages using 9 workers (0/6) ...
+  Generating static pages using 9 workers (1/6) 
+  Generating static pages using 9 workers (2/6) 
+  Generating static pages using 9 workers (4/6) 
+✓ Generating static pages using 9 workers (6/6) in 88ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/analyze
+├ ƒ /api/plays/[playId]/accuse
+├ ƒ /api/shared-cases
+├ ƒ /api/shared-cases/[shareId]
+├ ƒ /api/shared-cases/[shareId]/image
+├ ƒ /api/shared-cases/[shareId]/plays
+├ ○ /credits
+└ ƒ /s/[shareId]
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

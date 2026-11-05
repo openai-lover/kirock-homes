@@ -1,0 +1,14 @@
+
+> room-of-suspects@1.0.0 test:e2e
+> playwright test --grep sample correct verdict|sample can be completed|English sample
+
+
+Running 3 tests using 1 worker
+
+(node:14231) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/game.spec.ts:61:5 › sample correct verdict and wrong verdict both complete without API keys (19.4s)
+  ✓  2 tests/e2e/game.spec.ts:74:5 › sample can be completed using only keyboard navigation and subtitles (9.6s)
+  ✓  3 tests/e2e/game.spec.ts:253:5 › English sample has translated testimony, verdict, and explanation (9.8s)
+
+  3 passed (39.5s)

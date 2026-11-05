@@ -1,0 +1,7 @@
+# Submission preflight polish — 2026-11-05
+
+Preserve the detective palette: midnight #12242a, paper #f4eedf, brass #e5b65c, slate #284549, ink #182631. Existing Cormorant/Nanum Myeongjo titles and sans-serif controls remain. Keep one dramatic optical sweep and one clear, centered, larger skip label at the physical bottom-left; remove the redundant top-right action. Remove decorative icons from the start, photo, story and preview controls; center their text. No new marketing text or decoration.
+
+Cold-start issue: the previous readiness gate waited only for the character, not the photograph or fonts. Pending/preparing frames hid all title content. A backgrounded tab could also consume the timer while nobody saw the intro. Prepare the three existing visual assets and title fonts, show a text-based branded poster immediately, and bound preparation to 3 seconds with a static fallback. Pause the playing clock and animations while hidden. Version the seen marker so the corrected opening plays once for previous visitors; shared links and reduced-motion visits keep bypassing automatic playback.
+
+Validation scope: delayed and broken media, first frame, hidden-tab timer, single skip button/focus, English/Korean and long-language button centering, small mobile and landscape layouts, a shrunken viewport representing keyboard space, two distinct licensed real photos, portrait/landscape/rotation, manual placement plus keyboard/touch movement, offline and AI-fallback completion. Physical phone keyboards remain outside a desktop simulation claim.

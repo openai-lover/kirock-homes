@@ -1,0 +1,8 @@
+Executed by Kiro CLI 2.37.0 during refinement
+Command: node node_modules/typescript/bin/tsc --noEmit
+Working directory: <project>
+{
+  "exit_status": "exit status: 0",
+  "stdout": "",
+  "stderr": ""
+}

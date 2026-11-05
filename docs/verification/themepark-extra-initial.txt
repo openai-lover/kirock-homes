@@ -1,0 +1,13 @@
+
+> room-of-suspects@1.0.0 test:e2e
+> playwright test tests/e2e/attraction.spec.ts --reporter=list --output=/private/tmp/attraction-extra-results
+
+
+Running 2 tests using 1 worker
+
+(node:54698) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/attraction.spec.ts:5:5 › decorative artwork failure preserves readable entry actions and keyboard entry (660ms)
+  ✓  2 tests/e2e/attraction.spec.ts:33:5 › physical controls stay reachable across phone, tablet, desktop and RTL layouts (5.7s)
+
+  2 passed (7.3s)

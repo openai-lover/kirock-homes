@@ -1,0 +1,54 @@
+
+> room-of-suspects@1.0.0 test:e2e
+> playwright test tests/e2e/ui-redesign.spec.ts
+
+
+Running 3 tests using 1 worker
+
+(node:11951) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/ui-redesign.spec.ts:11:5 › share preview traps forward/reverse focus and restores its opener on Escape (941ms)
+  ✓  2 tests/e2e/ui-redesign.spec.ts:34:5 › casting rejects normalized duplicate names and long edge labels fit a 360px photo (888ms)
+  ✘  3 tests/e2e/ui-redesign.spec.ts:68:5 › cancelling a face pointer drag clears movement state (797ms)
+
+
+  1) tests/e2e/ui-redesign.spec.ts:68:5 › cancelling a face pointer drag clears movement state ─────
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Object {
+    -   "left": "25%",
+    -   "top": "50%",
+    +   "left": "33.8384%",
+    +   "top": "61.0263%",
+      }
+
+      79 |   await page.mouse.up();
+      80 |   const after = await face.evaluate(element => ({ left: (element as HTMLElement).style.left, top: (element as HTMLElement).style.top }));
+    > 81 |   expect(after).toEqual(before);
+         |                 ^
+      82 |   await face.focus();
+      83 |   await page.keyboard.press('ArrowRight');
+      84 |   await expect.poll(() => face.evaluate(element => parseFloat((element as HTMLElement).style.left))).toBeCloseTo(26);
+        at /Users/kyumin/Documents/ChatGPT/kiro/tests/e2e/ui-redesign.spec.ts:81:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/ui-redesign-cancelling-a-f-3ee3c--drag-clears-movement-state/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/ui-redesign-cancelling-a-f-3ee3c--drag-clears-movement-state/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/ui-redesign-cancelling-a-f-3ee3c--drag-clears-movement-state/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/ui-redesign-cancelling-a-f-3ee3c--drag-clears-movement-state/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/e2e/ui-redesign.spec.ts:68:5 › cancelling a face pointer drag clears movement state ──────
+  2 passed (3.6s)

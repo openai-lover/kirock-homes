@@ -1,0 +1,238 @@
+{
+  "startedAt": "2026-10-31T06:50:35.083Z",
+  "target": "http://127.0.0.1:3000",
+  "mode": "production server",
+  "sourceHashes": {
+    "src/components/Game.tsx": "3c17c80d43a47bd88e2f3dced3fd1f8afa1c47fb19f687127145de6a47f0941f",
+    "src/components/DetectiveAside.tsx": "83171e7da44dc4a39ed5530dc6dd6a922df763c8ed5a58610a961b7233867eff",
+    "src/lib/ui/detective-voice.ts": "0bf5df3ab97cc848f32ca966b342579ad5ed3a7b4f74e493685e516162af3a39",
+    "src/app/globals.css": "e0b637a031ccf21ec32cdb0331ca4fa94461bfdde52d035ef8795f92af4bfa51",
+    "src/app/layout.tsx": "4d7ce240a45940e18dfa7891cd3c0af0b48aa763b4af9e61e568f869b97ef396",
+    "src/app/credits/page.tsx": "6d153213542d9b408fce47bb2895eb34f358ba811eafc445d58aebafc1087c58"
+  },
+  "checks": [
+    {
+      "name": "en-US detective artwork loads",
+      "status": "pass",
+      "naturalWidth": 1254,
+      "naturalHeight": 1254
+    },
+    {
+      "name": "en-US original sample photo loads",
+      "status": "pass",
+      "naturalWidth": 1100,
+      "naturalHeight": 1659
+    },
+    {
+      "name": "en-US language, current brand and exactly three photo suspects",
+      "status": "pass"
+    },
+    {
+      "name": "en-US landing fits 1440px",
+      "status": "pass",
+      "width": 1440,
+      "viewport": 1440
+    },
+    {
+      "name": "en-US landing fits 390px",
+      "status": "pass",
+      "width": 390,
+      "viewport": 390
+    },
+    {
+      "name": "en-US landing fits 360px",
+      "status": "pass",
+      "width": 360,
+      "viewport": 360
+    },
+    {
+      "name": "ko-KR detective artwork loads",
+      "status": "pass",
+      "naturalWidth": 1254,
+      "naturalHeight": 1254
+    },
+    {
+      "name": "ko-KR original sample photo loads",
+      "status": "pass",
+      "naturalWidth": 1100,
+      "naturalHeight": 1659
+    },
+    {
+      "name": "ko-KR language, current brand and exactly three photo suspects",
+      "status": "pass"
+    },
+    {
+      "name": "ko-KR landing fits 1440px",
+      "status": "pass",
+      "width": 1440,
+      "viewport": 1440
+    },
+    {
+      "name": "ko-KR landing fits 390px",
+      "status": "pass",
+      "width": 390,
+      "viewport": 390
+    },
+    {
+      "name": "ko-KR landing fits 360px",
+      "status": "pass",
+      "width": 360,
+      "viewport": 360
+    },
+    {
+      "name": "English detective guidance follows awakening; photo still has three suspects",
+      "status": "pass"
+    },
+    {
+      "name": "English detective guidance follows listening; photo still has three suspects",
+      "status": "pass"
+    },
+    {
+      "name": "English official statements fit desktop",
+      "status": "pass",
+      "width": 1440,
+      "viewport": 1440
+    },
+    {
+      "name": "English detective guidance follows confronting; photo still has three suspects",
+      "status": "pass"
+    },
+    {
+      "name": "English rebuttal and citation fit 360px",
+      "status": "pass",
+      "width": 360,
+      "viewport": 360
+    },
+    {
+      "name": "English detective guidance follows deducing; photo still has three suspects",
+      "status": "pass"
+    },
+    {
+      "name": "English cross-examination completes to six manual hypotheses without a pre-accusation verdict",
+      "status": "pass"
+    },
+    {
+      "name": "English six-world board fits 390px",
+      "status": "pass",
+      "width": 390,
+      "viewport": 390
+    },
+    {
+      "name": "English detective guidance follows reveal; photo still has three suspects",
+      "status": "pass"
+    },
+    {
+      "name": "English verdict and explanation fit 390px",
+      "status": "pass",
+      "width": 390,
+      "viewport": 390
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "docs/kirock-screenshots/en-landing-1440.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1050
+      }
+    },
+    {
+      "path": "docs/kirock-screenshots/en-landing-390.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "path": "docs/kirock-screenshots/en-landing-360.png",
+      "viewport": {
+        "width": 360,
+        "height": 844
+      }
+    },
+    {
+      "path": "docs/kirock-screenshots/ko-landing-1440.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1050
+      }
+    },
+    {
+      "path": "docs/kirock-screenshots/ko-landing-390.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "path": "docs/kirock-screenshots/ko-landing-360.png",
+      "viewport": {
+        "width": 360,
+        "height": 844
+      }
+    },
+    {
+      "path": "docs/kirock-screenshots/en-awakening-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1050
+      }
+    },
+    {
+      "path": "docs/kirock-screenshots/en-statements-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1050
+      }
+    },
+    {
+      "path": "docs/kirock-screenshots/en-interrogation-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1050
+      }
+    },
+    {
+      "path": "docs/kirock-screenshots/en-interrogation-360.png",
+      "viewport": {
+        "width": 360,
+        "height": 844
+      }
+    },
+    {
+      "path": "docs/kirock-screenshots/en-hypothesis-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1050
+      }
+    },
+    {
+      "path": "docs/kirock-screenshots/en-hypothesis-390.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "path": "docs/kirock-screenshots/en-verdict-390.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    }
+  ],
+  "browserErrors": [],
+  "failedRequests": [],
+  "browser": "156.0.8078.74",
+  "status": "pass",
+  "finishedAt": "2026-10-31T06:50:48.033Z",
+  "finalSourceHashes": {
+    "src/components/Game.tsx": "3c17c80d43a47bd88e2f3dced3fd1f8afa1c47fb19f687127145de6a47f0941f",
+    "src/components/DetectiveAside.tsx": "83171e7da44dc4a39ed5530dc6dd6a922df763c8ed5a58610a961b7233867eff",
+    "src/lib/ui/detective-voice.ts": "0bf5df3ab97cc848f32ca966b342579ad5ed3a7b4f74e493685e516162af3a39",
+    "src/app/globals.css": "e0b637a031ccf21ec32cdb0331ca4fa94461bfdde52d035ef8795f92af4bfa51",
+    "src/app/layout.tsx": "4d7ce240a45940e18dfa7891cd3c0af0b48aa763b4af9e61e568f869b97ef396",
+    "src/app/credits/page.tsx": "6d153213542d9b408fce47bb2895eb34f358ba811eafc445d58aebafc1087c58"
+  },
+  "sourceChangedDuringRun": false
+}

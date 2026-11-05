@@ -1,0 +1,33 @@
+
+> room-of-suspects@1.0.0 test:e2e
+> playwright test tests/e2e/detective-visual.spec.ts tests/e2e/opening.spec.ts --reporter=list --output=/private/tmp/themepark-focused-results
+
+
+Running 12 tests using 1 worker
+
+(node:54441) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/detective-visual.spec.ts:49:5 › keyboard suspect previews are flavour only and leave the real case unplayed (1.4s)
+  ✓   2 tests/e2e/detective-visual.spec.ts:91:7 › the detective and playable case invitation remain readable in ten languages at 1440px (2.2s)
+  ✓   3 tests/e2e/detective-visual.spec.ts:91:7 › the detective and playable case invitation remain readable in ten languages at 360px (2.0s)
+  ✓   4 tests/e2e/detective-visual.spec.ts:123:5 › investigation progress follows listening and actual rebuttals before deduction becomes available (1.5s)
+  ✓   5 tests/e2e/opening.spec.ts:36:7 › first-visit cinematic opening › the opening fills the viewport, contains keyboard focus, and stays dismissed after reload (470ms)
+  ✓   6 tests/e2e/opening.spec.ts:58:7 › first-visit cinematic opening › the complete opening reveals the homepage automatically and releases scrolling (7.4s)
+  ✓   7 tests/e2e/opening.spec.ts:75:7 › first-visit cinematic opening › the mobile character entrance keeps both exit controls on screen (3.7s)
+  ✓   8 tests/e2e/opening.spec.ts:97:7 › first-visit cinematic opening › replay restores its opener and cancelled timers cannot interrupt a new game (7.6s)
+  ✓   9 tests/e2e/opening.spec.ts:118:7 › first-visit cinematic opening › unavailable storage and failed artwork cannot trap a player in the opening (7.2s)
+  ✓  10 tests/e2e/opening.spec.ts:136:7 › first-visit cinematic opening › a direct shared-case link bypasses the opening before reporting an expired case (412ms)
+  ✓  11 tests/e2e/opening.spec.ts:145:5 › reduced motion bypasses automatically and explicit replay waits on a static accessible title screen (6.9s)
+compact en: {"copy":{"x":24,"y":76,"width":312,"height":203.1875},"dialogue":{"x":24,"y":227.1875,"width":310,"height":52},"character":{"x":85,"y":331.59375,"width":190,"height":190},"skip":{"x":263.96875,"y":16,"width":76.03125,"height":44},"enter":{"x":24,"y":562,"width":174,"height":54}}
+compact ko: {"copy":{"x":24,"y":76,"width":312,"height":200.9375},"dialogue":{"x":24,"y":225.75,"width":310,"height":51.1875},"character":{"x":85,"y":330.46875,"width":190,"height":190},"skip":{"x":238,"y":16,"width":102,"height":44},"enter":{"x":24,"y":562,"width":174,"height":54}}
+compact es: {"copy":{"x":24,"y":76,"width":312,"height":203.1875},"dialogue":{"x":24,"y":227.1875,"width":310,"height":52},"character":{"x":85,"y":331.59375,"width":190,"height":190},"skip":{"x":214.609375,"y":16,"width":125.390625,"height":44},"enter":{"x":24,"y":562,"width":174.03125,"height":54}}
+compact fr: {"copy":{"x":24,"y":76,"width":312,"height":203.1875},"dialogue":{"x":24,"y":227.1875,"width":310,"height":52},"character":{"x":85,"y":331.59375,"width":190,"height":190},"skip":{"x":205.9375,"y":16,"width":134.0625,"height":44},"enter":{"x":24,"y":562,"width":178.703125,"height":54}}
+compact de: {"copy":{"x":24,"y":76,"width":312,"height":203.1875},"dialogue":{"x":24,"y":227.1875,"width":310,"height":52},"character":{"x":85,"y":331.59375,"width":190,"height":190},"skip":{"x":216.59375,"y":16,"width":123.40625,"height":44},"enter":{"x":24,"y":562,"width":199.375,"height":54}}
+compact pt: {"copy":{"x":24,"y":76,"width":312,"height":203.1875},"dialogue":{"x":24,"y":227.1875,"width":310,"height":52},"character":{"x":85,"y":331.59375,"width":190,"height":190},"skip":{"x":226.609375,"y":16,"width":113.390625,"height":44},"enter":{"x":24,"y":562,"width":174,"height":54}}
+compact ja: {"copy":{"x":24,"y":76,"width":312,"height":203.1875},"dialogue":{"x":24,"y":227.1875,"width":310,"height":52},"character":{"x":85,"y":331.59375,"width":190,"height":190},"skip":{"x":199.8125,"y":16,"width":140.1875,"height":44},"enter":{"x":24,"y":562,"width":174,"height":54}}
+compact zh: {"copy":{"x":24,"y":76,"width":312,"height":203.1875},"dialogue":{"x":24,"y":227.1875,"width":310,"height":52},"character":{"x":85,"y":331.59375,"width":190,"height":190},"skip":{"x":267.609375,"y":16,"width":72.390625,"height":44},"enter":{"x":24,"y":562,"width":174,"height":54}}
+compact ar: {"copy":{"x":24,"y":76,"width":312,"height":176.6875},"dialogue":{"x":26,"y":227.1875,"width":310,"height":25.5},"character":{"x":85,"y":318.34375,"width":190,"height":190},"skip":{"x":20,"y":16,"width":78.796875,"height":44},"enter":{"x":162,"y":562,"width":174,"height":54}}
+compact hi: {"copy":{"x":24,"y":76,"width":312,"height":202.1875},"dialogue":{"x":24,"y":227.1875,"width":310,"height":51},"character":{"x":85,"y":331.09375,"width":190,"height":190},"skip":{"x":262.109375,"y":16,"width":77.890625,"height":44},"enter":{"x":24,"y":562,"width":174,"height":54}}
+  ✓  12 tests/e2e/opening.spec.ts:164:5 › compact static replay keeps dialogue, character and controls separate in all ten languages (1.4s)
+
+  12 passed (46.7s)

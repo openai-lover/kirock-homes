@@ -1,0 +1,270 @@
+{
+  "startedAt": "2026-10-31T06:17:36.827Z",
+  "target": "http://127.0.0.1:3000",
+  "mode": "development server",
+  "sourceHashes": {
+    "src/components/Game.tsx": "ce970d01c9ef72785e14932b15a0267bd2ed239e64e273471f570bc340d1848c",
+    "src/components/PhotoStage.tsx": "c9b1f7f4e29be793ea21d921bdf644168b0693fc948c9879fd1b63553a4416e9",
+    "src/components/CrossExamination.tsx": "5b4e9160d6eda55f548a61f2e1acf34edb043c91af2b21a8f3d7848824b4be86",
+    "src/components/HypothesisBoard.tsx": "23f7f041fe43e1c2eb29f3a5a105cde5546cccf8f4b9c7de3cfe7074968776ba",
+    "src/app/globals.css": "8138b544d5570bdc11831e706c1fb9bcb68bbcba1751e99d12384ca268789d8e"
+  },
+  "checks": [
+    {
+      "name": "desktop landing has no horizontal overflow",
+      "status": "pass",
+      "pageWidth": 1440,
+      "viewport": 1440
+    },
+    {
+      "name": "390px landing has no horizontal overflow",
+      "status": "pass",
+      "pageWidth": 390,
+      "viewport": 390
+    },
+    {
+      "name": "360px landing has no horizontal overflow",
+      "status": "pass",
+      "pageWidth": 360,
+      "viewport": 360
+    },
+    {
+      "name": "360px English landing has no horizontal overflow",
+      "status": "pass",
+      "pageWidth": 360,
+      "viewport": 360
+    },
+    {
+      "name": "390px cross-examination and citations have no horizontal overflow",
+      "status": "pass",
+      "pageWidth": 390,
+      "viewport": 390
+    },
+    {
+      "name": "portrait sample preserves image ratio",
+      "status": "pass",
+      "rendered": 0.6630562750176595,
+      "natural": 0.6630500301386377
+    },
+    {
+      "name": "390px investigation has no horizontal overflow",
+      "status": "pass",
+      "pageWidth": 390,
+      "viewport": 390
+    },
+    {
+      "name": "share preview consent, forward/reverse focus trap, and Escape focus restoration",
+      "status": "pass"
+    },
+    {
+      "name": "landscape upload preserves image ratio at 360px",
+      "status": "pass",
+      "rendered": 1.5,
+      "natural": 1.5
+    },
+    {
+      "name": "28-character names and edge face placements do not widen the 360px page",
+      "status": "pass",
+      "pageWidth": 360,
+      "viewport": 360
+    },
+    {
+      "name": "long face labels stay within the photo width",
+      "status": "pass",
+      "labelBounds": [
+        {
+          "left": 6,
+          "right": 114,
+          "stageWidth": 300
+        },
+        {
+          "left": 96,
+          "right": 204,
+          "stageWidth": 300
+        },
+        {
+          "left": 186,
+          "right": 294,
+          "stageWidth": 300
+        }
+      ]
+    },
+    {
+      "name": "long custom names in testimony and choices fit 360px",
+      "status": "pass",
+      "pageWidth": 360,
+      "viewport": 360
+    },
+    {
+      "name": "portrait upload preserves image ratio at 390px",
+      "status": "pass",
+      "rendered": 0.6666666666666666,
+      "natural": 0.6666666666666666
+    },
+    {
+      "name": "portrait casting has no horizontal overflow at 390px",
+      "status": "pass",
+      "pageWidth": 390,
+      "viewport": 390
+    },
+    {
+      "name": "portrait upload preserves image ratio at 768px",
+      "status": "pass",
+      "rendered": 0.6666666666666666,
+      "natural": 0.6666666666666666
+    },
+    {
+      "name": "portrait casting has no horizontal overflow at 768px",
+      "status": "pass",
+      "pageWidth": 768,
+      "viewport": 768
+    },
+    {
+      "name": "portrait upload preserves image ratio at 1440px",
+      "status": "pass",
+      "rendered": 0.6666666666666666,
+      "natural": 0.6666666666666666
+    },
+    {
+      "name": "portrait casting has no horizontal overflow at 1440px",
+      "status": "pass",
+      "pageWidth": 1440,
+      "viewport": 1440
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "docs/screenshots/desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1050
+      },
+      "fullPage": true
+    },
+    {
+      "path": "docs/screenshots/mobile.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "fullPage": true
+    },
+    {
+      "path": "docs/screenshots/mobile-360.png",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "fullPage": true
+    },
+    {
+      "path": "docs/screenshots/mobile-english.png",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "fullPage": true
+    },
+    {
+      "path": "docs/screenshots/awakening-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1050
+      },
+      "fullPage": true
+    },
+    {
+      "path": "docs/screenshots/interrogation-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1050
+      },
+      "fullPage": true
+    },
+    {
+      "path": "docs/screenshots/interrogation-mobile.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "fullPage": true
+    },
+    {
+      "path": "docs/screenshots/hypothesis-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1050
+      },
+      "fullPage": true
+    },
+    {
+      "path": "docs/screenshots/investigation-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1050
+      },
+      "fullPage": true
+    },
+    {
+      "path": "docs/screenshots/investigation-mobile.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "fullPage": true
+    },
+    {
+      "path": "docs/screenshots/verdict-mobile.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "fullPage": true
+    },
+    {
+      "path": "docs/screenshots/share-dialog-mobile.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "fullPage": false
+    },
+    {
+      "path": "docs/screenshots/long-names-landscape-mobile.png",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "fullPage": true
+    },
+    {
+      "path": "docs/screenshots/long-names-investigation-mobile.png",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "fullPage": true
+    },
+    {
+      "path": "docs/screenshots/portrait-casting-mobile.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "fullPage": true
+    }
+  ],
+  "browserErrors": [],
+  "failedRequests": [],
+  "browser": "156.0.8078.74",
+  "status": "pass",
+  "finishedAt": "2026-10-31T06:17:59.402Z",
+  "finalSourceHashes": {
+    "src/components/Game.tsx": "ce970d01c9ef72785e14932b15a0267bd2ed239e64e273471f570bc340d1848c",
+    "src/components/PhotoStage.tsx": "c9b1f7f4e29be793ea21d921bdf644168b0693fc948c9879fd1b63553a4416e9",
+    "src/components/CrossExamination.tsx": "5b4e9160d6eda55f548a61f2e1acf34edb043c91af2b21a8f3d7848824b4be86",
+    "src/components/HypothesisBoard.tsx": "23f7f041fe43e1c2eb29f3a5a105cde5546cccf8f4b9c7de3cfe7074968776ba",
+    "src/app/globals.css": "8138b544d5570bdc11831e706c1fb9bcb68bbcba1751e99d12384ca268789d8e"
+  },
+  "sourceChangedDuringRun": false
+}

@@ -1,0 +1,46 @@
+{
+  "name": "attraction-props",
+  "description": "Scoped real Kiro implementation of decorative detective props. Prepared by Codex.",
+  "prompt": "Implement only the supplied owned files. Preserve prior Codex/Kiro attribution. Never read credentials, private photos, .env, .data, unrelated home files; no MCP, network tools, installs, git, billing or subscriptions. Do not invent execution evidence.",
+  "tools": [
+    "fs_read",
+    "fs_write",
+    "execute_bash"
+  ],
+  "allowedTools": [],
+  "resources": [],
+  "mcpServers": {},
+  "toolsSettings": {
+    "fs_read": {
+      "allowedPaths": [
+        "/Users/kyumin/Documents/ChatGPT/kiro/AGENTS.md",
+        "/Users/kyumin/Documents/ChatGPT/kiro/package.json",
+        "/Users/kyumin/Documents/ChatGPT/kiro/tsconfig.json",
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/components/GameIcon.tsx",
+        "/Users/kyumin/Documents/ChatGPT/kiro/docs/themepark-design.md",
+        "/Users/kyumin/Documents/ChatGPT/kiro/.kiro/steering/game-invariants.md",
+        "/Users/kyumin/Documents/ChatGPT/kiro/node_modules/next/dist/docs/**",
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/components/DetectiveProp.tsx",
+        "/Users/kyumin/Documents/ChatGPT/kiro/.kiro/specs/attraction-props/requirements.md",
+        "/Users/kyumin/Documents/ChatGPT/kiro/.kiro/specs/attraction-props/design.md",
+        "/Users/kyumin/Documents/ChatGPT/kiro/.kiro/specs/attraction-props/tasks.md"
+      ],
+      "denyByDefault": true
+    },
+    "fs_write": {
+      "allowedPaths": [
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/components/DetectiveProp.tsx",
+        "/Users/kyumin/Documents/ChatGPT/kiro/.kiro/specs/attraction-props/requirements.md",
+        "/Users/kyumin/Documents/ChatGPT/kiro/.kiro/specs/attraction-props/design.md",
+        "/Users/kyumin/Documents/ChatGPT/kiro/.kiro/specs/attraction-props/tasks.md"
+      ],
+      "denyByDefault": true
+    },
+    "execute_bash": {
+      "allowedCommands": [
+        "^node node_modules/typescript/bin/tsc --noEmit$"
+      ],
+      "denyByDefault": true
+    }
+  }
+}

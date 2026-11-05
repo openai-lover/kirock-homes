@@ -1,0 +1,42 @@
+
+Running 1 test using 1 worker
+
+(node:74097) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/preflight.spec.ts:72:5 › phone chat keeps input and send controls visible when the keyboard reduces available height (811ms)
+
+
+  1) tests/e2e/preflight.spec.ts:72:5 › phone chat keeps input and send controls visible when the keyboard reduces available height 
+
+    Error: typing remains above keyboard
+
+    expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 480
+    Received:    481
+
+      76 |  await page.evaluate(()=>window.scrollTo(0,0));
+      77 |  const input=(await page.getByTestId('chat-input').boundingBox())!,send=(await page.locator('.chat-send').boundingBox())!,log=(await page.getByTestId('chat-log').boundingBox())!;
+    > 78 |  expect(input.y+input.height,'typing remains above keyboard').toBeLessThanOrEqual(480);
+         |                                                               ^
+      79 |  expect(send.y+send.height,'send remains above keyboard').toBeLessThanOrEqual(480);
+      80 |  expect(log.height,'messages keep a useful scrollable area').toBeGreaterThanOrEqual(80);
+      81 |  await page.screenshot({path:'docs/screenshots/preflight/chat-keyboard-space.png'});
+        at /Users/kyumin/Documents/ChatGPT/kiro/tests/e2e/preflight.spec.ts:78:63
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/preflight-phone-chat-keeps-ede42-rd-reduces-available-height/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/preflight-phone-chat-keeps-ede42-rd-reduces-available-height/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/preflight-phone-chat-keeps-ede42-rd-reduces-available-height/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/preflight-phone-chat-keeps-ede42-rd-reduces-available-height/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/e2e/preflight.spec.ts:72:5 › phone chat keeps input and send controls visible when the keyboard reduces available height 

@@ -1,0 +1,27 @@
+You are Kiro CLI, authenticated by the user. Implement a meaningful, narrowly scoped feature for Room of Suspects. The existing application and tests were created by Codex. Do not claim them as Kiro work. Codex prepared this prompt and tool permissions; the new implementation/specs/tests below are your actual work.
+
+The user wants a richer detective game with actual objections, rebuttals and deduction. Codex is concurrently implementing cross-examination routes and styling. You own only:
+- src/lib/game/hypothesis.ts
+- src/components/HypothesisBoard.tsx
+- tests/hypothesis.test.ts
+- .kiro/specs/detective-hypotheses/requirements.md
+- .kiro/specs/detective-hypotheses/design.md
+- .kiro/specs/detective-hypotheses/tasks.md
+- .kiro/steering/game-invariants.md
+Do not edit index.ts, types.ts, Game.tsx, CrossExamination.tsx, CSS, package files or any other files. Do not install dependencies. Do not read private photos, .env, .data, credential files, home directories or auth state. Do not use external services, network tools, MCP, or Git commands.
+
+First read AGENTS.md, src/lib/game/types.ts, src/lib/game/solver.ts, src/lib/game/render.ts, tests/engine.test.ts, src/components/CrossExamination.tsx, package.json and relevant installed Next documentation before code changes. Source can be actively changing; preserve other agents' work and use the existing public types. Report any real concern you identify but do not fix files outside your scope.
+
+Create requirements/design/tasks for a manual six-world hypothesis board, then implement it. This is a player-owned deduction scratchpad, NEVER an automatic solver or truth oracle. Requirements:
+1. Pure TypeScript module builds the Cartesian product of three validated suspect IDs and fact=false/true into exactly six distinct hypotheses, using stable IDs derived from culpritId and Boolean fact. Preserve supplied suspect display order and keep false then true for each suspect. It must not mutate inputs or depend on UI, solver, AI, randomness, storage or private answer data. Export a well-named builder and types directly from hypothesis.ts. Use existing Suspect and SuspectId types.
+2. A client React component default export HypothesisBoard, exact props { suspects: readonly Suspect[]; locale: Locale; factLabels: readonly [string, string] }. factLabels[0] describes false and [1] true. The component owns reversible local eliminated-world IDs; the parent does not pass a case, solution, testimony or solver. Each of the six buttons toggles possible/eliminated and has aria-pressed true when eliminated. Show suspect name plus the corresponding fact label and explicit localized possible/eliminated text. Both states must remain readable and accessible, with visible text rather than only color.
+3. Provide a localized reset button to restore all six. Show how many hypotheses the player has left, and if only one remains label it exactly '내가 남긴 가설' (English: 'My remaining theory'), NEVER 'correct' or 'answer'. If zero remain, explain that the player can restore cards. No automatic eliminations, correct/incorrect feedback, culprit hints, verdict submission or pre-verdict truth calculation.
+4. Reuse class names hypothesis-board, hypothesis-grid, hypothesis-card so Codex can style afterward. Add data-testid='hypothesis-board', data-testid='hypothesis-card-<stableId>', and data-testid='hypothesis-reset' for meaningful browser verification. Keep structure mobile-friendly; native button semantics enable keyboard interaction.
+5. Korean and English UI. Any new decorative label must not be an extra factual claim or evidence. The official testimony wording must remain controlled by existing code. Existing rules: exactly one liar who is culprit; six exhaustive worlds; unique solution; each of three statements necessary; facts and targets stable under role permutations; no solution leak to a shared public response.
+6. tests/hypothesis.test.ts uses node:test and assert as current project does. Cover all six suspect permutations, six unique false/true pairs per order, stable world identity independent of display order, expected ordering, and input immutability (freeze array and objects). Do not introduce contrived tests for invalid inputs: input is validated upstream. A source-level check may confirm no private answer/solver dependency if useful, but prioritize behavior tests.
+7. Write concise steering for immutable game constraints and attribution: inherited source is Codex; your task is the manual hypothesis feature. Specs tasks may be marked complete ONLY after actual implementation and relevant command execution. Do not claim browser validation; Codex will integrate and run that separately.
+
+Allowed test commands (run from the current project directory, no prefix or shell compound):
+node --import tsx --conditions=react-server --test tests/hypothesis.test.ts
+node --import tsx --conditions=react-server --test tests/engine.test.ts tests/hypothesis.test.ts
+Run the first, then the engine-plus-hypothesis regression command. Fix only owned files on failure. If a command or file operation is blocked, report it exactly rather than pretending it succeeded. End with changed files, exported function/type signature, actual test outcomes, review findings and any unresolved integration work. Never record an action as completed before performing it.

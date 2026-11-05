@@ -1,0 +1,66 @@
+{
+  "name": "kirock-locales",
+  "description": "Scoped ten-language secondary UI implementation by actual Kiro CLI",
+  "prompt": "Follow the supplied task and file boundaries. Other agents are editing other files concurrently. Do not read private photos, credentials, .env, .data, unrelated files, account or browser state. No network tools, installs, settings changes, or Git operations. Preserve prior authorship; state new work honestly. Run only the allowed focused test, and record outcomes only after execution.",
+  "tools": [
+    "fs_read",
+    "fs_write",
+    "execute_bash"
+  ],
+  "allowedTools": [],
+  "toolsSettings": {
+    "fs_read": {
+      "allowedPaths": [
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/lib/i18n/secondary-ui.ts",
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/lib/ui/detective-voice.ts",
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/components/CrossExamination.tsx",
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/components/HypothesisBoard.tsx",
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/components/DetectiveAside.tsx",
+        "/Users/kyumin/Documents/ChatGPT/kiro/tests/secondary-i18n.test.ts",
+        "/Users/kyumin/Documents/ChatGPT/kiro/.kiro/specs/ten-languages/requirements.md",
+        "/Users/kyumin/Documents/ChatGPT/kiro/.kiro/specs/ten-languages/design.md",
+        "/Users/kyumin/Documents/ChatGPT/kiro/.kiro/specs/ten-languages/tasks.md",
+        "/Users/kyumin/Documents/ChatGPT/kiro/AGENTS.md",
+        "/Users/kyumin/Documents/ChatGPT/kiro/package.json",
+        "/Users/kyumin/Documents/ChatGPT/kiro/tsconfig.json",
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/lib/game/types.ts",
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/lib/i18n/locales.ts",
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/lib/game/interrogation.ts",
+        "/Users/kyumin/Documents/ChatGPT/kiro/.kiro/steering/game-invariants.md",
+        "/Users/kyumin/Documents/ChatGPT/kiro/node_modules/next/dist/docs/**"
+      ],
+      "deniedPaths": [
+        "**/.env*",
+        "**/.data/**",
+        "**/.aws/**",
+        "**/.ssh/**"
+      ],
+      "denyByDefault": true
+    },
+    "fs_write": {
+      "allowedPaths": [
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/lib/i18n/secondary-ui.ts",
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/lib/ui/detective-voice.ts",
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/components/CrossExamination.tsx",
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/components/HypothesisBoard.tsx",
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/components/DetectiveAside.tsx",
+        "/Users/kyumin/Documents/ChatGPT/kiro/tests/secondary-i18n.test.ts",
+        "/Users/kyumin/Documents/ChatGPT/kiro/.kiro/specs/ten-languages/requirements.md",
+        "/Users/kyumin/Documents/ChatGPT/kiro/.kiro/specs/ten-languages/design.md",
+        "/Users/kyumin/Documents/ChatGPT/kiro/.kiro/specs/ten-languages/tasks.md"
+      ],
+      "denyByDefault": true
+    },
+    "execute_bash": {
+      "allowedCommands": [
+        "^node --import tsx --conditions=react-server --test tests/secondary-i18n.test.ts$"
+      ],
+      "deniedCommands": [
+        ".*(?:curl|wget|sudo|rm |git |npm install|npm publish|printenv).*"
+      ],
+      "denyByDefault": true
+    }
+  },
+  "resources": [],
+  "mcpServers": {}
+}

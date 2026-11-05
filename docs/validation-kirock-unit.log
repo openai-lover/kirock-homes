@@ -1,0 +1,64 @@
+
+> room-of-suspects@1.0.0 test
+> node --import tsx --conditions=react-server --test tests/*.test.ts
+
+✔ missing key gives honest manual fallback and accepts no fake detections (2.31375ms)
+✔ provider timeout aborts pending work and ignores a late result (100.166708ms)
+✔ malformed JSON, bad coordinates and unavailable provider always allow manual casting (0.757459ms)
+✔ AI output can only select approved traits and positions, never dialogue or official testimony (0.182375ms)
+✔ compatible adapter sends bounded vision request and parses mocked structured response (16.436417ms)
+✔ all 144 approved variants: six worlds, one solution, all three testimonies necessary, bilingual proof agrees (25.642ms)
+✔ lamp fact subject stays fixed through every role, name, and display shuffle (0.252792ms)
+✔ generation is reproducible with seed and varies roles/order/state across seeds (1.784125ms)
+✔ no lamp selects generic fictional story; forcing coffee without one fails (0.208334ms)
+✔ public DTO contains only replay material and is independent of guilt before verdict (1.208125ms)
+✔ invalid templates are rejected: ambiguity, contradictions, redundant testimony (0.213208ms)
+✔ untrusted drafts reject tampered logic, hidden solution fields, unknown versions, and invalid coordinates (0.935834ms)
+✔ validated drafts and public snapshots are detached copies, preventing mutation through caller references (0.189542ms)
+✔ all six permutations of suspect display order produce exactly six hypotheses (0.646583ms)
+✔ display order is respected: suspects appear in displayOrder sequence (0.07075ms)
+✔ within each suspect pair, fact=false appears before fact=true (0.064541ms)
+✔ all six IDs are unique within a single call (0.052584ms)
+✔ hypothesis IDs are stable: same culpritId+fact always yields the same id, regardless of display order (0.074459ms)
+✔ ID format matches '<suspectId>-<fact>' template literal (0.039417ms)
+✔ suspectDisplayName is taken from the suspects array, not the display order entry alone (0.0445ms)
+✔ frozen input array is not mutated by buildHypotheses (0.06575ms)
+✔ frozen Suspect objects are not mutated by buildHypotheses (0.623125ms)
+✔ returned array is independent of input — mutating result does not affect subsequent calls (0.075042ms)
+✔ hypothesis.ts source does not import solver, validatePuzzle, or private answer modules (0.117583ms)
+✔ photo coordinates use the image rectangle and clamp beyond its edges (1.0505ms)
+✔ shared image decoding applies EXIF orientation and removes EXIF metadata (11.301792ms)
+✔ server normalizes landscape and portrait images with bounded dimensions (23.778666ms)
+✔ fake image bytes, unsupported data URLs and excessive bytes are rejected (1.043ms)
+✔ interrogations cover all 144 variants with exact official citations, fixed referents, and three unchanged statements (9.564041ms)
+✔ public interrogation fields carry no solution metadata and scaffolding never announces a verdict (1.883167ms)
+✔ dialogue is derived from existing evidence, not private role/state metadata, personalities, or layout (0.436792ms)
+✔ Korean and English use the same witness links and citations, and survive snapshot serialization (0.233292ms)
+✔ missing, duplicate, misattributed, and empty official citations are rejected (0.361792ms)
+✔ each object kind has its own voice, attributed to the actual speaker without changing evidence (0.670334ms)
+✔ service errors preserve status across isolated Next route/instrumentation class copies (2.959041ms)
+✔ shared snapshots preserve both languages, dialogue, image and answer; public allow-list has no spoilers (3.486209ms)
+✔ owner and play authorization are separate; independent friends and repeated accusations (1.517458ms)
+✔ legacy frozen shares keep their original dialogue without regenerated interrogation (4.472916ms)
+✔ SQLite survives restart and removes private row, image and play records on deletion (3.763334ms)
+✔ two independent Node processes racing different accusations commit the same first result (84.424417ms)
+✔ strict expiry blocks new public/image/play/reveal access; cleanup deletes all expired data (1.560959ms)
+✔ server refuses caller-supplied claims and additional solution fields (0.341083ms)
+✔ persistent AI budgets and request deduplication prevent additional chargeable calls (0.460083ms)
+✔ one image cannot cause more than two provider calls during its 15-minute request window (0.279459ms)
+✔ image decoder rejects corrupt/unsupported/oversize uploads and strips orientation metadata (12.203333ms)
+✔ same-origin mutations, bounded request bodies and supported locales are enforced (1.213125ms)
+✔ configured HTTPS reverse proxy origin requires HTTPS and issues Secure owner cookies (0.99425ms)
+✔ Node startup instrumentation starts hourly cleanup and physically removes downtime-expired rows (6.095166ms)
+{"event":"room_cleanup","at":"2026-10-31T06:50:03.447Z","status":"ok","cases":0,"plays":0,"aiRequests":0}
+✔ configured AI route enforces zero-call budget and consent without contacting a provider (5.981333ms)
+{"event":"room_cleanup","at":"2026-10-31T06:50:03.456Z","status":"ok","cases":0,"plays":0,"aiRequests":0}
+✔ real route handlers require photo consent, issue private cookies, keep public JSON safe, and delete the link (11.220667ms)
+ℹ tests 50
+ℹ suites 0
+ℹ pass 50
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 335.663709

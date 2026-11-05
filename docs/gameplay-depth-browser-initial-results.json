@@ -1,0 +1,784 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/25.9.0_2/bin/node",
+      "/Users/kyumin/Documents/ChatGPT/kiro/node_modules/.bin/playwright",
+      "test"
+    ],
+    "configFile": "/Users/kyumin/Documents/ChatGPT/kiro/playwright.config.ts",
+    "rootDir": "/Users/kyumin/Documents/ChatGPT/kiro/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/kyumin/Documents/ChatGPT/kiro/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/kyumin/Documents/ChatGPT/kiro/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/kyumin/Documents/ChatGPT/kiro/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/kyumin/Documents/ChatGPT/kiro/tests/e2e",
+        "snapshotDir": "/Users/kyumin/Documents/ChatGPT/kiro/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3000",
+          "browserName": "chromium",
+          "launchOptions": {
+            "executablePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+          },
+          "reducedMotion": "reduce",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev",
+      "url": "http://127.0.0.1:3000",
+      "reuseExistingServer": true,
+      "timeout": 120000,
+      "env": {
+        "AI_PROVIDER": "none"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "game.spec.ts",
+      "file": "game.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "sample correct verdict and wrong verdict both complete without API keys",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 19711,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T06:14:46.558Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-4684247c329e818791b2",
+          "file": "game.spec.ts",
+          "line": 61,
+          "column": 5
+        },
+        {
+          "title": "sample can be completed using only keyboard navigation and subtitles",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9870,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T06:15:06.855Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-0c5575510486e406793e",
+          "file": "game.spec.ts",
+          "line": 74,
+          "column": 5
+        },
+        {
+          "title": "mobile/tablet 360px keeps photo faces and statements within the viewport",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9913,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T06:15:16.731Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-0811a5cd1af0919682e1",
+          "file": "game.spec.ts",
+          "line": 94,
+          "column": 7
+        },
+        {
+          "title": "mobile/tablet 390px keeps photo faces and statements within the viewport",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9876,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T06:15:26.651Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-8905f02051f8de3248a3",
+          "file": "game.spec.ts",
+          "line": 94,
+          "column": 7
+        },
+        {
+          "title": "mobile/tablet 768px keeps photo faces and statements within the viewport",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10039,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T06:15:36.533Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-f88221b07737e41befc0",
+          "file": "game.spec.ts",
+          "line": 94,
+          "column": 7
+        },
+        {
+          "title": "landscape, portrait, EXIF rotation and manual clockwise rotation preserve photo coordinates",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10740,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T06:15:46.579Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-bff83796a74b6b8a0de1",
+          "file": "game.spec.ts",
+          "line": 110,
+          "column": 5
+        },
+        {
+          "title": "unsupported and corrupted photo files give usable errors and sample remains playable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9972,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T06:15:57.323Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-d90ddb1dd2bdc49209f9",
+          "file": "game.spec.ts",
+          "line": 157,
+          "column": 5
+        },
+        {
+          "title": "missing AI key falls back to manual selection with explicit analysis consent",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10253,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T06:16:07.305Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-5983c7395827b2f7009a",
+          "file": "game.spec.ts",
+          "line": 167,
+          "column": 5
+        },
+        {
+          "title": "invalid AI output and real client timeout both retain a completable manual path",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 29242,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T06:16:17.565Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-9f9bc1225e6963d73114",
+          "file": "game.spec.ts",
+          "line": 186,
+          "column": 5
+        },
+        {
+          "title": "valid AI candidates use displayName and a late response cannot overwrite manual choices",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11485,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T06:16:46.814Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-0ad1e5b7498acef71452",
+          "file": "game.spec.ts",
+          "line": 209,
+          "column": 5
+        },
+        {
+          "title": "corrupted JSON and malformed ready responses never crash the casting screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 20262,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T06:16:58.305Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-f18556a852ab9fc0d710",
+          "file": "game.spec.ts",
+          "line": 233,
+          "column": 5
+        },
+        {
+          "title": "English sample has translated testimony, verdict, and explanation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10008,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T06:17:18.571Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-e6851ea6c8aadeb62063",
+          "file": "game.spec.ts",
+          "line": 253,
+          "column": 5
+        },
+        {
+          "title": "sharing preserves the case, hides answers, supports independent one-shot play, and deletes for the owner",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 10595,
+                  "error": {
+                    "message": "TypeError: Cannot convert undefined or null to object",
+                    "stack": "TypeError: Cannot convert undefined or null to object\n    at /Users/kyumin/Documents/ChatGPT/kiro/tests/e2e/game.spec.ts:291:17",
+                    "location": {
+                      "file": "/Users/kyumin/Documents/ChatGPT/kiro/tests/e2e/game.spec.ts",
+                      "column": 17,
+                      "line": 291
+                    },
+                    "snippet": "  289 |   const publicCase = await publicResponse.json();\n  290 |   expect(publicCase.statements.map((item: { text: string }) => item.text)).toEqual(local.texts);\n> 291 |   expect(Object.keys(publicCase.interrogations).sort()).toEqual([...suspectIds]);\n      |                 ^\n  292 |   expect(publicCase.factLabels).toHaveLength(2);\n  293 |   const prohibited = ['culpritId', 'confession', 'proofSteps', 'roleAssignment', 'factInverted', 'private_json'];\n  294 |   for (const key of prohibited) expect(JSON.stringify(publicCase)).not.toContain(`\"${key}\"`);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/kyumin/Documents/ChatGPT/kiro/tests/e2e/game.spec.ts",
+                        "column": 17,
+                        "line": 291
+                      },
+                      "message": "TypeError: Cannot convert undefined or null to object\n\n  289 |   const publicCase = await publicResponse.json();\n  290 |   expect(publicCase.statements.map((item: { text: string }) => item.text)).toEqual(local.texts);\n> 291 |   expect(Object.keys(publicCase.interrogations).sort()).toEqual([...suspectIds]);\n      |                 ^\n  292 |   expect(publicCase.factLabels).toHaveLength(2);\n  293 |   const prohibited = ['culpritId', 'confession', 'proofSteps', 'roleAssignment', 'factInverted', 'private_json'];\n  294 |   for (const key of prohibited) expect(JSON.stringify(publicCase)).not.toContain(`\"${key}\"`);\n    at /Users/kyumin/Documents/ChatGPT/kiro/tests/e2e/game.spec.ts:291:17"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T06:17:28.584Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/kyumin/Documents/ChatGPT/kiro/test-results/game-sharing-preserves-the-d419c-y-and-deletes-for-the-owner/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/kyumin/Documents/ChatGPT/kiro/test-results/game-sharing-preserves-the-d419c-y-and-deletes-for-the-owner/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/kyumin/Documents/ChatGPT/kiro/test-results/game-sharing-preserves-the-d419c-y-and-deletes-for-the-owner/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/kyumin/Documents/ChatGPT/kiro/tests/e2e/game.spec.ts",
+                    "column": 17,
+                    "line": 291
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-199b20be9f59d0e048b6",
+          "file": "game.spec.ts",
+          "line": 269,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "ui-redesign.spec.ts",
+      "file": "ui-redesign.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "share preview traps forward/reverse focus and restores its opener on Escape",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1180,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T06:17:39.941Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "60d171471997609e54aa-d92031e48c892a430897",
+          "file": "ui-redesign.spec.ts",
+          "line": 12,
+          "column": 5
+        },
+        {
+          "title": "all three cross-examinations gate the verdict and cite only the existing named testimony",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1180,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T06:17:41.288Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "60d171471997609e54aa-61ad9d3519d9bd1411eb",
+          "file": "ui-redesign.spec.ts",
+          "line": 36,
+          "column": 5
+        },
+        {
+          "title": "casting rejects normalized duplicate names and long edge labels fit a 360px photo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 857,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T06:17:42.473Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "60d171471997609e54aa-6914bb51e8e7169c5f3a",
+          "file": "ui-redesign.spec.ts",
+          "line": 86,
+          "column": 5
+        },
+        {
+          "title": "six-world hypothesis cards are reversible personal notes and never judge the remaining world",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1279,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T06:17:43.334Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "60d171471997609e54aa-b6943d9cd04513e66af5",
+          "file": "ui-redesign.spec.ts",
+          "line": 120,
+          "column": 5
+        },
+        {
+          "title": "cancelling a face pointer drag clears movement state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 498,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T06:17:44.619Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "60d171471997609e54aa-32aa372b36487d0880a3",
+          "file": "ui-redesign.spec.ts",
+          "line": 159,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-31T06:14:46.138Z",
+    "duration": 179057.275,
+    "expected": 17,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,2371 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/25.9.0_2/bin/node",
+      "/Users/kyumin/Documents/ChatGPT/kiro/node_modules/.bin/playwright",
+      "test"
+    ],
+    "configFile": "/Users/kyumin/Documents/ChatGPT/kiro/playwright.config.ts",
+    "rootDir": "/Users/kyumin/Documents/ChatGPT/kiro/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/kyumin/Documents/ChatGPT/kiro/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/kyumin/Documents/ChatGPT/kiro/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/kyumin/Documents/ChatGPT/kiro/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/kyumin/Documents/ChatGPT/kiro/tests/e2e",
+        "snapshotDir": "/Users/kyumin/Documents/ChatGPT/kiro/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3000",
+          "browserName": "chromium",
+          "locale": "ko-KR",
+          "launchOptions": {
+            "executablePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+          },
+          "reducedMotion": "reduce",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev",
+      "url": "http://127.0.0.1:3000",
+      "reuseExistingServer": true,
+      "timeout": 120000,
+      "env": {
+        "AI_PROVIDER": "none"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "brand.spec.ts",
+      "file": "brand.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "English browser language",
+          "file": "brand.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "a new en-US visitor sees Kirock Homes in English",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 453,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T06:57:25.753Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7f66a5e57d790915269d-c3da936844eaf481ca59",
+              "file": "brand.spec.ts",
+              "line": 6,
+              "column": 7
+            },
+            {
+              "title": "an explicit language choice overrides en-US and survives reload in both directions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 499,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T06:57:26.458Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7f66a5e57d790915269d-884025bb2da2a54e58a8",
+              "file": "brand.spec.ts",
+              "line": 15,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Korean browser language",
+          "file": "brand.spec.ts",
+          "line": 34,
+          "column": 6,
+          "specs": [
+            {
+              "title": "a new ko-KR visitor also starts in English until they choose a language",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 355,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T06:57:26.963Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7f66a5e57d790915269d-1b8b110a25d44335cdd1",
+              "file": "brand.spec.ts",
+              "line": 37,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "chat.spec.ts",
+      "file": "chat.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "chat in en: sequential evidence, free input, replies and verdict",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 672,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:27.333Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6dac514d5d837ca37b9e-1d569b07947101da7889",
+          "file": "chat.spec.ts",
+          "line": 9,
+          "column": 43
+        },
+        {
+          "title": "chat in ko: sequential evidence, free input, replies and verdict",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 792,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:28.008Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6dac514d5d837ca37b9e-d77c6086e5a9012ea6ee",
+          "file": "chat.spec.ts",
+          "line": 9,
+          "column": 43
+        },
+        {
+          "title": "chat in es: sequential evidence, free input, replies and verdict",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 705,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:28.806Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6dac514d5d837ca37b9e-b877a5cd866dc186eede",
+          "file": "chat.spec.ts",
+          "line": 9,
+          "column": 43
+        },
+        {
+          "title": "chat in fr: sequential evidence, free input, replies and verdict",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 714,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:29.518Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6dac514d5d837ca37b9e-e2ea1c9509c63d25fcfe",
+          "file": "chat.spec.ts",
+          "line": 9,
+          "column": 43
+        },
+        {
+          "title": "chat in de: sequential evidence, free input, replies and verdict",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 667,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:30.239Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6dac514d5d837ca37b9e-2cf00803c7c6c6edf1e9",
+          "file": "chat.spec.ts",
+          "line": 9,
+          "column": 43
+        },
+        {
+          "title": "chat in pt: sequential evidence, free input, replies and verdict",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 678,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:30.911Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6dac514d5d837ca37b9e-e199787ab7b778479f73",
+          "file": "chat.spec.ts",
+          "line": 9,
+          "column": 43
+        },
+        {
+          "title": "chat in ja: sequential evidence, free input, replies and verdict",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 763,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:31.595Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6dac514d5d837ca37b9e-f6fe4b705be540027eef",
+          "file": "chat.spec.ts",
+          "line": 9,
+          "column": 43
+        },
+        {
+          "title": "chat in zh: sequential evidence, free input, replies and verdict",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 739,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:32.362Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6dac514d5d837ca37b9e-39b7b638c61d112dc849",
+          "file": "chat.spec.ts",
+          "line": 9,
+          "column": 43
+        },
+        {
+          "title": "chat in ar: sequential evidence, free input, replies and verdict",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 736,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:33.106Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6dac514d5d837ca37b9e-b7206b054d79a3977fb0",
+          "file": "chat.spec.ts",
+          "line": 9,
+          "column": 43
+        },
+        {
+          "title": "chat in hi: sequential evidence, free input, replies and verdict",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 743,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:33.846Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6dac514d5d837ca37b9e-24c064e42ccf23cdfed7",
+          "file": "chat.spec.ts",
+          "line": 9,
+          "column": 43
+        },
+        {
+          "title": "chat at 360px has reachable composer, readable photo and no overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 635,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:34.594Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6dac514d5d837ca37b9e-6b8afbe8a3af025aed82",
+          "file": "chat.spec.ts",
+          "line": 15,
+          "column": 43
+        },
+        {
+          "title": "chat at 390px has reachable composer, readable photo and no overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 537,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:35.234Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6dac514d5d837ca37b9e-5c25d4ff5c309978b0b5",
+          "file": "chat.spec.ts",
+          "line": 15,
+          "column": 43
+        },
+        {
+          "title": "chat at 768px has reachable composer, readable photo and no overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 652,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:35.774Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6dac514d5d837ca37b9e-a8634cff2f2caaa32e37",
+          "file": "chat.spec.ts",
+          "line": 15,
+          "column": 43
+        },
+        {
+          "title": "chat at 1440px has reachable composer, readable photo and no overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 665,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:36.432Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6dac514d5d837ca37b9e-933d23037f8f4ee5af51",
+          "file": "chat.spec.ts",
+          "line": 15,
+          "column": 43
+        },
+        {
+          "title": "photo story uses one real photo and its shutter opens the same actual game scene",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 567,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:37.103Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6dac514d5d837ca37b9e-a74d8fa8c1c20a8bae57",
+          "file": "chat.spec.ts",
+          "line": 23,
+          "column": 5
+        },
+        {
+          "title": "AI plan uses the player target and recent history, interjects and preserves evidence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 529,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:37.677Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6dac514d5d837ca37b9e-6c982a65bf661c143d62",
+          "file": "chat.spec.ts",
+          "line": 28,
+          "column": 5
+        },
+        {
+          "title": "malformed chat and user-cancelled slow AI both fall back and allow accusation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 510,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:38.211Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6dac514d5d837ca37b9e-18cf045c6e244bf49e72",
+          "file": "chat.spec.ts",
+          "line": 32,
+          "column": 5
+        },
+        {
+          "title": "Arabic mobile retains evidence across language change, traps accusation focus and allows cancellation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 560,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:38.726Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6dac514d5d837ca37b9e-082c5692bdba191ec93b",
+          "file": "chat.spec.ts",
+          "line": 36,
+          "column": 5
+        },
+        {
+          "title": "mobile photo expansion preserves original coordinates and closes with Escape",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 500,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:39.291Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6dac514d5d837ca37b9e-aab4808f047768dfc049",
+          "file": "chat.spec.ts",
+          "line": 39,
+          "column": 5
+        },
+        {
+          "title": "a typed direct address is passed as an explicit recipient and wrong-speaker output falls back",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 438,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:39.797Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6dac514d5d837ca37b9e-72ce6846d2e4a0253f2d",
+          "file": "chat.spec.ts",
+          "line": 42,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "game.spec.ts",
+      "file": "game.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "sample correct verdict and wrong verdict both complete without API keys",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1249,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:40.270Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-4684247c329e818791b2",
+          "file": "game.spec.ts",
+          "line": 57,
+          "column": 5
+        },
+        {
+          "title": "sample can be completed using only keyboard navigation and subtitles",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 599,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:41.523Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-0c5575510486e406793e",
+          "file": "game.spec.ts",
+          "line": 70,
+          "column": 5
+        },
+        {
+          "title": "mobile/tablet 360px keeps photo faces and statements within the viewport",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 693,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:42.127Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-0811a5cd1af0919682e1",
+          "file": "game.spec.ts",
+          "line": 80,
+          "column": 7
+        },
+        {
+          "title": "mobile/tablet 390px keeps photo faces and statements within the viewport",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 690,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:42.826Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-8905f02051f8de3248a3",
+          "file": "game.spec.ts",
+          "line": 80,
+          "column": 7
+        },
+        {
+          "title": "mobile/tablet 768px keeps photo faces and statements within the viewport",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 720,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:43.522Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-f88221b07737e41befc0",
+          "file": "game.spec.ts",
+          "line": 80,
+          "column": 7
+        },
+        {
+          "title": "landscape, portrait, EXIF rotation and manual clockwise rotation preserve photo coordinates",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1524,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:44.248Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-bff83796a74b6b8a0de1",
+          "file": "game.spec.ts",
+          "line": 96,
+          "column": 5
+        },
+        {
+          "title": "unsupported and corrupted photo files give usable errors and sample remains playable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 811,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:45.777Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-d90ddb1dd2bdc49209f9",
+          "file": "game.spec.ts",
+          "line": 143,
+          "column": 5
+        },
+        {
+          "title": "missing AI key falls back to manual selection with explicit analysis consent",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1096,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:46.595Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-5983c7395827b2f7009a",
+          "file": "game.spec.ts",
+          "line": 153,
+          "column": 5
+        },
+        {
+          "title": "invalid AI output and real client timeout both retain a completable manual path",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10789,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:47.696Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-9f9bc1225e6963d73114",
+          "file": "game.spec.ts",
+          "line": 172,
+          "column": 5
+        },
+        {
+          "title": "valid AI candidates use displayName and a late response cannot overwrite manual choices",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2221,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:57:58.492Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-0ad1e5b7498acef71452",
+          "file": "game.spec.ts",
+          "line": 195,
+          "column": 5
+        },
+        {
+          "title": "corrupted JSON and malformed ready responses never crash the casting screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1940,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:58:00.718Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-f18556a852ab9fc0d710",
+          "file": "game.spec.ts",
+          "line": 219,
+          "column": 5
+        },
+        {
+          "title": "sharing preserves the case, hides answers, supports independent one-shot play, and deletes for the owner",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2957,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:58:02.665Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-199b20be9f59d0e048b6",
+          "file": "game.spec.ts",
+          "line": 239,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "lens-story.spec.ts",
+      "file": "lens-story.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "the lens travels across the same photograph with an enlarged optical crop",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 624,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:58:05.632Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d6aa7e26c298b5fc5b6-c4ea26cea015a66f4aa7",
+          "file": "lens-story.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "story plays a complete loop, pauses, resumes and closes without delayed navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4534,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:58:06.263Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d6aa7e26c298b5fc5b6-f6b725e89d8b01552ac1",
+          "file": "lens-story.spec.ts",
+          "line": 17,
+          "column": 5
+        },
+        {
+          "title": "story at 360px in en keeps every scene and control on screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 750,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:58:10.803Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d6aa7e26c298b5fc5b6-2e1c57616f08a5774f5d",
+          "file": "lens-story.spec.ts",
+          "line": 29,
+          "column": 77
+        },
+        {
+          "title": "story at 360px in ko keeps every scene and control on screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 798,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:58:11.559Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d6aa7e26c298b5fc5b6-2edda96c3275926e5d87",
+          "file": "lens-story.spec.ts",
+          "line": 29,
+          "column": 77
+        },
+        {
+          "title": "story at 360px in es keeps every scene and control on screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 711,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:58:12.362Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d6aa7e26c298b5fc5b6-ec29cdd5abd916fea68f",
+          "file": "lens-story.spec.ts",
+          "line": 29,
+          "column": 77
+        },
+        {
+          "title": "story at 360px in fr keeps every scene and control on screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 713,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:58:13.079Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d6aa7e26c298b5fc5b6-9041e6093df357c1b9d9",
+          "file": "lens-story.spec.ts",
+          "line": 29,
+          "column": 77
+        },
+        {
+          "title": "story at 360px in de keeps every scene and control on screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 659,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:58:13.798Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d6aa7e26c298b5fc5b6-b92dff079b2cff408c22",
+          "file": "lens-story.spec.ts",
+          "line": 29,
+          "column": 77
+        },
+        {
+          "title": "story at 360px in pt keeps every scene and control on screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 699,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:58:14.461Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d6aa7e26c298b5fc5b6-84155a93910cad096041",
+          "file": "lens-story.spec.ts",
+          "line": 29,
+          "column": 77
+        },
+        {
+          "title": "story at 360px in ja keeps every scene and control on screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 706,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:58:15.165Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d6aa7e26c298b5fc5b6-8fa0d1a6d4efb2ace427",
+          "file": "lens-story.spec.ts",
+          "line": 29,
+          "column": 77
+        },
+        {
+          "title": "story at 360px in zh keeps every scene and control on screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 653,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:58:15.876Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d6aa7e26c298b5fc5b6-3b3f10afc97a6aea67a7",
+          "file": "lens-story.spec.ts",
+          "line": 29,
+          "column": 77
+        },
+        {
+          "title": "story at 360px in ar keeps every scene and control on screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 739,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:58:16.534Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d6aa7e26c298b5fc5b6-3a4ce46d014046807ee8",
+          "file": "lens-story.spec.ts",
+          "line": 29,
+          "column": 77
+        },
+        {
+          "title": "story at 360px in hi keeps every scene and control on screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 693,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:58:17.278Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d6aa7e26c298b5fc5b6-12c224be3a28d4ac9ca1",
+          "file": "lens-story.spec.ts",
+          "line": 29,
+          "column": 77
+        }
+      ]
+    },
+    {
+      "title": "opening.spec.ts",
+      "file": "opening.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "reduced motion bypasses automatically and explicit replay waits on a static accessible title screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6947,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:58:44.956Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0dd38654c2908fb5f757-36e08cc0059b99761b28",
+          "file": "opening.spec.ts",
+          "line": 145,
+          "column": 5
+        },
+        {
+          "title": "compact static replay keeps dialogue, character and controls separate in all ten languages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1418,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "compact en: {\"copy\":{\"x\":24,\"y\":76,\"width\":312,\"height\":173.1875},\"dialogue\":{\"x\":24,\"y\":197.1875,\"width\":310,\"height\":52},\"character\":{\"x\":85,\"y\":316.59375,\"width\":190,\"height\":190},\"skip\":{\"x\":20,\"y\":562,\"width\":180,\"height\":58}}\n"
+                    },
+                    {
+                      "text": "compact ko: {\"copy\":{\"x\":24,\"y\":76,\"width\":312,\"height\":170.9375},\"dialogue\":{\"x\":24,\"y\":195.75,\"width\":310,\"height\":51.1875},\"character\":{\"x\":85,\"y\":315.46875,\"width\":190,\"height\":190},\"skip\":{\"x\":20,\"y\":562,\"width\":180,\"height\":58}}\n"
+                    },
+                    {
+                      "text": "compact es: {\"copy\":{\"x\":24,\"y\":76,\"width\":312,\"height\":173.1875},\"dialogue\":{\"x\":24,\"y\":197.1875,\"width\":310,\"height\":52},\"character\":{\"x\":85,\"y\":316.59375,\"width\":190,\"height\":190},\"skip\":{\"x\":20,\"y\":562,\"width\":212.03125,\"height\":58}}\n"
+                    },
+                    {
+                      "text": "compact fr: {\"copy\":{\"x\":24,\"y\":76,\"width\":312,\"height\":173.1875},\"dialogue\":{\"x\":24,\"y\":197.1875,\"width\":310,\"height\":52},\"character\":{\"x\":85,\"y\":316.59375,\"width\":190,\"height\":190},\"skip\":{\"x\":20,\"y\":562,\"width\":227.046875,\"height\":58}}\n"
+                    },
+                    {
+                      "text": "compact de: {\"copy\":{\"x\":24,\"y\":76,\"width\":312,\"height\":173.1875},\"dialogue\":{\"x\":24,\"y\":197.1875,\"width\":310,\"height\":52},\"character\":{\"x\":85,\"y\":316.59375,\"width\":190,\"height\":190},\"skip\":{\"x\":20,\"y\":562,\"width\":208.015625,\"height\":58}}\n"
+                    },
+                    {
+                      "text": "compact pt: {\"copy\":{\"x\":24,\"y\":76,\"width\":312,\"height\":173.1875},\"dialogue\":{\"x\":24,\"y\":197.1875,\"width\":310,\"height\":52},\"character\":{\"x\":85,\"y\":316.59375,\"width\":190,\"height\":190},\"skip\":{\"x\":20,\"y\":562,\"width\":191.015625,\"height\":58}}\n"
+                    },
+                    {
+                      "text": "compact ja: {\"copy\":{\"x\":24,\"y\":76,\"width\":312,\"height\":173.1875},\"dialogue\":{\"x\":24,\"y\":197.1875,\"width\":310,\"height\":52},\"character\":{\"x\":85,\"y\":316.59375,\"width\":190,\"height\":190},\"skip\":{\"x\":20,\"y\":562,\"width\":219.28125,\"height\":58}}\n"
+                    },
+                    {
+                      "text": "compact zh: {\"copy\":{\"x\":24,\"y\":76,\"width\":312,\"height\":173.1875},\"dialogue\":{\"x\":24,\"y\":197.1875,\"width\":310,\"height\":52},\"character\":{\"x\":85,\"y\":316.59375,\"width\":190,\"height\":190},\"skip\":{\"x\":20,\"y\":562,\"width\":180,\"height\":58}}\n"
+                    },
+                    {
+                      "text": "compact ar: {\"copy\":{\"x\":24,\"y\":76,\"width\":312,\"height\":146.6875},\"dialogue\":{\"x\":26,\"y\":197.1875,\"width\":310,\"height\":25.5},\"character\":{\"x\":85,\"y\":303.34375,\"width\":190,\"height\":190},\"skip\":{\"x\":20,\"y\":562,\"width\":180,\"height\":58}}\n"
+                    },
+                    {
+                      "text": "compact hi: {\"copy\":{\"x\":24,\"y\":76,\"width\":312,\"height\":172.1875},\"dialogue\":{\"x\":24,\"y\":197.1875,\"width\":310,\"height\":51},\"character\":{\"x\":85,\"y\":316.09375,\"width\":190,\"height\":190},\"skip\":{\"x\":20,\"y\":562,\"width\":180,\"height\":58}}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:58:51.910Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "compact-opening-bounds",
+                      "contentType": "application/json",
+                      "body": "ewogICJlbiI6IHsKICAgICJ0ZXh0IjogIuKAnEV2ZXJ5IHJvb20gaGFzIGEgc3RvcnkuIFlvdXJzIGhhcyBzdXNwZWN0cy7igJ0iLAogICAgImJvdW5kcyI6IHsKICAgICAgImNvcHkiOiB7CiAgICAgICAgIngiOiAyNCwKICAgICAgICAieSI6IDc2LAogICAgICAgICJ3aWR0aCI6IDMxMiwKICAgICAgICAiaGVpZ2h0IjogMTczLjE4NzUKICAgICAgfSwKICAgICAgImRpYWxvZ3VlIjogewogICAgICAgICJ4IjogMjQsCiAgICAgICAgInkiOiAxOTcuMTg3NSwKICAgICAgICAid2lkdGgiOiAzMTAsCiAgICAgICAgImhlaWdodCI6IDUyCiAgICAgIH0sCiAgICAgICJjaGFyYWN0ZXIiOiB7CiAgICAgICAgIngiOiA4NSwKICAgICAgICAieSI6IDMxNi41OTM3NSwKICAgICAgICAid2lkdGgiOiAxOTAsCiAgICAgICAgImhlaWdodCI6IDE5MAogICAgICB9LAogICAgICAic2tpcCI6IHsKICAgICAgICAieCI6IDIwLAogICAgICAgICJ5IjogNTYyLAogICAgICAgICJ3aWR0aCI6IDE4MCwKICAgICAgICAiaGVpZ2h0IjogNTgKICAgICAgfQogICAgfQogIH0sCiAgImtvIjogewogICAgInRleHQiOiAi4oCc67Cp66eI64ukIOyCrOyXsOydgCDsnojsp4AuIOyekOuEpCDrsKnsl5Qg7Jqp7J2Y7J6Q64+EIOyeiOqzoC7igJ0iLAogICAgImJvdW5kcyI6IHsKICAgICAgImNvcHkiOiB7CiAgICAgICAgIngiOiAyNCwKICAgICAgICAieSI6IDc2LAogICAgICAgICJ3aWR0aCI6IDMxMiwKICAgICAgICAiaGVpZ2h0IjogMTcwLjkzNzUKICAgICAgfSwKICAgICAgImRpYWxvZ3VlIjogewogICAgICAgICJ4IjogMjQsCiAgICAgICAgInkiOiAxOTUuNzUsCiAgICAgICAgIndpZHRoIjogMzEwLAogICAgICAgICJoZWlnaHQiOiA1MS4xODc1CiAgICAgIH0sCiAgICAgICJjaGFyYWN0ZXIiOiB7CiAgICAgICAgIngiOiA4NSwKICAgICAgICAieSI6IDMxNS40Njg3NSwKICAgICAgICAid2lkdGgiOiAxOTAsCiAgICAgICAgImhlaWdodCI6IDE5MAogICAgICB9LAogICAgICAic2tpcCI6IHsKICAgICAgICAieCI6IDIwLAogICAgICAgICJ5IjogNTYyLAogICAgICAgICJ3aWR0aCI6IDE4MCwKICAgICAgICAiaGVpZ2h0IjogNTgKICAgICAgfQogICAgfQogIH0sCiAgImVzIjogewogICAgInRleHQiOiAi4oCcQ2FkYSBoYWJpdGFjacOzbiB0aWVuZSB1bmEgaGlzdG9yaWEuIExhIHR1eWEgdGllbmUgc29zcGVjaG9zb3Mu4oCdIiwKICAgICJib3VuZHMiOiB7CiAgICAgICJjb3B5IjogewogICAgICAgICJ4IjogMjQsCiAgICAgICAgInkiOiA3NiwKICAgICAgICAid2lkdGgiOiAzMTIsCiAgICAgICAgImhlaWdodCI6IDE3My4xODc1CiAgICAgIH0sCiAgICAgICJkaWFsb2d1ZSI6IHsKICAgICAgICAieCI6IDI0LAogICAgICAgICJ5IjogMTk3LjE4NzUsCiAgICAgICAgIndpZHRoIjogMzEwLAogICAgICAgICJoZWlnaHQiOiA1MgogICAgICB9LAogICAgICAiY2hhcmFjdGVyIjogewogICAgICAgICJ4IjogODUsCiAgICAgICAgInkiOiAzMTYuNTkzNzUsCiAgICAgICAgIndpZHRoIjogMTkwLAogICAgICAgICJoZWlnaHQiOiAxOTAKICAgICAgfSwKICAgICAgInNraXAiOiB7CiAgICAgICAgIngiOiAyMCwKICAgICAgICAieSI6IDU2MiwKICAgICAgICAid2lkdGgiOiAyMTIuMDMxMjUsCiAgICAgICAgImhlaWdodCI6IDU4CiAgICAgIH0KICAgIH0KICB9LAogICJmciI6IHsKICAgICJ0ZXh0IjogIuKAnENoYXF1ZSBwacOoY2UgYSBzb24gaGlzdG9pcmUuIExhIHbDtHRyZSBhIHNlcyBzdXNwZWN0cy7igJ0iLAogICAgImJvdW5kcyI6IHsKICAgICAgImNvcHkiOiB7CiAgICAgICAgIngiOiAyNCwKICAgICAgICAieSI6IDc2LAogICAgICAgICJ3aWR0aCI6IDMxMiwKICAgICAgICAiaGVpZ2h0IjogMTczLjE4NzUKICAgICAgfSwKICAgICAgImRpYWxvZ3VlIjogewogICAgICAgICJ4IjogMjQsCiAgICAgICAgInkiOiAxOTcuMTg3NSwKICAgICAgICAid2lkdGgiOiAzMTAsCiAgICAgICAgImhlaWdodCI6IDUyCiAgICAgIH0sCiAgICAgICJjaGFyYWN0ZXIiOiB7CiAgICAgICAgIngiOiA4NSwKICAgICAgICAieSI6IDMxNi41OTM3NSwKICAgICAgICAid2lkdGgiOiAxOTAsCiAgICAgICAgImhlaWdodCI6IDE5MAogICAgICB9LAogICAgICAic2tpcCI6IHsKICAgICAgICAieCI6IDIwLAogICAgICAgICJ5IjogNTYyLAogICAgICAgICJ3aWR0aCI6IDIyNy4wNDY4NzUsCiAgICAgICAgImhlaWdodCI6IDU4CiAgICAgIH0KICAgIH0KICB9LAogICJkZSI6IHsKICAgICJ0ZXh0IjogIuKAnEplZGVzIFppbW1lciBoYXQgc2VpbmUgR2VzY2hpY2h0ZS4gRGVpbmVzIGhhdCBWZXJkw6RjaHRpZ2Uu4oCdIiwKICAgICJib3VuZHMiOiB7CiAgICAgICJjb3B5IjogewogICAgICAgICJ4IjogMjQsCiAgICAgICAgInkiOiA3NiwKICAgICAgICAid2lkdGgiOiAzMTIsCiAgICAgICAgImhlaWdodCI6IDE3My4xODc1CiAgICAgIH0sCiAgICAgICJkaWFsb2d1ZSI6IHsKICAgICAgICAieCI6IDI0LAogICAgICAgICJ5IjogMTk3LjE4NzUsCiAgICAgICAgIndpZHRoIjogMzEwLAogICAgICAgICJoZWlnaHQiOiA1MgogICAgICB9LAogICAgICAiY2hhcmFjdGVyIjogewogICAgICAgICJ4IjogODUsCiAgICAgICAgInkiOiAzMTYuNTkzNzUsCiAgICAgICAgIndpZHRoIjogMTkwLAogICAgICAgICJoZWlnaHQiOiAxOTAKICAgICAgfSwKICAgICAgInNraXAiOiB7CiAgICAgICAgIngiOiAyMCwKICAgICAgICAieSI6IDU2MiwKICAgICAgICAid2lkdGgiOiAyMDguMDE1NjI1LAogICAgICAgICJoZWlnaHQiOiA1OAogICAgICB9CiAgICB9CiAgfSwKICAicHQiOiB7CiAgICAidGV4dCI6ICLigJxUb2RvIGPDtG1vZG8gdGVtIHVtYSBoaXN0w7NyaWEuIE8gc2V1IHRlbSBzdXNwZWl0b3Mu4oCdIiwKICAgICJib3VuZHMiOiB7CiAgICAgICJjb3B5IjogewogICAgICAgICJ4IjogMjQsCiAgICAgICAgInkiOiA3NiwKICAgICAgICAid2lkdGgiOiAzMTIsCiAgICAgICAgImhlaWdodCI6IDE3My4xODc1CiAgICAgIH0sCiAgICAgICJkaWFsb2d1ZSI6IHsKICAgICAgICAieCI6IDI0LAogICAgICAgICJ5IjogMTk3LjE4NzUsCiAgICAgICAgIndpZHRoIjogMzEwLAogICAgICAgICJoZWlnaHQiOiA1MgogICAgICB9LAogICAgICAiY2hhcmFjdGVyIjogewogICAgICAgICJ4IjogODUsCiAgICAgICAgInkiOiAzMTYuNTkzNzUsCiAgICAgICAgIndpZHRoIjogMTkwLAogICAgICAgICJoZWlnaHQiOiAxOTAKICAgICAgfSwKICAgICAgInNraXAiOiB7CiAgICAgICAgIngiOiAyMCwKICAgICAgICAieSI6IDU2MiwKICAgICAgICAid2lkdGgiOiAxOTEuMDE1NjI1LAogICAgICAgICJoZWlnaHQiOiA1OAogICAgICB9CiAgICB9CiAgfSwKICAiamEiOiB7CiAgICAidGV4dCI6ICLigJzjganjga7pg6jlsYvjgavjgoLnianoqp7jgYzjgYLjgovjgILlkJvjga7pg6jlsYvjgavjga/jgIHlrrnnlpHogIXjgb7jgafjgYTjgovjgILigJ0iLAogICAgImJvdW5kcyI6IHsKICAgICAgImNvcHkiOiB7CiAgICAgICAgIngiOiAyNCwKICAgICAgICAieSI6IDc2LAogICAgICAgICJ3aWR0aCI6IDMxMiwKICAgICAgICAiaGVpZ2h0IjogMTczLjE4NzUKICAgICAgfSwKICAgICAgImRpYWxvZ3VlIjogewogICAgICAgICJ4IjogMjQsCiAgICAgICAgInkiOiAxOTcuMTg3NSwKICAgICAgICAid2lkdGgiOiAzMTAsCiAgICAgICAgImhlaWdodCI6IDUyCiAgICAgIH0sCiAgICAgICJjaGFyYWN0ZXIiOiB7CiAgICAgICAgIngiOiA4NSwKICAgICAgICAieSI6IDMxNi41OTM3NSwKICAgICAgICAid2lkdGgiOiAxOTAsCiAgICAgICAgImhlaWdodCI6IDE5MAogICAgICB9LAogICAgICAic2tpcCI6IHsKICAgICAgICAieCI6IDIwLAogICAgICAgICJ5IjogNTYyLAogICAgICAgICJ3aWR0aCI6IDIxOS4yODEyNSwKICAgICAgICAiaGVpZ2h0IjogNTgKICAgICAgfQogICAgfQogIH0sCiAgInpoIjogewogICAgInRleHQiOiAi4oCc5q+P5Liq5oi/6Ze06YO95pyJ5pWF5LqL44CC5L2g55qE5oi/6Ze077yM6L+Y5pyJ5auM55aR5Lq644CC4oCdIiwKICAgICJib3VuZHMiOiB7CiAgICAgICJjb3B5IjogewogICAgICAgICJ4IjogMjQsCiAgICAgICAgInkiOiA3NiwKICAgICAgICAid2lkdGgiOiAzMTIsCiAgICAgICAgImhlaWdodCI6IDE3My4xODc1CiAgICAgIH0sCiAgICAgICJkaWFsb2d1ZSI6IHsKICAgICAgICAieCI6IDI0LAogICAgICAgICJ5IjogMTk3LjE4NzUsCiAgICAgICAgIndpZHRoIjogMzEwLAogICAgICAgICJoZWlnaHQiOiA1MgogICAgICB9LAogICAgICAiY2hhcmFjdGVyIjogewogICAgICAgICJ4IjogODUsCiAgICAgICAgInkiOiAzMTYuNTkzNzUsCiAgICAgICAgIndpZHRoIjogMTkwLAogICAgICAgICJoZWlnaHQiOiAxOTAKICAgICAgfSwKICAgICAgInNraXAiOiB7CiAgICAgICAgIngiOiAyMCwKICAgICAgICAieSI6IDU2MiwKICAgICAgICAid2lkdGgiOiAxODAsCiAgICAgICAgImhlaWdodCI6IDU4CiAgICAgIH0KICAgIH0KICB9LAogICJhciI6IHsKICAgICJ0ZXh0IjogIuKAnNmE2YPZhCDYutix2YHYqSDYrdmD2KfZitipLiDZiNmB2Yog2LrYsdmB2KrZgyDZhdi02KrYqNmHINio2YfZhSDYo9mK2LbZi9inLuKAnSIsCiAgICAiYm91bmRzIjogewogICAgICAiY29weSI6IHsKICAgICAgICAieCI6IDI0LAogICAgICAgICJ5IjogNzYsCiAgICAgICAgIndpZHRoIjogMzEyLAogICAgICAgICJoZWlnaHQiOiAxNDYuNjg3NQogICAgICB9LAogICAgICAiZGlhbG9ndWUiOiB7CiAgICAgICAgIngiOiAyNiwKICAgICAgICAieSI6IDE5Ny4xODc1LAogICAgICAgICJ3aWR0aCI6IDMxMCwKICAgICAgICAiaGVpZ2h0IjogMjUuNQogICAgICB9LAogICAgICAiY2hhcmFjdGVyIjogewogICAgICAgICJ4IjogODUsCiAgICAgICAgInkiOiAzMDMuMzQzNzUsCiAgICAgICAgIndpZHRoIjogMTkwLAogICAgICAgICJoZWlnaHQiOiAxOTAKICAgICAgfSwKICAgICAgInNraXAiOiB7CiAgICAgICAgIngiOiAyMCwKICAgICAgICAieSI6IDU2MiwKICAgICAgICAid2lkdGgiOiAxODAsCiAgICAgICAgImhlaWdodCI6IDU4CiAgICAgIH0KICAgIH0KICB9LAogICJoaSI6IHsKICAgICJ0ZXh0IjogIuKAnOCkueCksCDgpJXgpK7gpLDgpYcg4KSV4KWAIOCkheCkquCkqOClgCDgpJXgpLngpL7gpKjgpYAg4KS54KWL4KSk4KWAIOCkueCliOClpCDgpKTgpYHgpK7gpY3gpLngpL7gpLDgpYcg4KSV4KSu4KSw4KWHIOCkruClh+CkgiDgpKTgpYsg4KS44KSC4KSm4KS/4KSX4KWN4KSnIOCkreClgCDgpLngpYjgpILgpaTigJ0iLAogICAgImJvdW5kcyI6IHsKICAgICAgImNvcHkiOiB7CiAgICAgICAgIngiOiAyNCwKICAgICAgICAieSI6IDc2LAogICAgICAgICJ3aWR0aCI6IDMxMiwKICAgICAgICAiaGVpZ2h0IjogMTcyLjE4NzUKICAgICAgfSwKICAgICAgImRpYWxvZ3VlIjogewogICAgICAgICJ4IjogMjQsCiAgICAgICAgInkiOiAxOTcuMTg3NSwKICAgICAgICAid2lkdGgiOiAzMTAsCiAgICAgICAgImhlaWdodCI6IDUxCiAgICAgIH0sCiAgICAgICJjaGFyYWN0ZXIiOiB7CiAgICAgICAgIngiOiA4NSwKICAgICAgICAieSI6IDMxNi4wOTM3NSwKICAgICAgICAid2lkdGgiOiAxOTAsCiAgICAgICAgImhlaWdodCI6IDE5MAogICAgICB9LAogICAgICAic2tpcCI6IHsKICAgICAgICAieCI6IDIwLAogICAgICAgICJ5IjogNTYyLAogICAgICAgICJ3aWR0aCI6IDE4MCwKICAgICAgICAiaGVpZ2h0IjogNTgKICAgICAgfQogICAgfQogIH0KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0dd38654c2908fb5f757-550abc9c2a7f00c12c9b",
+          "file": "opening.spec.ts",
+          "line": 164,
+          "column": 5
+        }
+      ],
+      "suites": [
+        {
+          "title": "first-visit cinematic opening",
+          "file": "opening.spec.ts",
+          "line": 33,
+          "column": 6,
+          "specs": [
+            {
+              "title": "the opening fills the viewport, contains keyboard focus, and stays dismissed after reload",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 568,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T06:58:17.982Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0dd38654c2908fb5f757-3fa5ab8a6dcb73b511b2",
+              "file": "opening.spec.ts",
+              "line": 36,
+              "column": 7
+            },
+            {
+              "title": "the complete opening reveals the homepage automatically and releases scrolling",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7833,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T06:58:18.553Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0dd38654c2908fb5f757-3e1982dbe69869a1598c",
+              "file": "opening.spec.ts",
+              "line": 58,
+              "column": 7
+            },
+            {
+              "title": "the mobile character entrance keeps its single bottom-left exit on screen",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2516,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T06:58:26.392Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0dd38654c2908fb5f757-2bad020138dc4fddcb29",
+              "file": "opening.spec.ts",
+              "line": 75,
+              "column": 7
+            },
+            {
+              "title": "replay restores its opener and cancelled timers cannot interrupt a new game",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7688,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T06:58:28.913Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0dd38654c2908fb5f757-527f5898d8eb5898401e",
+              "file": "opening.spec.ts",
+              "line": 97,
+              "column": 7
+            },
+            {
+              "title": "unavailable storage and failed artwork cannot trap a player in the opening",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7895,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T06:58:36.608Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0dd38654c2908fb5f757-9111c50291371b7e1e5c",
+              "file": "opening.spec.ts",
+              "line": 118,
+              "column": 7
+            },
+            {
+              "title": "a direct shared-case link bypasses the opening before reporting an expired case",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 438,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T06:58:44.512Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0dd38654c2908fb5f757-ef56c08bca10758d521a",
+              "file": "opening.spec.ts",
+              "line": 136,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "preflight.spec.ts",
+      "file": "preflight.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "cold opening waits for the desk photo and always shows a branded first frame",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2866,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:58:53.339Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0cec08b5ff809b421064-85e291ac2f4ab52f0902",
+          "file": "preflight.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "the corrected intro plays once for visitors who saw the old version",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 475,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:58:56.210Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0cec08b5ff809b421064-183e522ecfd517db85e4",
+          "file": "preflight.spec.ts",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "a hidden tab pauses the intro clock and animation, then resumes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1234,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:58:56.690Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0cec08b5ff809b421064-7c4405a20cfc125fdff3",
+          "file": "preflight.spec.ts",
+          "line": 24,
+          "column": 5
+        },
+        {
+          "title": "a missing scene photograph still provides a visible title and working skip",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3363,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:58:57.929Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0cec08b5ff809b421064-89fe1c92af1070781057",
+          "file": "preflight.spec.ts",
+          "line": 37,
+          "column": 5
+        },
+        {
+          "title": "entry labels are centered and legible from compact phones to desktop",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1248,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:59:01.297Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0cec08b5ff809b421064-faf660b5778c00d1d52e",
+          "file": "preflight.spec.ts",
+          "line": 45,
+          "column": 5
+        },
+        {
+          "title": "phone chat keeps input and send controls visible when the keyboard reduces available height",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 456,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:59:02.552Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0cec08b5ff809b421064-910cacb00c21c0686908",
+          "file": "preflight.spec.ts",
+          "line": 73,
+          "column": 5
+        },
+        {
+          "title": "real dark-desk.jpg uploads, preserves face placement and completes correct verdict",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1437,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:59:03.012Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0cec08b5ff809b421064-76d10027dc731baa417f",
+          "file": "preflight.spec.ts",
+          "line": 89,
+          "column": 31
+        },
+        {
+          "title": "real work-desk.jpg uploads, preserves face placement and completes wrong verdict",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1658,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T06:59:04.455Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0cec08b5ff809b421064-c8346ebf177fd809d603",
+          "file": "preflight.spec.ts",
+          "line": 89,
+          "column": 31
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-05T06:57:25.469Z",
+    "duration": 100921.189,
+    "expected": 63,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

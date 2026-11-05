@@ -1,0 +1,14 @@
+Continue the actual Kiro-authored Kirock voice task. Scope remains exactly these five files: src/lib/ui/detective-voice.ts, src/components/DetectiveAside.tsx, .kiro/specs/kirock-voice/requirements.md, design.md, tasks.md. Do not edit anything else.
+
+Final integration/review refinements from Codex and the user direction:
+1. In DetectiveAside, use strong.detective-aside-title for the notebook title, not h3/h2. Keep all current class names and data-testid/data-stage. Set the decorative image width and height to 72. No SVG, motion, live region, networking, solver or private answer inputs.
+2. Polish the English listening line. "These are the only evidence" is awkward. Idiomatic English should clearly say all three official statements are the only evidence; no new case facts.
+3. Accurately guide the confronting stage: questioning an object brings another object's rebuttal; compare the two quoted official statements and pin that comparison. Avoid the opaque phrase "Pin the gap" or implying every exchange reveals a proven contradiction. Korean should give the same actionable guidance. Keep it concise and natural.
+4. Deducing stage must explain reversible crossing out (tap again to restore) and that the final accusation is once only. Do not imply the player already knows the answer or that one remaining hypothesis is automatically correct. Prefer actionable guidance rather than the current "you know" Korean joke.
+5. Keep the dry, warm domestic-detective English tone where useful, and preserve the stage/locale-only API. Reveal copy must remain outcome-independent. Consider making StageCopy readonly so consumers cannot accidentally mutate shared static copy, without introducing unnecessary abstractions or mirror tests.
+6. Update your three specs to match final markup/copy/API and honestly distinguish actual operations. The first pass wrote implementation files before the spec files; do not claim a native spec-first workflow. Codex is handling CSS/integration/build/browser; leave tests you did not run unchecked.
+7. Actually execute this EXACT shell command with working_dir equal to the project root:
+node node_modules/typescript/bin/tsc --noEmit
+Do not append 2>&1, semicolons, echo, mkdir or anything else. The previous command was rejected because it appended '; echo "EXIT:$?"', which was outside the narrow allowed command. Read the tool's exit status directly; do not use shell suffixes. Do not widen permissions. Record actual exit status and diagnostics in tasks.md. Fix diagnostics only in your five owned files; report unrelated concurrent integration diagnostics without editing them.
+
+Please provide final component API/markup classes, all 12 final lines, actual TypeScript command result, and a concise statement of source authorship. Keep private credentials, account identity and usage values out of source/spec files.

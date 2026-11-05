@@ -1,0 +1,85 @@
+{
+  "tool": "Kiro CLI",
+  "engine": "v2",
+  "preparedBy": "Codex",
+  "promptFile": "docs/kiro/ten-languages-prompt.txt",
+  "agentFile": ".kiro/agents/kirock-locales.json",
+  "startUTC": "2026-10-31T07:25:49.297Z",
+  "finishedAtUTC": "2026-10-31T07:33:17.041Z",
+  "exitCode": 1,
+  "signal": null,
+  "runStatus": "partial_completion_service_throttled",
+  "validation": {
+    "command": "node --import tsx --conditions=react-server --test tests/secondary-i18n.test.ts",
+    "firstRun": {
+      "exitCode": 1,
+      "reason": "French apostrophe caused a TypeScript transform error",
+      "tests": 1,
+      "passed": 0,
+      "failed": 1
+    },
+    "afterKiroCorrections": {
+      "exitCode": 0,
+      "tests": 19,
+      "passed": 19,
+      "failed": 0,
+      "skipped": 0
+    },
+    "rejectedShellRequests": 2,
+    "fullTypecheckBuildBrowserNotClaimed": true
+  },
+  "lastError": {
+    "stage": "prompt",
+    "message": "Internal error (code -32603): Encountered an error in the response stream: The request was throttled by the service",
+    "requestIdentifierOmitted": true
+  },
+  "sanitization": {
+    "sessionIdentifiersRemoved": true,
+    "accountMeteringRemoved": true,
+    "modelInternalMetadataRemoved": true,
+    "absoluteUserPathsRemoved": true,
+    "toolCallIdentifiersRetainedForCorrelation": true,
+    "rawEvents": 595,
+    "publishedEvents": 567,
+    "removedMetadataEvents": 28
+  },
+  "authorship": "Kiro authored the secondary catalogue, stage-copy extension, component localization, tests, requirements and design. Codex prepared the scope and prompt, owns integration and broader validation, and records the unfinished task list after the throttled run.",
+  "kiroBeforeIntegrationHashesFromFinalCreateToolPayloads": {
+    "src/lib/i18n/secondary-ui.ts": "89f74f9083faee98f4759aac4205cad58b484e101ae2b56f841be779aa5a57a5",
+    "src/lib/ui/detective-voice.ts": "fd2736467a7ba8d5329d63af02f72f4fae3ce020bb989476a371aa16841e0897",
+    "src/components/CrossExamination.tsx": "8d9b43d3c0604b5a785bd41891d1d377f874bddd094b2ec08e023dc9b3ca7391",
+    "src/components/HypothesisBoard.tsx": "6cd1f1ffd20d151910babab700e1c130e21281c3a988cda490582716216edde0",
+    "src/components/DetectiveAside.tsx": "7ca29e1d79810e29fffe1a2d34f4cab874e490cb2f729901d97cc7431e8302d3",
+    "tests/secondary-i18n.test.ts": "bbc54694d7ecf2c3d1a1df1a73492ce3b4aede1408a9e43434167b812112dc56",
+    ".kiro/specs/ten-languages/requirements.md": "0c91a24083c0e4f70306b6cce61a9e8f671246b5ca04214f84a3c777fe07ac60",
+    ".kiro/specs/ten-languages/design.md": "4712ea336d7496646e300ee5e4a0487e186d64d7a8afb9fa15df196a4a99cf0f"
+  },
+  "currentSourceHashCaptureUTC": "2026-10-31T07:36:27.892Z",
+  "currentSourceHashesAtEvidenceCapture": {
+    "src/lib/i18n/secondary-ui.ts": "89f74f9083faee98f4759aac4205cad58b484e101ae2b56f841be779aa5a57a5",
+    "src/lib/ui/detective-voice.ts": "fd2736467a7ba8d5329d63af02f72f4fae3ce020bb989476a371aa16841e0897",
+    "src/components/CrossExamination.tsx": "2c382b98555b5ccb1b314cdc67d672a53c7d1a14879616fc4ac755e455c1b6ce",
+    "src/components/HypothesisBoard.tsx": "3db7429702009c705ef81a446ce98a274f449770100a0c545eb4ccd155be00f8",
+    "src/components/DetectiveAside.tsx": "7ca29e1d79810e29fffe1a2d34f4cab874e490cb2f729901d97cc7431e8302d3",
+    "tests/secondary-i18n.test.ts": "bbc54694d7ecf2c3d1a1df1a73492ce3b4aede1408a9e43434167b812112dc56",
+    ".kiro/specs/ten-languages/requirements.md": "0c91a24083c0e4f70306b6cce61a9e8f671246b5ca04214f84a3c777fe07ac60",
+    ".kiro/specs/ten-languages/design.md": "4712ea336d7496646e300ee5e4a0487e186d64d7a8afb9fa15df196a4a99cf0f"
+  },
+  "filesChangedAfterKiroBeforeThisCapture": [
+    "src/components/CrossExamination.tsx",
+    "src/components/HypothesisBoard.tsx"
+  ],
+  "hashNotes": "Kiro hashes are computed from each final successful create tool input, before Codex integration. Current-source hashes are a separately timed observation, not asserted to be the untouched Kiro output. Documentation corrections and the Codex task record are recorded separately.",
+  "stderrSanitized": "",
+  "codexDocumentationRecordedUTC": "2026-10-31T07:39:03.093Z",
+  "codexDocumentationHashes": {
+    "docs/kiro/ten-languages-README.md": "2a6f9221eebc07f248ef3678f167408003ddc59e4da60a92524c130277146dc2",
+    ".kiro/specs/ten-languages/tasks.md": "2e4d56bc8b2c5bacb38d37c1db805b3cb1a1f04f5417fde7db240f0e29af1d66",
+    ".kiro/specs/ten-languages/design.md": "03bd1aed6adc36d0f569bf45468e0c208ab712e5fb78756cfe3ce737f9636413",
+    "docs/kiro-usage.md": "dbc98152c8309217ab08021cae234e7f593f926c5eb331366f14b99938404e55"
+  },
+  "exportHashes": {
+    "docs/kiro/ten-languages-events.jsonl": "79dfe9807b19505d3523ccfab4a8fa25bbb0ae7d8d906387e7333ccd2c6fbf6a",
+    "docs/kiro/ten-languages-tools.json": "1539ed98204b9ebf54aab371606f32434a45c1ecae73405b14a93f8e256151d7"
+  }
+}

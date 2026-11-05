@@ -1,0 +1,48 @@
+[
+  {
+    "sessionUpdate": "tool_call_update",
+    "toolCallId": "tooluse_jOszuUSwpI6BJAKI9KG1Dp",
+    "kind": "execute",
+    "status": "completed",
+    "title": "Running: node node_modules/typescript/bin/tsc --noEmit 2>&1",
+    "rawInput": {
+      "__tool_use_purpose": "Run tsc --noEmit exactly as specified",
+      "command": "node node_modules/typescript/bin/tsc --noEmit 2>&1",
+      "working_dir": "/Users/kyumin/Documents/ChatGPT/kiro"
+    },
+    "rawOutput": {
+      "items": [
+        {
+          "Json": {
+            "exit_status": "exit status: 2",
+            "stdout": "src/components/DetectiveProp.tsx(171,27): error TS2503: Cannot find namespace 'JSX'.\n",
+            "stderr": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sessionUpdate": "tool_call_update",
+    "toolCallId": "tooluse_jb4eH0gJAnLhxHkTrw9agx",
+    "kind": "execute",
+    "status": "completed",
+    "title": "Running: node node_modules/typescript/bin/tsc --noEmit 2>&1",
+    "rawInput": {
+      "__tool_use_purpose": "Re-run tsc --noEmit after fix",
+      "command": "node node_modules/typescript/bin/tsc --noEmit 2>&1",
+      "working_dir": "/Users/kyumin/Documents/ChatGPT/kiro"
+    },
+    "rawOutput": {
+      "items": [
+        {
+          "Json": {
+            "exit_status": "exit status: 0",
+            "stdout": "",
+            "stderr": ""
+          }
+        }
+      ]
+    }
+  }
+]

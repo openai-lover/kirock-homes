@@ -1,0 +1,42 @@
+{
+  "name": "group-chat-routing",
+  "description": "Scoped routing implementation by Kiro; prepared by Codex",
+  "prompt": "Follow the provided owned-file scope. Never read credentials, .env, .data, user home or photos. No network/MCP/installs. Do not change game evidence. Record actual execution only.",
+  "tools": [
+    "fs_read",
+    "fs_write",
+    "execute_bash"
+  ],
+  "allowedTools": [],
+  "resources": [],
+  "mcpServers": {},
+  "toolsSettings": {
+    "fs_read": {
+      "allowedPaths": [
+        "/Users/kyumin/Documents/ChatGPT/kiro/AGENTS.md",
+        "/Users/kyumin/Documents/ChatGPT/kiro/package.json",
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/lib/game/types.ts",
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/lib/i18n/locales.ts",
+        "/Users/kyumin/Documents/ChatGPT/kiro/docs/group-chat-design.md",
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/lib/chat/routing.ts",
+        "/Users/kyumin/Documents/ChatGPT/kiro/tests/chat-routing.test.ts",
+        "/Users/kyumin/Documents/ChatGPT/kiro/.kiro/specs/group-chat-routing/**"
+      ],
+      "denyByDefault": true
+    },
+    "fs_write": {
+      "allowedPaths": [
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/lib/chat/routing.ts",
+        "/Users/kyumin/Documents/ChatGPT/kiro/tests/chat-routing.test.ts",
+        "/Users/kyumin/Documents/ChatGPT/kiro/.kiro/specs/group-chat-routing/**"
+      ],
+      "denyByDefault": true
+    },
+    "execute_bash": {
+      "allowedCommands": [
+        "^node --import tsx --test tests/chat-routing.test.ts$"
+      ],
+      "denyByDefault": true
+    }
+  }
+}

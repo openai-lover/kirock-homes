@@ -1,0 +1,18 @@
+{
+  "recordedAt": "2026-10-31T05:40:01.323Z",
+  "timezone": "Asia/Seoul",
+  "samples": 1,
+  "browser": "156.0.8078.74",
+  "platform": "darwin",
+  "viewport": {
+    "width": 1280,
+    "height": 900
+  },
+  "server": "Next.js production build, http://127.0.0.1:3000",
+  "reducedMotion": false,
+  "metric": "Sample-start click capture to first open-eye DOM detection plus two requestAnimationFrame callbacks",
+  "milliseconds": 868.5,
+  "underOneSecond": true,
+  "limitations": "One local desktop Chrome run. DOM/frame timing is a proxy for first visible eye; not a device population or a photo-upload latency measurement.",
+  "concurrentBrowserTestSuite": true
+}

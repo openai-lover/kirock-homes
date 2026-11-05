@@ -1,0 +1,63 @@
+
+> room-of-suspects@1.0.0 test:e2e
+> playwright test tests/e2e/opening.spec.ts
+
+
+Running 7 tests using 1 worker
+
+(node:21403) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/opening.spec.ts:36:7 › first-visit cinematic opening › the opening fills the viewport, contains keyboard focus, and stays dismissed after reload (936ms)
+  ✓  2 tests/e2e/opening.spec.ts:58:7 › first-visit cinematic opening › the complete opening reveals the homepage automatically and releases scrolling (7.5s)
+  ✓  3 tests/e2e/opening.spec.ts:75:7 › first-visit cinematic opening › the mobile character entrance keeps both exit controls on screen (3.9s)
+  ✓  4 tests/e2e/opening.spec.ts:97:7 › first-visit cinematic opening › replay restores its opener and cancelled timers cannot interrupt a new game (7.8s)
+  ✓  5 tests/e2e/opening.spec.ts:118:7 › first-visit cinematic opening › unavailable storage and failed artwork cannot trap a player in the opening (7.4s)
+  ✘  6 tests/e2e/opening.spec.ts:136:7 › first-visit cinematic opening › a direct shared-case link bypasses the opening before reporting an expired case (1.5s)
+(node:21460) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  7 tests/e2e/opening.spec.ts:145:5 › reduced motion bypasses automatically and explicit replay waits on a static accessible title screen (7.1s)
+
+
+  1) tests/e2e/opening.spec.ts:136:7 › first-visit cinematic opening › a direct shared-case link bypasses the opening before reporting an expired case 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "This case has expired or was deleted."
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <div role="alert" class="notice error">…</div> aka getByText('This case has expired or was')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 10000ms
+      - waiting for getByRole('alert')
+        5 × locator resolved to <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div>
+          - unexpected value ""
+
+
+      136 |   test('a direct shared-case link bypasses the opening before reporting an expired case', async ({ page }) => {
+      137 |     await page.goto('/s/opening-missing-case');
+    > 138 |     await expect(page.getByRole('alert')).toContainText('This case has expired or was deleted.');
+          |                                           ^
+      139 |     await expect(opening(page)).toHaveCount(0);
+      140 |     await expect(page.getByTestId('game-content')).toHaveJSProperty('inert', false);
+      141 |     expect(await page.evaluate(key => localStorage.getItem(key), seenKey)).toBeNull();
+        at /Users/kyumin/Documents/ChatGPT/kiro/tests/e2e/opening.spec.ts:138:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/opening-first-visit-cinema-64d41-e-reporting-an-expired-case/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/opening-first-visit-cinema-64d41-e-reporting-an-expired-case/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/opening-first-visit-cinema-64d41-e-reporting-an-expired-case/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/opening-first-visit-cinema-64d41-e-reporting-an-expired-case/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/e2e/opening.spec.ts:136:7 › first-visit cinematic opening › a direct shared-case link bypasses the opening before reporting an expired case 
+  6 passed (37.5s)

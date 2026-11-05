@@ -1,0 +1,73 @@
+
+> room-of-suspects@1.0.0 test:e2e
+> playwright test
+
+
+Running 52 tests using 1 worker
+
+(node:22636) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/brand.spec.ts:6:7 › English browser language › a new en-US visitor sees Kirock Homes in English (312ms)
+  ✓   2 tests/e2e/brand.spec.ts:15:7 › English browser language › an explicit language choice overrides en-US and survives reload in both directions (361ms)
+  ✓   3 tests/e2e/brand.spec.ts:37:7 › Korean browser language › a new ko-KR visitor also starts in English until they choose a language (238ms)
+  ✓   4 tests/e2e/game.spec.ts:66:5 › sample correct verdict and wrong verdict both complete without API keys (19.4s)
+  ✓   5 tests/e2e/game.spec.ts:79:5 › sample can be completed using only keyboard navigation and subtitles (9.7s)
+  ✓   6 tests/e2e/game.spec.ts:99:7 › mobile/tablet 360px keeps photo faces and statements within the viewport (9.8s)
+  ✓   7 tests/e2e/game.spec.ts:99:7 › mobile/tablet 390px keeps photo faces and statements within the viewport (9.7s)
+  ✓   8 tests/e2e/game.spec.ts:99:7 › mobile/tablet 768px keeps photo faces and statements within the viewport (9.8s)
+  ✓   9 tests/e2e/game.spec.ts:115:5 › landscape, portrait, EXIF rotation and manual clockwise rotation preserve photo coordinates (10.6s)
+  ✓  10 tests/e2e/game.spec.ts:162:5 › unsupported and corrupted photo files give usable errors and sample remains playable (9.8s)
+  ✓  11 tests/e2e/game.spec.ts:172:5 › missing AI key falls back to manual selection with explicit analysis consent (10.1s)
+  ✓  12 tests/e2e/game.spec.ts:191:5 › invalid AI output and real client timeout both retain a completable manual path (28.9s)
+  ✓  13 tests/e2e/game.spec.ts:214:5 › valid AI candidates use displayName and a late response cannot overwrite manual choices (11.2s)
+  ✓  14 tests/e2e/game.spec.ts:238:5 › corrupted JSON and malformed ready responses never crash the casting screen (20.0s)
+  ✓  15 tests/e2e/game.spec.ts:258:5 › English sample has translated testimony, verdict, and explanation (9.9s)
+  ✓  16 tests/e2e/game.spec.ts:274:5 › sharing preserves the case, hides answers, supports independent one-shot play, and deletes for the owner (30.0s)
+  ✓  17 tests/e2e/languages.spec.ts:8:7 › complete the sample mystery in en at mobile width (905ms)
+  ✓  18 tests/e2e/languages.spec.ts:8:7 › complete the sample mystery in ko at mobile width (919ms)
+  ✓  19 tests/e2e/languages.spec.ts:8:7 › complete the sample mystery in es at mobile width (915ms)
+  ✓  20 tests/e2e/languages.spec.ts:8:7 › complete the sample mystery in fr at mobile width (874ms)
+  ✓  21 tests/e2e/languages.spec.ts:8:7 › complete the sample mystery in de at mobile width (906ms)
+  ✓  22 tests/e2e/languages.spec.ts:8:7 › complete the sample mystery in pt at mobile width (885ms)
+  ✓  23 tests/e2e/languages.spec.ts:8:7 › complete the sample mystery in ja at mobile width (946ms)
+  ✓  24 tests/e2e/languages.spec.ts:8:7 › complete the sample mystery in zh at mobile width (932ms)
+  ✓  25 tests/e2e/languages.spec.ts:8:7 › complete the sample mystery in ar at mobile width (937ms)
+  ✓  26 tests/e2e/languages.spec.ts:8:7 › complete the sample mystery in hi at mobile width (850ms)
+  ✓  27 tests/e2e/languages.spec.ts:44:5 › language changes preserve cross-examination notes, eliminations and photo coordinates (956ms)
+  ✓  28 tests/e2e/languages.spec.ts:64:5 › keyboard language selection persists and an invalid saved language defaults to English (314ms)
+  ✓  29 tests/e2e/languages.spec.ts:78:5 › credits and privacy follow the language choice across all ten locales (398ms)
+  ✓  30 tests/e2e/languages.spec.ts:93:5 › a failed shared verdict translation can retry without a second accusation (908ms)
+  ✓  31 tests/e2e/languages.spec.ts:133:5 › an older shared case keeps English evidence direction inside an Arabic interface (828ms)
+  ✓  32 tests/e2e/novel-visual.spec.ts:53:5 › the novel homepage offers readable copy and keyboard access to its sample on desktop (460ms)
+  ✓  33 tests/e2e/novel-visual.spec.ts:70:5 › the 360px homepage keeps ten languages readable and actions reachable (1.3s)
+  ✓  34 tests/e2e/novel-visual.spec.ts:86:5 › mobile evidence and rebuttals remain readable and usable through a complete confrontation (859ms)
+  ✓  35 tests/e2e/novel-visual.spec.ts:109:5 › responsive layout and translated reading panels preserve the photograph and face positions (732ms)
+  ✓  36 tests/e2e/opening.spec.ts:36:7 › first-visit cinematic opening › the opening fills the viewport, contains keyboard focus, and stays dismissed after reload (309ms)
+  ✓  37 tests/e2e/opening.spec.ts:58:7 › first-visit cinematic opening › the complete opening reveals the homepage automatically and releases scrolling (7.5s)
+  ✓  38 tests/e2e/opening.spec.ts:75:7 › first-visit cinematic opening › the mobile character entrance keeps both exit controls on screen (3.7s)
+  ✓  39 tests/e2e/opening.spec.ts:97:7 › first-visit cinematic opening › replay restores its opener and cancelled timers cannot interrupt a new game (7.6s)
+  ✓  40 tests/e2e/opening.spec.ts:118:7 › first-visit cinematic opening › unavailable storage and failed artwork cannot trap a player in the opening (7.2s)
+  ✓  41 tests/e2e/opening.spec.ts:136:7 › first-visit cinematic opening › a direct shared-case link bypasses the opening before reporting an expired case (243ms)
+  ✓  42 tests/e2e/opening.spec.ts:145:5 › reduced motion bypasses automatically and explicit replay waits on a static accessible title screen (7.0s)
+compact en: {"copy":{"x":24,"y":76,"width":312,"height":186.9375},"dialogue":{"x":24,"y":210.9375,"width":310,"height":52},"character":{"x":85,"y":323.46875,"width":190,"height":190},"skip":{"x":263.96875,"y":16,"width":76.03125,"height":44},"enter":{"x":24,"y":572,"width":122.046875,"height":44}}
+compact ko: {"copy":{"x":24,"y":76,"width":312,"height":183.65625},"dialogue":{"x":24,"y":208.46875,"width":310,"height":51.1875},"character":{"x":85,"y":321.828125,"width":190,"height":190},"skip":{"x":238,"y":16,"width":102,"height":44},"enter":{"x":24,"y":572,"width":118,"height":44}}
+compact es: {"copy":{"x":24,"y":76,"width":312,"height":186.9375},"dialogue":{"x":24,"y":210.9375,"width":310,"height":52},"character":{"x":85,"y":323.46875,"width":190,"height":190},"skip":{"x":214.609375,"y":16,"width":125.390625,"height":44},"enter":{"x":24,"y":572,"width":152.046875,"height":44}}
+compact fr: {"copy":{"x":24,"y":76,"width":312,"height":186.9375},"dialogue":{"x":24,"y":210.9375,"width":310,"height":52},"character":{"x":85,"y":323.46875,"width":190,"height":190},"skip":{"x":205.9375,"y":16,"width":134.0625,"height":44},"enter":{"x":24,"y":572,"width":154.703125,"height":44}}
+compact de: {"copy":{"x":24,"y":76,"width":312,"height":186.9375},"dialogue":{"x":24,"y":210.9375,"width":310,"height":52},"character":{"x":85,"y":323.46875,"width":190,"height":190},"skip":{"x":216.59375,"y":16,"width":123.40625,"height":44},"enter":{"x":24,"y":572,"width":176.09375,"height":44}}
+compact pt: {"copy":{"x":24,"y":76,"width":312,"height":186.9375},"dialogue":{"x":24,"y":210.9375,"width":310,"height":52},"character":{"x":85,"y":323.46875,"width":190,"height":190},"skip":{"x":226.609375,"y":16,"width":113.390625,"height":44},"enter":{"x":24,"y":572,"width":142.71875,"height":44}}
+compact ja: {"copy":{"x":24,"y":76,"width":312,"height":186.9375},"dialogue":{"x":24,"y":210.9375,"width":310,"height":52},"character":{"x":85,"y":323.46875,"width":190,"height":190},"skip":{"x":199.8125,"y":16,"width":140.1875,"height":44},"enter":{"x":24,"y":572,"width":104.28125,"height":44}}
+compact zh: {"copy":{"x":24,"y":76,"width":312,"height":186.9375},"dialogue":{"x":24,"y":210.9375,"width":310,"height":52},"character":{"x":85,"y":323.46875,"width":190,"height":190},"skip":{"x":267.609375,"y":16,"width":72.390625,"height":44},"enter":{"x":24,"y":572,"width":85.140625,"height":44}}
+compact ar: {"copy":{"x":24,"y":76,"width":312,"height":160.4375},"dialogue":{"x":26,"y":210.9375,"width":310,"height":25.5},"character":{"x":85,"y":310.21875,"width":190,"height":190},"skip":{"x":20,"y":16,"width":78.796875,"height":44},"enter":{"x":252.46875,"y":572,"width":83.53125,"height":44}}
+compact hi: {"copy":{"x":24,"y":76,"width":312,"height":185.9375},"dialogue":{"x":24,"y":210.9375,"width":310,"height":51},"character":{"x":85,"y":322.96875,"width":190,"height":190},"skip":{"x":262.109375,"y":16,"width":77.890625,"height":44},"enter":{"x":24,"y":572,"width":108.796875,"height":44}}
+  ✓  43 tests/e2e/opening.spec.ts:164:5 › compact static replay keeps dialogue, character and controls separate in all ten languages (1.3s)
+  ✓  44 tests/e2e/sherlock-visual.spec.ts:19:7 › consulting-room layout stays usable in en at 1440px (1.4s)
+  ✓  45 tests/e2e/sherlock-visual.spec.ts:19:7 › consulting-room layout stays usable in en at 360px (298ms)
+  ✓  46 tests/e2e/sherlock-visual.spec.ts:19:7 › consulting-room layout stays usable in ko at 390px (458ms)
+  ✓  47 tests/e2e/sherlock-visual.spec.ts:19:7 › consulting-room layout stays usable in ar at 360px (326ms)
+  ✓  48 tests/e2e/ui-redesign.spec.ts:17:5 › share preview traps forward/reverse focus and restores its opener on Escape (934ms)
+  ✓  49 tests/e2e/ui-redesign.spec.ts:41:5 › all three cross-examinations gate the verdict and cite only the existing named testimony (988ms)
+  ✓  50 tests/e2e/ui-redesign.spec.ts:91:5 › casting rejects normalized duplicate names and long edge labels fit a 360px photo (693ms)
+  ✓  51 tests/e2e/ui-redesign.spec.ts:125:5 › six-world hypothesis cards are reversible personal notes and never judge the remaining world (1.2s)
+  ✓  52 tests/e2e/ui-redesign.spec.ts:164:5 › cancelling a face pointer drag clears movement state (381ms)
+
+  52 passed (4.1m)

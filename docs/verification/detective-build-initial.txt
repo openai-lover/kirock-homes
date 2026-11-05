@@ -1,0 +1,40 @@
+
+> room-of-suspects@1.0.0 build
+> next build
+
+▲ Next.js 16.4.3 (Turbopack)
+✓ Running next.config.ts took 11ms
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 1 error:
+./src/app/globals.css:26:167
+Error: Parsing CSS source code failed
+  [90m24 |[0m ...
+  [90m25 |[0m ...
+[31m[1m>[0m [90m26 |[0m ...ding:[35m9[0mpx [35m10[0mpx;min-height:[35m44[0mpx;color:#b9c8c8)}
+  [90m   |[0m                                               [31m[1m^[0m
+  [90m27 |[0m ...
+  [90m28 |[0m ...
+  [90m29 |[0m ...
+
+Unexpected token CloseParenthesis
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:26:167
+  [90m24 |[0m ...
+  [90m25 |[0m ...
+[31m[1m>[0m [90m26 |[0m ...ding:[35m9[0mpx [35m10[0mpx;min-height:[35m44[0mpx;color:#b9c8c8)}
+  [90m   |[0m                                               [31m[1m^[0m
+  [90m27 |[0m ...
+  [90m28 |[0m ...
+  [90m29 |[0m ...
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+    at ignore-listed frames

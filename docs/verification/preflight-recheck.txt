@@ -1,0 +1,15 @@
+
+Running 8 tests using 1 worker
+
+(node:74569) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/preflight.spec.ts:3:5 › cold opening waits for the desk photo and always shows a branded first frame (3.1s)
+  ✓  2 tests/e2e/preflight.spec.ts:16:5 › the corrected intro plays once for visitors who saw the old version (454ms)
+  ✓  3 tests/e2e/preflight.spec.ts:24:5 › a hidden tab pauses the intro clock and animation, then resumes (1.3s)
+  ✓  4 tests/e2e/preflight.spec.ts:37:5 › a missing scene photograph still provides a visible title and working skip (3.3s)
+  ✓  5 tests/e2e/preflight.spec.ts:45:5 › entry labels are centered and legible from compact phones to desktop (1.3s)
+  ✓  6 tests/e2e/preflight.spec.ts:73:5 › phone chat keeps input and send controls visible when the keyboard reduces available height (484ms)
+  ✓  7 tests/e2e/preflight.spec.ts:89:31 › real dark-desk.jpg uploads, preserves face placement and completes correct verdict (1.4s)
+  ✓  8 tests/e2e/preflight.spec.ts:89:31 › real work-desk.jpg uploads, preserves face placement and completes wrong verdict (1.5s)
+
+  8 passed (13.8s)

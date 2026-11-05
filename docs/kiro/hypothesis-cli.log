@@ -1,0 +1,106 @@
+I'll start by reading all the required files before writing any code.
+[tool] Reading AGENTS.md:1, package.json:1
+[tool] status: Completed
+[tool] Reading types.ts:1, solver.ts:1, render.ts:1
+[tool] status: Completed
+[tool] Reading engine.test.ts:1, CrossExamination.tsx:1
+[tool] status: Completed
+Now let me check the existing directory structure and look at the Next.js docs:
+[tool] status: Failed
+[tool] Reading listing src
+[tool] status: Completed
+[tool] Reading index.ts:1, listing tests
+[tool] status: Completed
+Now let me check the relevant Next.js docs directory and the tsconfig:
+[tool] Reading tsconfig.json:1, listing docs
+[tool] status: Completed
+[tool] Reading index.md:1, listing 01-getting-started
+[tool] status: Completed
+[tool] Reading 05-server-and-client-components.md:1-80
+[tool] status: Completed
+I now have all the context I need. Let me implement all the required files. I'll start with the spec files, then the library module, then the component, then the tests.
+[tool] Creating requirements.md
+[tool] status: Completed
+[tool] Creating design.md
+[tool] status: Completed
+[tool] Creating tasks.md
+[tool] status: Completed
+[tool] Creating game-invariants.md
+[tool] status: Completed
+Now implement the core library module:
+[tool] Creating hypothesis.ts
+[tool] status: Completed
+Now implement the React component:
+[tool] Creating HypothesisBoard.tsx
+[tool] status: Completed
+Now write the tests:
+[tool] Creating hypothesis.test.ts
+[tool] status: Completed
+Now run the hypothesis tests:
+[tool] Running: node --import tsx --conditions=react-server --test tests/hypothesis.test.ts 2>&1
+[tool] status: Completed
+All 11 tests pass. Now run the combined regression:
+[tool] Running: node --import tsx --conditions=react-server --test tests/engine.test.ts tests/hypothesis.test.ts 2>&1
+[tool] status: Completed
+19/19 pass — 8 engine tests unchanged, 11 new hypothesis tests all green. Now update the tasks file to record the confirmed outcomes:
+[tool] Editing tasks.md
+[tool] status: Completed
+---
+
+## Summary
+
+### Changed files (all Kiro work)
+
+| File | Action |
+|---|---|
+| `src/lib/game/hypothesis.ts` | Created — pure TS module, no UI/solver/answer deps |
+| `src/components/HypothesisBoard.tsx` | Created — `'use client'` React component |
+| `tests/hypothesis.test.ts` | Created — 11 node:test cases |
+| `.kiro/specs/detective-hypotheses/requirements.md` | Created |
+| `.kiro/specs/detective-hypotheses/design.md` | Created |
+| `.kiro/specs/detective-hypotheses/tasks.md` | Created, updated with confirmed results |
+| `.kiro/steering/game-invariants.md` | Created |
+
+### Exported signatures
+
+```ts
+// src/lib/game/hypothesis.ts
+export type HypothesisId = `${SuspectId}-false` | `${SuspectId}-true`;
+
+export type Hypothesis = {
+  readonly id: HypothesisId;
+  readonly culpritId: SuspectId;
+  readonly fact: boolean;
+  readonly suspectDisplayName: string;
+};
+
+export function buildHypotheses(
+  suspects: readonly Suspect[],
+  displayOrder: readonly SuspectId[],
+): Hypothesis[]
+
+// src/components/HypothesisBoard.tsx
+export default function HypothesisBoard(props: {
+  suspects: readonly Suspect[];
+  locale: Locale;
+  factLabels: readonly [string, string];
+}): JSX.Element
+```
+
+### Actual test outcomes
+
+**Hypothesis only:** `node --import tsx --conditions=react-server --test tests/hypothesis.test.ts`
+→ 11 pass, 0 fail (133 ms)
+
+**Engine + hypothesis regression:** `node --import tsx --conditions=react-server --test tests/engine.test.ts tests/hypothesis.test.ts`
+→ 19 pass (8 engine + 11 hypothesis), 0 fail (118 ms)
+
+### Review findings
+
+One real concern to flag for Codex: `HypothesisBoard` imports from `@/lib/game/hypothesis` and `@/lib/game/types` separately. If Codex adds `hypothesis.ts` to the barrel `src/lib/game/index.ts`, the import path can be simplified to `@/lib/game` — but that's Codex's call since `index.ts` is outside my scope.
+
+### Unresolved integration work
+
+- Codex must render `<HypothesisBoard suspects={snapshot.suspects} locale={locale} factLabels={snapshot.factLabels} />` inside `Game.tsx` at the appropriate game phase. `snapshot.factLabels` is already produced by `publicSnapshot` in `render.ts`.
+- Codex must add CSS for `.hypothesis-board`, `.hypothesis-grid`, `.hypothesis-card`, `.hypothesis-reset` to `globals.css`.
+- Browser/Playwright validation of `data-testid="hypothesis-board"` etc. is Codex e2e work — not claimed here.

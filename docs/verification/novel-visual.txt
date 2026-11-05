@@ -1,0 +1,15 @@
+
+> room-of-suspects@1.0.0 test:e2e
+> playwright test tests/e2e/novel-visual.spec.ts --reporter=list --output=/private/tmp/novel-visual-results
+
+
+Running 4 tests using 1 worker
+
+(node:22553) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/novel-visual.spec.ts:53:5 › the novel homepage offers readable copy and keyboard access to its sample on desktop (499ms)
+  ✓  2 tests/e2e/novel-visual.spec.ts:70:5 › the 360px homepage keeps ten languages readable and actions reachable (1.3s)
+  ✓  3 tests/e2e/novel-visual.spec.ts:86:5 › mobile evidence and rebuttals remain readable and usable through a complete confrontation (837ms)
+  ✓  4 tests/e2e/novel-visual.spec.ts:109:5 › responsive layout and translated reading panels preserve the photograph and face positions (765ms)
+
+  4 passed (4.0s)

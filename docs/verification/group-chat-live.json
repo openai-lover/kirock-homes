@@ -1,0 +1,13 @@
+{
+  "executedAt": "2026-11-05T05:32:03.271Z",
+  "elapsedMs": 6138,
+  "mode": "kiro",
+  "plan": {
+    "speakerId": "s0",
+    "intent": "compare",
+    "referenceId": "s2",
+    "tone": "dramatic",
+    "interject": true
+  },
+  "reason": null
+}

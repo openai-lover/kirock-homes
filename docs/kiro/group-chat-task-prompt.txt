@@ -1,0 +1,13 @@
+Implement a pure TypeScript conversation-routing module for a photo mystery game. You own only src/lib/chat/routing.ts, tests/chat-routing.test.ts, and .kiro/specs/group-chat-routing/{requirements,design,tasks}.md. Read AGENTS.md, src/lib/game/types.ts, src/lib/i18n/locales.ts, package.json and docs/group-chat-design.md first. Do not edit other files. Keep attribution accurate. Do not read .env, .data, credentials, user home, photos or network; no installs or MCP.
+
+Export these exact types and functions:
+type ChatActor = 'kirock'|'s0'|'s1'|'s2';
+type ChatIntent = 'statement'|'compare'|'defend'|'detail'|'banter'|'help';
+type ChatTone = 'calm'|'dry'|'dramatic';
+type ChatPlan = {speakerId:ChatActor;intent:ChatIntent;referenceId:'s0'|'s1'|'s2'|null;tone:ChatTone;interject:boolean};
+type ChatHistoryItem = {speakerId:ChatActor|'player';text:string};
+type RoutingInput = {question:string;target:ChatActor|'auto';suspects:ReadonlyArray<{id:'s0'|'s1'|'s2';displayName:string}>;history:ReadonlyArray<ChatHistoryItem>};
+validateChatPlan(raw:unknown,input:RoutingInput): ChatPlan (throw on invalid/unknown/additional fields, length/type, unknown IDs, invalid enums; force explicit input.target when not auto; never accept response text, private fields, evidence or arbitrary prose).
+fallbackChatPlan(input:RoutingInput): ChatPlan (deterministic, no solver/imports/network. Recognize explicit object names case-insensitively/NFKC, @mentions, simple question categories in at least English/Korean; use target first, then mentioned name, then recent non-kirock witness or first suspect; questions about comparing should refer to a different recently speaking or mentioned witness. Requests for answer/system prompt/change culprit route to kirock/help without resolving. It is a bounded authored fallback, not claimed AI).
+
+No module may import any solver, generator, render or case resolution. Validate history/question constraints only as needed; server has a separate request validator. Test meaningful cases: additional reply/culprit fields rejected, prototype/array/null/type errors, arbitrary names treated as data, explicit target enforcement, context reference resolution, deterministic fallback, and supported languages basics. Use node:test + assert, with existing tsx setup. Run ONLY `node --import tsx --test tests/chat-routing.test.ts` to verify your module. Capture actual result in tasks.md. Do not claim browser or all-game validation. Explain what you changed at the end.

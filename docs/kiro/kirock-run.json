@@ -1,0 +1,64 @@
+{
+  "tool": "Kiro CLI",
+  "version": "2.37.0",
+  "engine": "v2",
+  "authVerified": true,
+  "identityAndCredentialsOmitted": true,
+  "usageReadCommandVerified": true,
+  "personalUsageValuesNotPublished": true,
+  "preparedBy": "Codex",
+  "promptFile": "docs/kiro/kirock-task-prompt.txt",
+  "agentFile": ".kiro/agents/kirock-voice.json",
+  "startUTC": "2026-10-31T06:44:32.714Z",
+  "sourceBefore": {
+    "src/lib/game/types.ts": "bf4706f92dc68e4cfc7cc9c94114f169dc511b1bbaa9ab866e9a45fac2eb99aa",
+    "src/components/Game.tsx": "9b63fde159f981580d5b2d2210458581ae2383fed52eee78bde123c9db18d773",
+    "src/components/HypothesisBoard.tsx": "23f7f041fe43e1c2eb29f3a5a105cde5546cccf8f4b9c7de3cfe7074968776ba",
+    "package.json": "0d9ecf226f37ce094c41ba76f41d18df19d5622053e287d17e7ec406e3a04a49",
+    "tsconfig.json": "921464a9276411be2615ff7df6b7dbeecdc4a5cbc1d275899175f1d94ec30610",
+    "AGENTS.md": "063098f6cb31bb44c6f8fbea25b3876de7ee1e5f7d00a50dbab506f6415eb7f0"
+  },
+  "ownedFilesBefore": [
+    {
+      "path": "src/lib/ui/detective-voice.ts",
+      "existed": false
+    },
+    {
+      "path": "src/components/DetectiveAside.tsx",
+      "existed": false
+    },
+    {
+      "path": ".kiro/specs/kirock-voice/requirements.md",
+      "existed": false
+    },
+    {
+      "path": ".kiro/specs/kirock-voice/design.md",
+      "existed": false
+    },
+    {
+      "path": ".kiro/specs/kirock-voice/tasks.md",
+      "existed": false
+    }
+  ],
+  "exitCode": 0,
+  "completionObservedUTC": "2026-10-31T06:49:18.131Z",
+  "eventFileLastModifiedUTC": "2026-10-31T06:46:18.382Z",
+  "runStatus": "success",
+  "validation": "First-pass TypeScript command denied: appended shell echo was outside the explicit allowed command. Follow-up will retry exact command.",
+  "authorship": "Kiro created five source/spec files. Codex prepared scope/config/prompt and integrated UI separately.",
+  "initialFileHashesFromToolEvents": {
+    "src/lib/ui/detective-voice.ts": "339258944fb70b3657c34b7c88ae5f98e3439227d10a4092f1293a05f8b72402",
+    "src/components/DetectiveAside.tsx": "7ee935cf50aa17d124bc19bb3d130659ae02a8392f9da2d9fc773978a0b606c6",
+    ".kiro/specs/kirock-voice/requirements.md": "33bffa8423723a45339bc5c5909cb35961a3b5681b19f84f65962613145f8097",
+    ".kiro/specs/kirock-voice/design.md": "2a7b6b57df2f743a60388f49e96df3c48229fced79532cadf1d51507c27488c1",
+    ".kiro/specs/kirock-voice/tasks.md": "27a1dcfc616a5a91346332adfe88f1f8ae9782d16d48167d9a341026bc8b54ce"
+  },
+  "finalSourceHashes": {
+    "src/lib/ui/detective-voice.ts": "0bf5df3ab97cc848f32ca966b342579ad5ed3a7b4f74e493685e516162af3a39",
+    "src/components/DetectiveAside.tsx": "83171e7da44dc4a39ed5530dc6dd6a922df763c8ed5a58610a961b7233867eff",
+    ".kiro/specs/kirock-voice/requirements.md": "34e732862f49a84ffc0beb4af692300cd1e33b38ac74523bf09500ff8821a65e",
+    ".kiro/specs/kirock-voice/design.md": "30762b18102271fe1f4a111d7ca23ee075fbf579fa4f779019cd8a54286a845b",
+    ".kiro/specs/kirock-voice/tasks.md": "466b2529d657f38efcde085d8e2e5af0f59ae25bd77eb7b64ec3e7bfcfbd25e7"
+  },
+  "followupRecord": "docs/kiro/kirock-followup-run.json"
+}

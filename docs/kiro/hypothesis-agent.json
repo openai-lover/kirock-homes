@@ -1,0 +1,63 @@
+{
+  "name": "room-detective-build",
+  "description": "Scoped Kiro hypothesis-board implementation task; orchestration configuration prepared by Codex.",
+  "prompt": "Implement only the authorized hypothesis board files. Existing application code is Codex work. Do not claim authorship of inherited code. Never read secrets, personal photographs, credential stores, or unrelated files. Do not use network, AWS, MCP, package installation, or Git mutation tools. Follow explicit prompt file scope. Report actual operations and failed tests honestly.",
+  "tools": [
+    "fs_read",
+    "fs_write",
+    "execute_bash"
+  ],
+  "allowedTools": [],
+  "toolsSettings": {
+    "fs_read": {
+      "allowedPaths": [
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/lib/game/**",
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/components/CrossExamination.tsx",
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/components/Game.tsx",
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/components/HypothesisBoard.tsx",
+        "/Users/kyumin/Documents/ChatGPT/kiro/tests/engine.test.ts",
+        "/Users/kyumin/Documents/ChatGPT/kiro/tests/hypothesis.test.ts",
+        "/Users/kyumin/Documents/ChatGPT/kiro/tests/interrogation.test.ts",
+        "/Users/kyumin/Documents/ChatGPT/kiro/package.json",
+        "/Users/kyumin/Documents/ChatGPT/kiro/tsconfig.json",
+        "/Users/kyumin/Documents/ChatGPT/kiro/AGENTS.md",
+        "/Users/kyumin/Documents/ChatGPT/kiro/node_modules/next/dist/docs/**",
+        "/Users/kyumin/Documents/ChatGPT/kiro/.kiro/specs/detective-hypotheses/**",
+        "/Users/kyumin/Documents/ChatGPT/kiro/.kiro/steering/game-invariants.md",
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/app/globals.css"
+      ],
+      "deniedPaths": [
+        "**/.env",
+        "**/.env.*",
+        "**/.data/**",
+        "**/public/**",
+        "**/.aws/**",
+        "**/.ssh/**",
+        "**/room-of-suspects-kiro-state/**"
+      ],
+      "denyByDefault": true
+    },
+    "fs_write": {
+      "allowedPaths": [
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/lib/game/hypothesis.ts",
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/components/HypothesisBoard.tsx",
+        "/Users/kyumin/Documents/ChatGPT/kiro/tests/hypothesis.test.ts",
+        "/Users/kyumin/Documents/ChatGPT/kiro/.kiro/specs/detective-hypotheses/**",
+        "/Users/kyumin/Documents/ChatGPT/kiro/.kiro/steering/game-invariants.md"
+      ],
+      "denyByDefault": true
+    },
+    "execute_bash": {
+      "allowedCommands": [
+        "^node --import tsx --conditions=react-server --test tests/hypothesis\\.test\\.ts$",
+        "^node --import tsx --conditions=react-server --test tests/engine\\.test\\.ts tests/hypothesis\\.test\\.ts$"
+      ],
+      "deniedCommands": [
+        ".*(?:curl|wget|sudo|rm |git |npm install|npm publish|env|printenv|cat .*\\.env).*"
+      ],
+      "denyByDefault": true
+    }
+  },
+  "resources": [],
+  "mcpServers": {}
+}

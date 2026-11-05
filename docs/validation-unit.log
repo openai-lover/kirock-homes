@@ -1,0 +1,46 @@
+
+> room-of-suspects@1.0.0 test
+> node --import tsx --conditions=react-server --test tests/*.test.ts
+
+✔ missing key gives honest manual fallback and accepts no fake detections (1.0785ms)
+✔ provider timeout aborts pending work and ignores a late result (100.789917ms)
+✔ malformed JSON, bad coordinates and unavailable provider always allow manual casting (0.880375ms)
+✔ AI output can only select approved traits and positions, never dialogue or official testimony (0.189041ms)
+✔ compatible adapter sends bounded vision request and parses mocked structured response (15.158ms)
+✔ all 144 approved variants: six worlds, one solution, all three testimonies necessary, bilingual proof agrees (19.529333ms)
+✔ lamp fact subject stays fixed through every role, name, and display shuffle (0.2285ms)
+✔ generation is reproducible with seed and varies roles/order/state across seeds (1.752416ms)
+✔ no lamp selects generic fictional story; forcing coffee without one fails (0.203583ms)
+✔ public DTO contains only replay material and is independent of guilt before verdict (0.439208ms)
+✔ invalid templates are rejected: ambiguity, contradictions, redundant testimony (0.100875ms)
+✔ untrusted drafts reject tampered logic, hidden solution fields, unknown versions, and invalid coordinates (0.467417ms)
+✔ validated drafts and public snapshots are detached copies, preventing mutation through caller references (0.125417ms)
+✔ photo coordinates use the image rectangle and clamp beyond its edges (1.080667ms)
+✔ shared image decoding applies EXIF orientation and removes EXIF metadata (10.824333ms)
+✔ server normalizes landscape and portrait images with bounded dimensions (26.162292ms)
+✔ fake image bytes, unsupported data URLs and excessive bytes are rejected (0.521375ms)
+✔ service errors preserve status across isolated Next route/instrumentation class copies (2.650916ms)
+✔ shared snapshots preserve both languages, dialogue, image and answer; public allow-list has no spoilers (2.420458ms)
+✔ owner and play authorization are separate; independent friends and repeated accusations (1.306542ms)
+✔ SQLite survives restart and removes private row, image and play records on deletion (4.6905ms)
+✔ two independent Node processes racing different accusations commit the same first result (78.464667ms)
+✔ strict expiry blocks new public/image/play/reveal access; cleanup deletes all expired data (1.419834ms)
+✔ server refuses caller-supplied claims and additional solution fields (0.382458ms)
+✔ persistent AI budgets and request deduplication prevent additional chargeable calls (0.475292ms)
+✔ one image cannot cause more than two provider calls during its 15-minute request window (0.265333ms)
+✔ image decoder rejects corrupt/unsupported/oversize uploads and strips orientation metadata (12.051375ms)
+✔ same-origin mutations, bounded request bodies and supported locales are enforced (1.06875ms)
+✔ configured HTTPS reverse proxy origin requires HTTPS and issues Secure owner cookies (0.904917ms)
+✔ Node startup instrumentation starts hourly cleanup and physically removes downtime-expired rows (5.685459ms)
+{"event":"room_cleanup","at":"2026-10-31T05:42:36.203Z","status":"ok","cases":0,"plays":0,"aiRequests":0}
+✔ configured AI route enforces zero-call budget and consent without contacting a provider (5.063625ms)
+{"event":"room_cleanup","at":"2026-10-31T05:42:36.210Z","status":"ok","cases":0,"plays":0,"aiRequests":0}
+✔ real route handlers require photo consent, issue private cookies, keep public JSON safe, and delete the link (10.175167ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 311.156792

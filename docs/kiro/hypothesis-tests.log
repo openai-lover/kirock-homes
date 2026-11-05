@@ -1,0 +1,23 @@
+Actual Kiro CLI tool output extracted from hypothesis-followup-events.jsonl
+Command: node --import tsx --conditions=react-server --test tests/hypothesis.test.ts 2>&1
+exit status: 0
+
+✔ all six permutations of suspect display order produce exactly six hypotheses (0.515166ms)
+✔ display order is respected: suspects appear in displayOrder sequence (0.060125ms)
+✔ within each suspect pair, fact=false appears before fact=true (0.045584ms)
+✔ all six IDs are unique within a single call (0.046041ms)
+✔ hypothesis IDs are stable: same culpritId+fact always yields the same id, regardless of display order (0.067459ms)
+✔ ID format matches '<suspectId>-<fact>' template literal (0.035083ms)
+✔ suspectDisplayName is taken from the suspects array, not the display order entry alone (0.03875ms)
+✔ frozen input array is not mutated by buildHypotheses (0.060541ms)
+✔ frozen Suspect objects are not mutated by buildHypotheses (0.55175ms)
+✔ returned array is independent of input — mutating result does not affect subsequent calls (0.073125ms)
+✔ hypothesis.ts source does not import solver, validatePuzzle, or private answer modules (0.122458ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 130.260834

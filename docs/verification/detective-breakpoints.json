@@ -1,0 +1,586 @@
+[
+  {
+    "width": 768,
+    "locale": "en",
+    "screenshot": "/private/tmp/detective-breakpoint-768-en.png",
+    "viewport": 768,
+    "contentWidth": 768,
+    "host": {
+      "x": 199,
+      "y": 321,
+      "width": 170,
+      "height": 170
+    },
+    "image": {
+      "x": 199,
+      "y": 321,
+      "width": 170,
+      "height": 170
+    },
+    "boxes": {
+      ".game-title": {
+        "x": 28,
+        "y": 178.1875,
+        "width": 341,
+        "height": 129.1875,
+        "imageOverlap": {
+          "width": 170,
+          "height": 0
+        },
+        "containerOverlap": {
+          "width": 170,
+          "height": 0
+        }
+      },
+      ".game-subtitle": {
+        "x": 28,
+        "y": 331.375,
+        "width": 341,
+        "height": 33.75,
+        "imageOverlap": {
+          "width": 170,
+          "height": 33.75
+        },
+        "containerOverlap": {
+          "width": 170,
+          "height": 33.75
+        }
+      },
+      ".tagline": {
+        "x": 28,
+        "y": 551.125,
+        "width": 341,
+        "height": 62.5,
+        "imageOverlap": {
+          "width": 170,
+          "height": 0
+        },
+        "containerOverlap": {
+          "width": 170,
+          "height": 0
+        }
+      },
+      ".intro-copy": {
+        "x": 28,
+        "y": 626.625,
+        "width": 320,
+        "height": 50.375,
+        "imageOverlap": {
+          "width": 149,
+          "height": 0
+        },
+        "containerOverlap": {
+          "width": 149,
+          "height": 0
+        }
+      },
+      ".entry-actions": {
+        "x": 28,
+        "y": 703,
+        "width": 341,
+        "height": 114,
+        "imageOverlap": {
+          "width": 170,
+          "height": 0
+        },
+        "containerOverlap": {
+          "width": 170,
+          "height": 0
+        }
+      },
+      ".preview-suspects": {
+        "x": 445,
+        "y": 698.53125,
+        "width": 280,
+        "height": 48,
+        "imageOverlap": {
+          "width": 0,
+          "height": 0
+        },
+        "containerOverlap": {
+          "width": 0,
+          "height": 0
+        }
+      },
+      ".preview-banter": {
+        "x": 445,
+        "y": 746.53125,
+        "width": 280,
+        "height": 108,
+        "imageOverlap": {
+          "width": 0,
+          "height": 0
+        },
+        "containerOverlap": {
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    "hitTargets": [
+      {
+        "label": "Try the sample desk",
+        "visibleHitPoints": 9,
+        "totalHitPoints": 9
+      },
+      {
+        "label": "Make a case with my photo",
+        "visibleHitPoints": 9,
+        "totalHitPoints": 9
+      },
+      {
+        "label": "1Mug",
+        "visibleHitPoints": 9,
+        "totalHitPoints": 9
+      },
+      {
+        "label": "2Lamp",
+        "visibleHitPoints": 9,
+        "totalHitPoints": 9
+      },
+      {
+        "label": "3Keyboard",
+        "visibleHitPoints": 9,
+        "totalHitPoints": 9
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "locale": "ko",
+    "screenshot": "/private/tmp/detective-breakpoint-768-ko.png",
+    "viewport": 768,
+    "contentWidth": 768,
+    "host": {
+      "x": 199,
+      "y": 321,
+      "width": 170,
+      "height": 170
+    },
+    "image": {
+      "x": 199,
+      "y": 321,
+      "width": 170,
+      "height": 170
+    },
+    "boxes": {
+      ".game-title": {
+        "x": 28,
+        "y": 178.1875,
+        "width": 341,
+        "height": 149.5,
+        "imageOverlap": {
+          "width": 170,
+          "height": 6.6875
+        },
+        "containerOverlap": {
+          "width": 170,
+          "height": 6.6875
+        }
+      },
+      ".game-subtitle": {
+        "x": 28,
+        "y": 351.6875,
+        "width": 341,
+        "height": 25,
+        "imageOverlap": {
+          "width": 170,
+          "height": 25
+        },
+        "containerOverlap": {
+          "width": 170,
+          "height": 25
+        }
+      },
+      ".tagline": {
+        "x": 28,
+        "y": 562.6875,
+        "width": 341,
+        "height": 35.1875,
+        "imageOverlap": {
+          "width": 170,
+          "height": 0
+        },
+        "containerOverlap": {
+          "width": 170,
+          "height": 0
+        }
+      },
+      ".intro-copy": {
+        "x": 28,
+        "y": 610.875,
+        "width": 320,
+        "height": 50.375,
+        "imageOverlap": {
+          "width": 149,
+          "height": 0
+        },
+        "containerOverlap": {
+          "width": 149,
+          "height": 0
+        }
+      },
+      ".entry-actions": {
+        "x": 28,
+        "y": 687.25,
+        "width": 341,
+        "height": 114,
+        "imageOverlap": {
+          "width": 170,
+          "height": 0
+        },
+        "containerOverlap": {
+          "width": 170,
+          "height": 0
+        }
+      },
+      ".preview-suspects": {
+        "x": 445,
+        "y": 690.65625,
+        "width": 280,
+        "height": 48,
+        "imageOverlap": {
+          "width": 0,
+          "height": 0
+        },
+        "containerOverlap": {
+          "width": 0,
+          "height": 0
+        }
+      },
+      ".preview-banter": {
+        "x": 445,
+        "y": 738.65625,
+        "width": 280,
+        "height": 108,
+        "imageOverlap": {
+          "width": 0,
+          "height": 0
+        },
+        "containerOverlap": {
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    "hitTargets": [
+      {
+        "label": "샘플 책상에서 바로 해보기",
+        "visibleHitPoints": 9,
+        "totalHitPoints": 9
+      },
+      {
+        "label": "내 사진으로 사건 만들기",
+        "visibleHitPoints": 9,
+        "totalHitPoints": 9
+      },
+      {
+        "label": "1머그컵",
+        "visibleHitPoints": 9,
+        "totalHitPoints": 9
+      },
+      {
+        "label": "2스탠드",
+        "visibleHitPoints": 9,
+        "totalHitPoints": 9
+      },
+      {
+        "label": "3키보드",
+        "visibleHitPoints": 9,
+        "totalHitPoints": 9
+      }
+    ]
+  },
+  {
+    "width": 1024,
+    "locale": "en",
+    "screenshot": "/private/tmp/detective-breakpoint-1024-en.png",
+    "viewport": 1024,
+    "contentWidth": 1024,
+    "host": {
+      "x": 442,
+      "y": 270,
+      "width": 200,
+      "height": 286.0625
+    },
+    "image": {
+      "x": 442,
+      "y": 270,
+      "width": 200,
+      "height": 200
+    },
+    "boxes": {
+      ".game-title": {
+        "x": 40,
+        "y": 194.875,
+        "width": 350,
+        "height": 149.59375,
+        "imageOverlap": {
+          "width": 0,
+          "height": 74.46875
+        },
+        "containerOverlap": {
+          "width": 0,
+          "height": 74.46875
+        }
+      },
+      ".game-subtitle": {
+        "x": 40,
+        "y": 368.46875,
+        "width": 350,
+        "height": 33.75,
+        "imageOverlap": {
+          "width": 0,
+          "height": 33.75
+        },
+        "containerOverlap": {
+          "width": 0,
+          "height": 33.75
+        }
+      },
+      ".tagline": {
+        "x": 40,
+        "y": 428.21875,
+        "width": 350,
+        "height": 62.5,
+        "imageOverlap": {
+          "width": 0,
+          "height": 41.78125
+        },
+        "containerOverlap": {
+          "width": 0,
+          "height": 62.5
+        }
+      },
+      ".intro-copy": {
+        "x": 40,
+        "y": 503.71875,
+        "width": 350,
+        "height": 50.375,
+        "imageOverlap": {
+          "width": 0,
+          "height": 0
+        },
+        "containerOverlap": {
+          "width": 0,
+          "height": 50.375
+        }
+      },
+      ".entry-actions": {
+        "x": 40,
+        "y": 580.09375,
+        "width": 350,
+        "height": 114,
+        "imageOverlap": {
+          "width": 0,
+          "height": 0
+        },
+        "containerOverlap": {
+          "width": 0,
+          "height": 0
+        }
+      },
+      ".preview-suspects": {
+        "x": 714,
+        "y": 626.578125,
+        "width": 255,
+        "height": 48,
+        "imageOverlap": {
+          "width": 0,
+          "height": 0
+        },
+        "containerOverlap": {
+          "width": 0,
+          "height": 0
+        }
+      },
+      ".preview-banter": {
+        "x": 714,
+        "y": 674.578125,
+        "width": 255,
+        "height": 108,
+        "imageOverlap": {
+          "width": 0,
+          "height": 0
+        },
+        "containerOverlap": {
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    "hitTargets": [
+      {
+        "label": "Try the sample desk",
+        "visibleHitPoints": 9,
+        "totalHitPoints": 9
+      },
+      {
+        "label": "Make a case with my photo",
+        "visibleHitPoints": 9,
+        "totalHitPoints": 9
+      },
+      {
+        "label": "1Mug",
+        "visibleHitPoints": 9,
+        "totalHitPoints": 9
+      },
+      {
+        "label": "2Lamp",
+        "visibleHitPoints": 9,
+        "totalHitPoints": 9
+      },
+      {
+        "label": "3Keyboard",
+        "visibleHitPoints": 9,
+        "totalHitPoints": 9
+      }
+    ]
+  },
+  {
+    "width": 1024,
+    "locale": "ko",
+    "screenshot": "/private/tmp/detective-breakpoint-1024-ko.png",
+    "viewport": 1024,
+    "contentWidth": 1024,
+    "host": {
+      "x": 442,
+      "y": 270,
+      "width": 200,
+      "height": 286.0625
+    },
+    "image": {
+      "x": 442,
+      "y": 270,
+      "width": 200,
+      "height": 200
+    },
+    "boxes": {
+      ".game-title": {
+        "x": 40,
+        "y": 193.40625,
+        "width": 350,
+        "height": 188.59375,
+        "imageOverlap": {
+          "width": 0,
+          "height": 112
+        },
+        "containerOverlap": {
+          "width": 0,
+          "height": 112
+        }
+      },
+      ".game-subtitle": {
+        "x": 40,
+        "y": 406,
+        "width": 350,
+        "height": 25,
+        "imageOverlap": {
+          "width": 0,
+          "height": 25
+        },
+        "containerOverlap": {
+          "width": 0,
+          "height": 25
+        }
+      },
+      ".tagline": {
+        "x": 40,
+        "y": 457,
+        "width": 350,
+        "height": 35.1875,
+        "imageOverlap": {
+          "width": 0,
+          "height": 13
+        },
+        "containerOverlap": {
+          "width": 0,
+          "height": 35.1875
+        }
+      },
+      ".intro-copy": {
+        "x": 40,
+        "y": 505.1875,
+        "width": 350,
+        "height": 50.375,
+        "imageOverlap": {
+          "width": 0,
+          "height": 0
+        },
+        "containerOverlap": {
+          "width": 0,
+          "height": 50.375
+        }
+      },
+      ".entry-actions": {
+        "x": 40,
+        "y": 581.5625,
+        "width": 350,
+        "height": 114,
+        "imageOverlap": {
+          "width": 0,
+          "height": 0
+        },
+        "containerOverlap": {
+          "width": 0,
+          "height": 0
+        }
+      },
+      ".preview-suspects": {
+        "x": 714,
+        "y": 626.578125,
+        "width": 255,
+        "height": 48,
+        "imageOverlap": {
+          "width": 0,
+          "height": 0
+        },
+        "containerOverlap": {
+          "width": 0,
+          "height": 0
+        }
+      },
+      ".preview-banter": {
+        "x": 714,
+        "y": 674.578125,
+        "width": 255,
+        "height": 108,
+        "imageOverlap": {
+          "width": 0,
+          "height": 0
+        },
+        "containerOverlap": {
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    "hitTargets": [
+      {
+        "label": "샘플 책상에서 바로 해보기",
+        "visibleHitPoints": 9,
+        "totalHitPoints": 9
+      },
+      {
+        "label": "내 사진으로 사건 만들기",
+        "visibleHitPoints": 9,
+        "totalHitPoints": 9
+      },
+      {
+        "label": "1머그컵",
+        "visibleHitPoints": 9,
+        "totalHitPoints": 9
+      },
+      {
+        "label": "2스탠드",
+        "visibleHitPoints": 9,
+        "totalHitPoints": 9
+      },
+      {
+        "label": "3키보드",
+        "visibleHitPoints": 9,
+        "totalHitPoints": 9
+      }
+    ]
+  }
+]

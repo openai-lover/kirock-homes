@@ -1,0 +1,150 @@
+
+Running 28 tests using 1 worker
+
+(node:74261) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/lens-story.spec.ts:4:5 › the lens travels across the same photograph with an enlarged optical crop (843ms)
+  ✓   2 tests/e2e/lens-story.spec.ts:17:5 › story plays a complete loop, pauses, resumes and closes without delayed navigation (1.3s)
+  ✓   3 tests/e2e/lens-story.spec.ts:29:77 › story at 360px in en keeps every scene and control on screen (746ms)
+  ✓   4 tests/e2e/lens-story.spec.ts:29:77 › story at 360px in ko keeps every scene and control on screen (770ms)
+  ✓   5 tests/e2e/lens-story.spec.ts:29:77 › story at 360px in es keeps every scene and control on screen (662ms)
+  ✓   6 tests/e2e/lens-story.spec.ts:29:77 › story at 360px in fr keeps every scene and control on screen (663ms)
+  ✓   7 tests/e2e/lens-story.spec.ts:29:77 › story at 360px in de keeps every scene and control on screen (640ms)
+  ✓   8 tests/e2e/lens-story.spec.ts:29:77 › story at 360px in pt keeps every scene and control on screen (675ms)
+  ✓   9 tests/e2e/lens-story.spec.ts:29:77 › story at 360px in ja keeps every scene and control on screen (691ms)
+  ✓  10 tests/e2e/lens-story.spec.ts:29:77 › story at 360px in zh keeps every scene and control on screen (655ms)
+  ✓  11 tests/e2e/lens-story.spec.ts:29:77 › story at 360px in ar keeps every scene and control on screen (735ms)
+  ✓  12 tests/e2e/lens-story.spec.ts:29:77 › story at 360px in hi keeps every scene and control on screen (719ms)
+  ✓  13 tests/e2e/opening.spec.ts:36:7 › first-visit cinematic opening › the opening fills the viewport, contains keyboard focus, and stays dismissed after reload (548ms)
+  ✓  14 tests/e2e/opening.spec.ts:58:7 › first-visit cinematic opening › the complete opening reveals the homepage automatically and releases scrolling (7.8s)
+  ✓  15 tests/e2e/opening.spec.ts:75:7 › first-visit cinematic opening › the mobile character entrance keeps its single bottom-left exit on screen (2.6s)
+  ✓  16 tests/e2e/opening.spec.ts:97:7 › first-visit cinematic opening › replay restores its opener and cancelled timers cannot interrupt a new game (7.7s)
+  ✓  17 tests/e2e/opening.spec.ts:118:7 › first-visit cinematic opening › unavailable storage and failed artwork cannot trap a player in the opening (7.8s)
+  ✓  18 tests/e2e/opening.spec.ts:136:7 › first-visit cinematic opening › a direct shared-case link bypasses the opening before reporting an expired case (460ms)
+  ✓  19 tests/e2e/opening.spec.ts:145:5 › reduced motion bypasses automatically and explicit replay waits on a static accessible title screen (7.0s)
+compact en: {"copy":{"x":24,"y":76,"width":312,"height":173.1875},"dialogue":{"x":24,"y":197.1875,"width":310,"height":52},"character":{"x":85,"y":316.59375,"width":190,"height":190},"skip":{"x":20,"y":562,"width":180,"height":58}}
+compact ko: {"copy":{"x":24,"y":76,"width":312,"height":170.9375},"dialogue":{"x":24,"y":195.75,"width":310,"height":51.1875},"character":{"x":85,"y":315.46875,"width":190,"height":190},"skip":{"x":20,"y":562,"width":180,"height":58}}
+compact es: {"copy":{"x":24,"y":76,"width":312,"height":173.1875},"dialogue":{"x":24,"y":197.1875,"width":310,"height":52},"character":{"x":85,"y":316.59375,"width":190,"height":190},"skip":{"x":20,"y":562,"width":212.03125,"height":58}}
+compact fr: {"copy":{"x":24,"y":76,"width":312,"height":173.1875},"dialogue":{"x":24,"y":197.1875,"width":310,"height":52},"character":{"x":85,"y":316.59375,"width":190,"height":190},"skip":{"x":20,"y":562,"width":227.046875,"height":58}}
+compact de: {"copy":{"x":24,"y":76,"width":312,"height":173.1875},"dialogue":{"x":24,"y":197.1875,"width":310,"height":52},"character":{"x":85,"y":316.59375,"width":190,"height":190},"skip":{"x":20,"y":562,"width":208.015625,"height":58}}
+compact pt: {"copy":{"x":24,"y":76,"width":312,"height":173.1875},"dialogue":{"x":24,"y":197.1875,"width":310,"height":52},"character":{"x":85,"y":316.59375,"width":190,"height":190},"skip":{"x":20,"y":562,"width":191.015625,"height":58}}
+compact ja: {"copy":{"x":24,"y":76,"width":312,"height":173.1875},"dialogue":{"x":24,"y":197.1875,"width":310,"height":52},"character":{"x":85,"y":316.59375,"width":190,"height":190},"skip":{"x":20,"y":562,"width":219.28125,"height":58}}
+compact zh: {"copy":{"x":24,"y":76,"width":312,"height":173.1875},"dialogue":{"x":24,"y":197.1875,"width":310,"height":52},"character":{"x":85,"y":316.59375,"width":190,"height":190},"skip":{"x":20,"y":562,"width":180,"height":58}}
+compact ar: {"copy":{"x":24,"y":76,"width":312,"height":146.6875},"dialogue":{"x":26,"y":197.1875,"width":310,"height":25.5},"character":{"x":85,"y":303.34375,"width":190,"height":190},"skip":{"x":20,"y":562,"width":180,"height":58}}
+compact hi: {"copy":{"x":24,"y":76,"width":312,"height":172.1875},"dialogue":{"x":24,"y":197.1875,"width":310,"height":51},"character":{"x":85,"y":316.09375,"width":190,"height":190},"skip":{"x":20,"y":562,"width":180,"height":58}}
+  ✓  20 tests/e2e/opening.spec.ts:164:5 › compact static replay keeps dialogue, character and controls separate in all ten languages (1.4s)
+  ✓  21 tests/e2e/preflight.spec.ts:3:5 › cold opening waits for the desk photo and always shows a branded first frame (2.9s)
+  ✓  22 tests/e2e/preflight.spec.ts:16:5 › the corrected intro plays once for visitors who saw the old version (461ms)
+  ✓  23 tests/e2e/preflight.spec.ts:24:5 › a hidden tab pauses the intro clock and animation, then resumes (1.2s)
+  ✓  24 tests/e2e/preflight.spec.ts:37:5 › a missing scene photograph still provides a visible title and working skip (3.4s)
+  ✘  25 tests/e2e/preflight.spec.ts:45:5 › entry labels are centered and legible from compact phones to desktop (331ms)
+(node:74362) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  26 tests/e2e/preflight.spec.ts:72:5 › phone chat keeps input and send controls visible when the keyboard reduces available height (546ms)
+  ✘  27 tests/e2e/preflight.spec.ts:88:31 › real dark-desk.jpg uploads, preserves face placement and completes correct verdict (45.2s)
+(node:74411) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  28 tests/e2e/preflight.spec.ts:88:31 › real work-desk.jpg uploads, preserves face placement and completes wrong verdict (45.4s)
+
+
+  1) tests/e2e/preflight.spec.ts:45:5 › entry labels are centered and legible from compact phones to desktop 
+
+    Error: 320 en horizontal center
+
+    expect(received).toBeLessThan(expected)
+
+    Expected: < 1
+    Received:   10.734375
+
+      51 |    for(const button of await page.locator('.entry-actions button').all()){
+      52 |     const label=button.locator('.button-label'),b=(await button.boundingBox())!,l=(await label.boundingBox())!;
+    > 53 |     expect(Math.abs(l.x+l.width/2-b.x-b.width/2),`${viewport.width} ${locale} horizontal center`).toBeLessThan(1);
+         |                                                                                                   ^
+      54 |     expect(Math.abs(l.y+l.height/2-b.y-b.height/2),`${viewport.width} ${locale} vertical center`).toBeLessThan(1);
+      55 |     expect(await label.evaluate(el=>parseFloat(getComputedStyle(el).fontSize))).toBeGreaterThanOrEqual(17);
+      56 |     expect(b.x).toBeGreaterThanOrEqual(0);expect(b.x+b.width).toBeLessThanOrEqual(viewport.width+1);
+        at /Users/kyumin/Documents/ChatGPT/kiro/tests/e2e/preflight.spec.ts:53:99
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/preflight-entry-labels-are-c7070-m-compact-phones-to-desktop/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/preflight-entry-labels-are-c7070-m-compact-phones-to-desktop/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/preflight-entry-labels-are-c7070-m-compact-phones-to-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/preflight-entry-labels-are-c7070-m-compact-phones-to-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/e2e/preflight.spec.ts:88:31 › real dark-desk.jpg uploads, preserves face placement and completes correct verdict 
+
+    Test timeout of 45000ms exceeded.
+
+    Error: locator.selectOption: Test timeout of 45000ms exceeded.
+    Call log:
+      - waiting for getByLabel('종류', { exact: true })
+
+
+      93 |  for(let i=0;i<photo.actors.length;i++){
+      94 |   const actor=photo.actors[i];await page.locator('.cast-tabs button').nth(i).click();
+    > 95 |   await page.getByLabel('물건 이름',{exact:true}).fill(actor.name);await page.getByLabel('종류',{exact:true}).selectOption(actor.kind);
+         |                                                                                                         ^
+      96 |   // Range inputs exercise the same precise placement controls as a player.
+      97 |   for(const [label,value] of [['가로 위치',actor.x],['세로 위치',actor.y],['얼굴 크기',actor.scale]] as const)await page.getByRole('slider',{name:label,exact:true}).fill(String(value));
+      98 |   await page.getByRole('button',{name:'이 위치로 선택'}).click();
+        at /Users/kyumin/Documents/ChatGPT/kiro/tests/e2e/preflight.spec.ts:95:105
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/preflight-real-dark-desk-j-57a36-d-completes-correct-verdict/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/preflight-real-dark-desk-j-57a36-d-completes-correct-verdict/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/preflight-real-dark-desk-j-57a36-d-completes-correct-verdict/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/preflight-real-dark-desk-j-57a36-d-completes-correct-verdict/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/e2e/preflight.spec.ts:88:31 › real work-desk.jpg uploads, preserves face placement and completes wrong verdict 
+
+    Test timeout of 45000ms exceeded.
+
+    Error: locator.selectOption: Test timeout of 45000ms exceeded.
+    Call log:
+      - waiting for getByLabel('종류', { exact: true })
+
+
+      93 |  for(let i=0;i<photo.actors.length;i++){
+      94 |   const actor=photo.actors[i];await page.locator('.cast-tabs button').nth(i).click();
+    > 95 |   await page.getByLabel('물건 이름',{exact:true}).fill(actor.name);await page.getByLabel('종류',{exact:true}).selectOption(actor.kind);
+         |                                                                                                         ^
+      96 |   // Range inputs exercise the same precise placement controls as a player.
+      97 |   for(const [label,value] of [['가로 위치',actor.x],['세로 위치',actor.y],['얼굴 크기',actor.scale]] as const)await page.getByRole('slider',{name:label,exact:true}).fill(String(value));
+      98 |   await page.getByRole('button',{name:'이 위치로 선택'}).click();
+        at /Users/kyumin/Documents/ChatGPT/kiro/tests/e2e/preflight.spec.ts:95:105
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/preflight-real-work-desk-j-3748d-and-completes-wrong-verdict/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/preflight-real-work-desk-j-3748d-and-completes-wrong-verdict/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/preflight-real-work-desk-j-3748d-and-completes-wrong-verdict/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/preflight-real-work-desk-j-3748d-and-completes-wrong-verdict/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    tests/e2e/preflight.spec.ts:45:5 › entry labels are centered and legible from compact phones to desktop 
+    tests/e2e/preflight.spec.ts:88:31 › real dark-desk.jpg uploads, preserves face placement and completes correct verdict 
+    tests/e2e/preflight.spec.ts:88:31 › real work-desk.jpg uploads, preserves face placement and completes wrong verdict 
+  25 passed (2.4m)

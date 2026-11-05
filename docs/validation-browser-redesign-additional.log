@@ -1,0 +1,14 @@
+
+> room-of-suspects@1.0.0 test:e2e
+> playwright test tests/e2e/ui-redesign.spec.ts
+
+
+Running 3 tests using 1 worker
+
+(node:12046) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/ui-redesign.spec.ts:11:5 › share preview traps forward/reverse focus and restores its opener on Escape (853ms)
+  ✓  2 tests/e2e/ui-redesign.spec.ts:34:5 › casting rejects normalized duplicate names and long edge labels fit a 360px photo (852ms)
+  ✓  3 tests/e2e/ui-redesign.spec.ts:68:5 › cancelling a face pointer drag clears movement state (517ms)
+
+  3 passed (2.8s)

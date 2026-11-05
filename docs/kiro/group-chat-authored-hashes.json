@@ -1,0 +1,7 @@
+{
+  "src/lib/chat/routing.ts": "55de44fdc8c8bf1c70d34d038d090a6dbd4f5ec746b696998740f97b204376de",
+  "tests/chat-routing.test.ts": "f99e8e78633c0400a5e93ecc58c1dc7e98e59aeed457572f6be190a87a64e4bf",
+  ".kiro/specs/group-chat-routing/requirements.md": "9d3b803aa885064fcdee71573cf22de764b728e348fe6217d7862ac9e64e6e51",
+  ".kiro/specs/group-chat-routing/design.md": "c3fd1c0079d71c059e62bae5be7e613c0123a7b1e8a0007ea86f7a9b925be831",
+  ".kiro/specs/group-chat-routing/tasks.md": "e093442a1af96a1a195d0b8214a4c4b3104d83f976013e2ce18f08f467614756"
+}

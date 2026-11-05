@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-31T06:32:33.264Z",
+  "mode": "production",
+  "checks": [
+    {
+      "locale": "ko",
+      "width": 1440,
+      "status": "pass",
+      "scroll": 1440,
+      "viewport": 1440,
+      "broken": []
+    },
+    {
+      "locale": "ko",
+      "width": 390,
+      "status": "pass",
+      "scroll": 390,
+      "viewport": 390,
+      "broken": []
+    },
+    {
+      "locale": "ko",
+      "width": 360,
+      "status": "pass",
+      "scroll": 360,
+      "viewport": 360,
+      "broken": []
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "status": "pass",
+      "scroll": 1440,
+      "viewport": 1440,
+      "broken": []
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "status": "pass",
+      "scroll": 390,
+      "viewport": 390,
+      "broken": []
+    },
+    {
+      "locale": "en",
+      "width": 360,
+      "status": "pass",
+      "scroll": 360,
+      "viewport": 360,
+      "broken": []
+    },
+    {
+      "name": "credits attribute unofficial mascot adaptation and Codex generation",
+      "status": "pass"
+    }
+  ],
+  "errors": [],
+  "status": "passed",
+  "followup": {
+    "at": "2026-10-31T06:33:12.756Z",
+    "reason": "The initial inspection used an incorrect phrase in its credits locator. Checked the actual visible attribution without changing application code."
+  }
+}

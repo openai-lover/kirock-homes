@@ -1,0 +1,20 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+browserContext.newPage: Executable doesn't exist at /Users/kyumin/Library/Caches/ms-playwright/ffmpeg-1013/ffmpeg-mac
+╔═════════════════════════════════════════════════════════════════╗
+║ Video rendering requires ffmpeg binary.                         ║
+║ Downloading it will not affect any of the system-wide settings. ║
+║ Please run the following command:                               ║
+║                                                                 ║
+║     npx playwright install ffmpeg                               ║
+║                                                                 ║
+║ <3 Playwright Team                                              ║
+╚═════════════════════════════════════════════════════════════════╝
+    at /Users/kyumin/Documents/ChatGPT/kiro/scripts/record-demo.mjs:8:26 {
+  log: [],
+  name: 'Error'
+}
+
+Node.js v25.9.0

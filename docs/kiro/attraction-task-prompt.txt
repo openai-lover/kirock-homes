@@ -1,0 +1,11 @@
+The user asks for a Sherlock detective theme-park interface, with thoughtfully crafted controls throughout, and actual Kiro development use. Codex handles the scene imagery, CSS and app integration. You, Kiro, own ONLY these new files:
+src/components/DetectiveProp.tsx
+.kiro/specs/attraction-props/requirements.md
+.kiro/specs/attraction-props/design.md
+.kiro/specs/attraction-props/tasks.md
+
+Read AGENTS.md, installed relevant Next server/client component docs, GameIcon.tsx and docs/themepark-design.md first. Write concise requirements and design BEFORE implementation; only check completed tasks after actions actually occur.
+
+Implement a small reusable decorative React SVG component with default export DetectiveProp, props { kind: 'bell' | 'key' | 'camera' | 'seal' | 'pin' | 'footprints' | 'crest'; className?: string }. SVG viewBox=0 0 48 48, currentColor strokes and transparent fills as appropriate, aria-hidden=true and focusable=false ALWAYS, no role=img/title/interactive controls; parent buttons already have translated labels. Base class detective-prop plus provided className. Every icon needs a distinctive, crisp 48px silhouette: brass reception bell, old skeleton key, antique folding camera, scalloped wax seal with simple check mark, map pin/pushpin, two detective footprints, and detective crest with deerstalker plus a small magnifier. No realistic eye, guns or pipe. Use original code-native SVG paths/shapes with no external images or fonts. No SVG IDs/defs collisions; no arbitrary HTML props/dangerouslySetInnerHTML. No locale, game state, guilt, solver, network, storage, animations or event handling. No use-client unless actually needed.
+
+Do not edit Game.tsx or any other existing file. Avoid tests that just repeat static icon paths. Run the exact allowed command node node_modules/typescript/bin/tsc --noEmit once; repair only your own file if needed. If external concurrent source breaks typecheck report exact diagnostic, do not change it. Tasks must document actual results, identify this as CLI-authored specs, not native IDE workflow. Do not claim browser/build verification. End with actual files and results.

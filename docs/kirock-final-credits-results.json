@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-31T06:55:19.821Z",
+  "mode": "final production rebuild after credits text change only",
+  "status": "passed",
+  "checks": [
+    "new Kiro guide contribution visible",
+    "Codex artwork/layout attribution visible",
+    "English-first Kirock Homes landing",
+    "390px landing has no horizontal overflow",
+    "no browser page errors"
+  ]
+}

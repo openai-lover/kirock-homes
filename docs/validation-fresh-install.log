@@ -1,0 +1,90 @@
+
+added 38 packages in 2s
+
+> room-of-suspects@1.0.0 typecheck
+> next typegen && tsc --noEmit
+
+Generating route types...
+✓ Types generated successfully
+
+> room-of-suspects@1.0.0 test
+> node --import tsx --conditions=react-server --test tests/*.test.ts
+
+✔ missing key gives honest manual fallback and accepts no fake detections (1.035167ms)
+✔ provider timeout aborts pending work and ignores a late result (99.207333ms)
+✔ malformed JSON, bad coordinates and unavailable provider always allow manual casting (0.874042ms)
+✔ AI output can only select approved traits and positions, never dialogue or official testimony (0.192083ms)
+✔ compatible adapter sends bounded vision request and parses mocked structured response (18.598084ms)
+✔ all 144 approved variants: six worlds, one solution, all three testimonies necessary, bilingual proof agrees (18.6055ms)
+✔ lamp fact subject stays fixed through every role, name, and display shuffle (0.236833ms)
+✔ generation is reproducible with seed and varies roles/order/state across seeds (1.664292ms)
+✔ no lamp selects generic fictional story; forcing coffee without one fails (0.226042ms)
+✔ public DTO contains only replay material and is independent of guilt before verdict (0.458375ms)
+✔ invalid templates are rejected: ambiguity, contradictions, redundant testimony (0.101583ms)
+✔ untrusted drafts reject tampered logic, hidden solution fields, unknown versions, and invalid coordinates (0.575542ms)
+✔ validated drafts and public snapshots are detached copies, preventing mutation through caller references (0.141667ms)
+✔ photo coordinates use the image rectangle and clamp beyond its edges (1.519791ms)
+✔ shared image decoding applies EXIF orientation and removes EXIF metadata (12.521042ms)
+✔ server normalizes landscape and portrait images with bounded dimensions (26.154667ms)
+✔ fake image bytes, unsupported data URLs and excessive bytes are rejected (0.466083ms)
+✔ service errors preserve status across isolated Next route/instrumentation class copies (2.983416ms)
+✔ shared snapshots preserve both languages, dialogue, image and answer; public allow-list has no spoilers (2.903834ms)
+✔ owner and play authorization are separate; independent friends and repeated accusations (1.308916ms)
+✔ SQLite survives restart and removes private row, image and play records on deletion (4.155917ms)
+✔ two independent Node processes racing different accusations commit the same first result (82.456917ms)
+✔ strict expiry blocks new public/image/play/reveal access; cleanup deletes all expired data (1.295792ms)
+✔ server refuses caller-supplied claims and additional solution fields (0.323334ms)
+✔ persistent AI budgets and request deduplication prevent additional chargeable calls (0.414833ms)
+✔ one image cannot cause more than two provider calls during its 15-minute request window (0.252542ms)
+✔ image decoder rejects corrupt/unsupported/oversize uploads and strips orientation metadata (12.298875ms)
+✔ same-origin mutations, bounded request bodies and supported locales are enforced (1.151583ms)
+✔ configured HTTPS reverse proxy origin requires HTTPS and issues Secure owner cookies (0.910292ms)
+✔ Node startup instrumentation starts hourly cleanup and physically removes downtime-expired rows (8.737125ms)
+{"event":"room_cleanup","at":"2026-10-31T05:44:35.122Z","status":"ok","cases":0,"plays":0,"aiRequests":0}
+✔ configured AI route enforces zero-call budget and consent without contacting a provider (7.400375ms)
+{"event":"room_cleanup","at":"2026-10-31T05:44:35.137Z","status":"ok","cases":0,"plays":0,"aiRequests":0}
+✔ real route handlers require photo consent, issue private cookies, keep public JSON safe, and delete the link (17.246209ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 719.280917
+
+> room-of-suspects@1.0.0 build
+> next build
+
+▲ Next.js 16.4.3 (Turbopack)
+✓ Running next.config.ts took 10ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 812ms
+  Running TypeScript ...
+  Finished TypeScript in 838ms ...
+  Collecting page data using 9 workers ...
+  Generating static pages using 9 workers (0/6) ...
+  Generating static pages using 9 workers (1/6) 
+  Generating static pages using 9 workers (2/6) 
+  Generating static pages using 9 workers (4/6) 
+✓ Generating static pages using 9 workers (6/6) in 48ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/analyze
+├ ƒ /api/plays/[playId]/accuse
+├ ƒ /api/shared-cases
+├ ƒ /api/shared-cases/[shareId]
+├ ƒ /api/shared-cases/[shareId]/image
+├ ƒ /api/shared-cases/[shareId]/plays
+├ ○ /credits
+└ ƒ /s/[shareId]
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+

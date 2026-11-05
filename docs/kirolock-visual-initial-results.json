@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-31T06:32:33.264Z",
+  "mode": "production",
+  "checks": [
+    {
+      "locale": "ko",
+      "width": 1440,
+      "status": "pass",
+      "scroll": 1440,
+      "viewport": 1440,
+      "broken": []
+    },
+    {
+      "locale": "ko",
+      "width": 390,
+      "status": "pass",
+      "scroll": 390,
+      "viewport": 390,
+      "broken": []
+    },
+    {
+      "locale": "ko",
+      "width": 360,
+      "status": "pass",
+      "scroll": 360,
+      "viewport": 360,
+      "broken": []
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "status": "pass",
+      "scroll": 1440,
+      "viewport": 1440,
+      "broken": []
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "status": "pass",
+      "scroll": 390,
+      "viewport": 390,
+      "broken": []
+    },
+    {
+      "locale": "en",
+      "width": 360,
+      "status": "pass",
+      "scroll": 360,
+      "viewport": 360,
+      "broken": []
+    }
+  ],
+  "errors": [],
+  "status": "failed",
+  "failure": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByText(/unofficial detective fan adaptation/)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByText(/unofficial detective fan adaptation/) with timeout 5000ms\n  - waiting for getByText(/unofficial detective fan adaptation/)\n"
+}

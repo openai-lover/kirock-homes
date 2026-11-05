@@ -1,0 +1,38 @@
+Implement a small, real Kiro-authored UI feature for the user's game. The English name is now definitively **Kirock Homes**, Korean **킬록 홈즈**. Room of Suspects remains the subtitle. Older files may still say Kirolock; this latest name overrides that old branding reference. Keep the historical image filename /art/kirolock-homes.png unchanged.
+
+The user wants an English-first refinement with idiomatic, quietly witty domestic detective guidance. Codex is updating the broader Game/CSS separately. You own ONLY these NEW files:
+- src/lib/ui/detective-voice.ts
+- src/components/DetectiveAside.tsx
+- .kiro/specs/kirock-voice/requirements.md
+- .kiro/specs/kirock-voice/design.md
+- .kiro/specs/kirock-voice/tasks.md
+Do not edit any other file, including Game.tsx, CSS, existing Kiro hypothesis files, existing evidence or the agent config. Do not install dependencies, read private photographs or credentials, call external tools/services, modify billing/subscriptions/overages, or perform Git operations. The scoped agent config and this prompt were prepared by Codex. The five files above are to be genuinely written by you, Kiro.
+
+Before coding, read AGENTS.md, src/lib/game/types.ts, the relevant portions of src/components/Game.tsx and HypothesisBoard.tsx, package.json, tsconfig.json, and installed Next docs relevant to a small presentational React component (node_modules/next/dist/docs/01-app/01-getting-started/05-server-and-client-components.md and/or directives/use-client docs). You may read docs/kirolock-branding.md for the older visual direction, with the new Kirock spelling taking precedence. Existing source is mainly Codex work; the manual hypothesis module/component/specs were previously authored by actual Kiro CLI. Do not relabel either group's work as your new contribution.
+
+Create concise requirements/design/tasks, leaving future tasks unchecked until actually completed, then implement:
+
+1. Pure TypeScript module src/lib/ui/detective-voice.ts. Export a stage type with exactly: 'casting' | 'awakening' | 'listening' | 'confronting' | 'deducing' | 'reveal'. Provide typed KO/EN copy and a deterministic function/interface for the component to obtain it. Use existing Locale type via type-only import if useful. No React/DOM, randomness, solver, cases, suspects, answer, server, storage or AI dependency. The selection depends only on locale and stage.
+
+2. Default-export React component DetectiveAside with EXACT required props:
+   { stage: 'casting' | 'awakening' | 'listening' | 'confronting' | 'deducing' | 'reveal'; locale: Locale }
+   A shared exported DetectiveStage type is welcome. There must be no correct/incorrect, guilt, suspect, case, statement, solver or private-answer prop. No state or network request is needed. Render a compact guidance aside containing the small existing /art/kirolock-homes.png image and stage copy. The heading is exactly "Kirock's notebook" in English and '킬록의 수첩' in Korean. The image is decorative next to text: use empty alt and appropriate decorative accessibility handling, with intrinsic width/height to avoid layout shift. The file name is intentionally historical, not a current brand spelling error.
+
+3. Use class names detective-aside, detective-aside-mascot, detective-aside-copy, detective-aside-title, detective-aside-line, and data-testid='detective-aside'. Codex will add styling and wire this into Game.tsx. Avoid inline styles that prevent responsive styling. Semantic aside and concise accessible text; avoid a live region that repeats unnecessarily. Give the component a clear stage data attribute if useful for browser verification.
+
+4. Write the actual stage lines yourself. English should be idiomatic, dry, warm, domestic-detective humor. Korean should be natural localization, not word-for-word translation. Each stage needs a short, usable instruction with a light comic voice, ideally 1–2 short sentences and no more than about 25 English words total. Keep it suitable for a cozy family game: no death, threats, gore or menacing undertone.
+   - casting: choose three objects and place their faces.
+   - awakening: give the objects a moment to wake up; no extra action required.
+   - listening: hear all three official statements.
+   - confronting: question each object, compare the quoted official statements and another object's objection, then pin the comparison.
+   - deducing: manually cross out or restore candidate worlds, then choose one final accusation. The notebook/board must not claim to know if the player's theory is right.
+   - reveal: invite the player to read the explanation. Wording must be the SAME whether the accusation was right or wrong; never imply success, failure or a particular culprit.
+   No line may invent an event fact, new evidence, a suspect's guilt, motive, facial tell or result-specific reaction. The three code-owned official statements stay the only logical evidence. The aside is authored guidance, not AI dialogue generation during play.
+
+5. Do not add tests that merely repeat the copy dictionary. Instead, review that all six stages and both locales are present, that the exact prop contract is respected, and that the component/module have no answer/solver dependencies. Execute this real local TypeScript check once implementation is complete:
+   node node_modules/typescript/bin/tsc --noEmit
+   If it fails, fix only your five owned files if responsible. If concurrent work outside your scope fails, report its exact diagnostic without modifying it. Do not claim browser/build validation; Codex will perform those after integration.
+
+6. Tasks can be checked only after the files exist and the relevant action has actually completed. Record the exact command and observed exit status in tasks.md AFTER running it. Do not invent time savings, user studies, pronunciation findings, native IDE spec runs, hooks or test results. These are CLI-authored spec documents, not evidence of a native IDE spec workflow.
+
+Finish with the component and module API, the final twelve localized stage lines, actual review/check results, and integration notes. No secrets or account identifiers in output.

@@ -1,0 +1,264 @@
+{
+  "stats": {
+    "startTime": "2026-10-31T07:40:08.620Z",
+    "duration": 249597.194,
+    "expected": 35,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "title": "a new en-US visitor sees Kirock Homes in English",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "an explicit language choice overrides en-US and survives reload in both directions",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "a new ko-KR visitor also starts in English until they choose a language",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "sample correct verdict and wrong verdict both complete without API keys",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "sample can be completed using only keyboard navigation and subtitles",
+      "status": "unexpected",
+      "outcomes": [
+        "timedOut"
+      ]
+    },
+    {
+      "title": "mobile/tablet 360px keeps photo faces and statements within the viewport",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "mobile/tablet 390px keeps photo faces and statements within the viewport",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "mobile/tablet 768px keeps photo faces and statements within the viewport",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "landscape, portrait, EXIF rotation and manual clockwise rotation preserve photo coordinates",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "unsupported and corrupted photo files give usable errors and sample remains playable",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "missing AI key falls back to manual selection with explicit analysis consent",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "invalid AI output and real client timeout both retain a completable manual path",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "valid AI candidates use displayName and a late response cannot overwrite manual choices",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "corrupted JSON and malformed ready responses never crash the casting screen",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "English sample has translated testimony, verdict, and explanation",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "sharing preserves the case, hides answers, supports independent one-shot play, and deletes for the owner",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "complete the sample mystery in en at mobile width",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "complete the sample mystery in ko at mobile width",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "complete the sample mystery in es at mobile width",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "complete the sample mystery in fr at mobile width",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "complete the sample mystery in de at mobile width",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "complete the sample mystery in pt at mobile width",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "complete the sample mystery in ja at mobile width",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "complete the sample mystery in zh at mobile width",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "complete the sample mystery in ar at mobile width",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "complete the sample mystery in hi at mobile width",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "language changes preserve cross-examination notes, eliminations and photo coordinates",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "keyboard language selection persists and an invalid saved language defaults to English",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "credits and privacy follow the language choice across all ten locales",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "a failed shared verdict translation can retry without a second accusation",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "an older shared case keeps English evidence direction inside an Arabic interface",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "share preview traps forward/reverse focus and restores its opener on Escape",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "all three cross-examinations gate the verdict and cite only the existing named testimony",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "casting rejects normalized duplicate names and long edge labels fit a 360px photo",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "six-world hypothesis cards are reversible personal notes and never judge the remaining world",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    },
+    {
+      "title": "cancelling a face pointer drag clears movement state",
+      "status": "expected",
+      "outcomes": [
+        "passed"
+      ]
+    }
+  ]
+}

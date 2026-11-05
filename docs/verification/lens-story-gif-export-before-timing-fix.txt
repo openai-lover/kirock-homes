@@ -1,0 +1,8 @@
+file:///Users/kyumin/Documents/ChatGPT/kiro/scripts/export-story-gif.mjs:27
+  if(metadata.pages!==frames.length||metadata.loop!==0||metadata.delay.reduce((a,b)=>a+b,0)!==duration)throw new Error('Invalid GIF timing');
+                                                                                                             ^
+
+Error: Invalid GIF timing
+    at file:///Users/kyumin/Documents/ChatGPT/kiro/scripts/export-story-gif.mjs:27:110
+
+Node.js v25.9.0

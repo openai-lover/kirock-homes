@@ -1,0 +1,31 @@
+Actual Kiro CLI tool output extracted from hypothesis-followup-events.jsonl
+Command: node --import tsx --conditions=react-server --test tests/engine.test.ts tests/hypothesis.test.ts 2>&1
+exit status: 0
+
+✔ all 144 approved variants: six worlds, one solution, all three testimonies necessary, bilingual proof agrees (17.552833ms)
+✔ lamp fact subject stays fixed through every role, name, and display shuffle (0.227083ms)
+✔ generation is reproducible with seed and varies roles/order/state across seeds (1.583583ms)
+✔ no lamp selects generic fictional story; forcing coffee without one fails (0.2225ms)
+✔ public DTO contains only replay material and is independent of guilt before verdict (0.759041ms)
+✔ invalid templates are rejected: ambiguity, contradictions, redundant testimony (0.094625ms)
+✔ untrusted drafts reject tampered logic, hidden solution fields, unknown versions, and invalid coordinates (0.568625ms)
+✔ validated drafts and public snapshots are detached copies, preventing mutation through caller references (0.159291ms)
+✔ all six permutations of suspect display order produce exactly six hypotheses (0.624209ms)
+✔ display order is respected: suspects appear in displayOrder sequence (0.066791ms)
+✔ within each suspect pair, fact=false appears before fact=true (0.051209ms)
+✔ all six IDs are unique within a single call (0.051584ms)
+✔ hypothesis IDs are stable: same culpritId+fact always yields the same id, regardless of display order (0.073ms)
+✔ ID format matches '<suspectId>-<fact>' template literal (0.04225ms)
+✔ suspectDisplayName is taken from the suspects array, not the display order entry alone (0.040709ms)
+✔ frozen input array is not mutated by buildHypotheses (0.071208ms)
+✔ frozen Suspect objects are not mutated by buildHypotheses (0.562333ms)
+✔ returned array is independent of input — mutating result does not affect subsequent calls (0.102958ms)
+✔ hypothesis.ts source does not import solver, validatePuzzle, or private answer modules (0.110084ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 115.648583

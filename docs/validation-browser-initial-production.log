@@ -1,0 +1,103 @@
+
+> room-of-suspects@1.0.0 test:e2e
+> playwright test
+
+
+Running 13 tests using 1 worker
+
+(node:10407) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/game.spec.ts:67:5 › sample correct verdict and wrong verdict both complete without API keys (4.5s)
+  ✓   2 tests/e2e/game.spec.ts:80:5 › sample can be completed using only keyboard navigation and subtitles (2.2s)
+  ✓   3 tests/e2e/game.spec.ts:99:7 › mobile/tablet 360px keeps photo faces and statements within the viewport (2.2s)
+  ✓   4 tests/e2e/game.spec.ts:99:7 › mobile/tablet 390px keeps photo faces and statements within the viewport (2.2s)
+  ✓   5 tests/e2e/game.spec.ts:99:7 › mobile/tablet 768px keeps photo faces and statements within the viewport (2.2s)
+  ✓   6 tests/e2e/game.spec.ts:115:5 › landscape, portrait, EXIF rotation and manual clockwise rotation preserve photo coordinates (3.0s)
+  ✓   7 tests/e2e/game.spec.ts:162:5 › unsupported and corrupted photo files give usable errors and sample remains playable (2.3s)
+  ✓   8 tests/e2e/game.spec.ts:172:5 › missing AI key falls back to manual selection with explicit analysis consent (2.6s)
+  ✓   9 tests/e2e/game.spec.ts:191:5 › invalid AI output and real client timeout both retain a completable manual path (13.8s)
+  ✘  10 tests/e2e/game.spec.ts:214:5 › valid AI candidates use displayName and a late response cannot overwrite manual choices (10.5s)
+(node:10503) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  11 tests/e2e/game.spec.ts:236:5 › corrupted JSON and malformed ready responses never crash the casting screen (5.1s)
+  ✓  12 tests/e2e/game.spec.ts:256:5 › English sample has translated testimony, verdict, and explanation (2.3s)
+  ✘  13 tests/e2e/game.spec.ts:271:5 › sharing preserves the case, hides answers, supports independent one-shot play, and deletes for the owner (4.9s)
+
+
+  1) tests/e2e/game.spec.ts:214:5 › valid AI candidates use displayName and a late response cannot overwrite manual choices 
+
+    Error: expect(locator).toBeEnabled() failed
+
+    Locator:  getByRole('button', { name: '물건 후보 추천' })
+    Expected: enabled
+    Received: disabled
+    Timeout:  10000ms
+
+    Call log:
+      - Expect "toBeEnabled" getByRole('button', { name: '물건 후보 추천' }) with timeout 10000ms
+      - waiting for getByRole('button', { name: '물건 후보 추천' })
+        18 × locator resolved to <button disabled>물건 후보 추천</button>
+           - unexpected value "disabled"
+
+
+      228 |   await page.getByRole('button', { name: '물건 후보 추천' }).click();
+      229 |   await page.getByLabel('물건 이름', { exact: true }).fill('내가 고른 책');
+    > 230 |   await expect(page.getByRole('button', { name: '물건 후보 추천' })).toBeEnabled();
+          |                                                                ^
+      231 |   await expect(page.getByLabel('물건 이름', { exact: true })).toHaveValue('내가 고른 책');
+      232 |   await page.getByRole('button', { name: '이 셋을 깨우기' }).click();
+      233 |   await finish(page);
+        at /Users/kyumin/Documents/ChatGPT/kiro/tests/e2e/game.spec.ts:230:64
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/game-valid-AI-candidates-u-d7b2a-ot-overwrite-manual-choices/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/game-valid-AI-candidates-u-d7b2a-ot-overwrite-manual-choices/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/game-valid-AI-candidates-u-d7b2a-ot-overwrite-manual-choices/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/game-valid-AI-candidates-u-d7b2a-ot-overwrite-manual-choices/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/e2e/game.spec.ts:271:5 › sharing preserves the case, hides answers, supports independent one-shot play, and deletes for the owner 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 403
+    Received: 500
+
+      317 |     expect(verdict.accusedId).not.toBe(mystery.culpritId);
+      318 |     const forbidden = await friend.request.delete(`/api/shared-cases/${shareId}`, { headers: { Origin: origin } });
+    > 319 |     expect(forbidden.status()).toBe(403);
+          |                                ^
+      320 |     const english = await (await friend.request.get(`/api/shared-cases/${shareId}?locale=en`)).json();
+      321 |     expect(english.id).toBe(publicCase.id);
+      322 |     expect(english.suspects).toEqual(publicCase.suspects);
+        at /Users/kyumin/Documents/ChatGPT/kiro/tests/e2e/game.spec.ts:319:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/game-sharing-preserves-the-d419c-y-and-deletes-for-the-owner/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/game-sharing-preserves-the-d419c-y-and-deletes-for-the-owner/test-failed-2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/game-sharing-preserves-the-d419c-y-and-deletes-for-the-owner/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/game-sharing-preserves-the-d419c-y-and-deletes-for-the-owner/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/game-sharing-preserves-the-d419c-y-and-deletes-for-the-owner/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    tests/e2e/game.spec.ts:214:5 › valid AI candidates use displayName and a late response cannot overwrite manual choices 
+    tests/e2e/game.spec.ts:271:5 › sharing preserves the case, hides answers, supports independent one-shot play, and deletes for the owner 
+  11 passed (59.0s)

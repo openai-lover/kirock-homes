@@ -1,0 +1,42 @@
+{
+  "exportedAt": "2026-11-05T06:22:23.424Z",
+  "authorship": "Codex-rendered photo and SVG animation; not GPT-native GIF generation",
+  "results": [
+    {
+      "path": "public/art/living-photo-story-en.gif",
+      "format": "gif",
+      "frames": 100,
+      "width": 440,
+      "height": 760,
+      "durationMs": 15000,
+      "loop": 0,
+      "beats": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "lastBeat": "5"
+    },
+    {
+      "path": "public/art/living-photo-story-ko.gif",
+      "format": "gif",
+      "frames": 100,
+      "width": 440,
+      "height": 760,
+      "durationMs": 15000,
+      "loop": 0,
+      "beats": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "lastBeat": "5"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+
+> room-of-suspects@1.0.0 test:e2e
+> playwright test tests/e2e/story.spec.ts --reporter=list --output=/private/tmp/story-final-results
+
+
+Running 8 tests using 1 worker
+
+(node:68068) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/story.spec.ts:12:5 › the optional comic supports keyboard reading, contained focus and return to its opener without starting a case (719ms)
+  ✓  2 tests/e2e/story.spec.ts:51:5 › the comic leads into a fresh, completable sample with three unheard statements (1.0s)
+  ✓  3 tests/e2e/story.spec.ts:71:5 › the final comic panel opens the actual photo picker and reaches manual casting (538ms)
+  ✓  4 tests/e2e/story.spec.ts:84:5 › failed comic artwork retains readable narrative and an escape into the sample (535ms)
+  ✓  5 tests/e2e/story.spec.ts:97:7 › all ten translated comics have reachable controls and readable panels at 1440×960 (11.2s)
+  ✓  6 tests/e2e/story.spec.ts:97:7 › all ten translated comics have reachable controls and readable panels at 1078×738 (10.7s)
+  ✓  7 tests/e2e/story.spec.ts:97:7 › all ten translated comics have reachable controls and readable panels at 360×640 (10.5s)
+  ✓  8 tests/e2e/story.spec.ts:97:7 › all ten translated comics have reachable controls and readable panels at 640×360 (10.0s)
+
+  8 passed (46.1s)
