@@ -65,3 +65,5 @@
  .chat-app[data-short-viewport=true] .chat-scene-column:not(.photo-expanded) .chat-scene-caption{display:none}
  .chat-app[data-short-viewport=true] .chat-photo-expand{top:6px}
 }
+
+.chat-app .brand{color:#f4eedf}

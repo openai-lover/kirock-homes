@@ -1,0 +1,54 @@
+{
+  "name": "kirock-homes",
+  "version": "1.1.0",
+  "displayName": "Kirock Homes",
+  "description": "Your real photo becomes a comedy mystery. Let your own Kiro cast the objects and perform a fair, fixed-evidence group chat.",
+  "author": "KYUMIN KIM",
+  "license": "MIT",
+  "minKiroCrewVersion": "0.11.2",
+  "tags": [
+    "game",
+    "photography",
+    "mystery",
+    "kiroween"
+  ],
+  "iconPath": "assets/icon.png",
+  "repo": "openai-lover/kirock-homes-crew",
+  "highlights": [
+    "Real photo object casting with your Kiro",
+    "Contextual character reactions with a second review",
+    "Exact code-owned evidence and exhaustive six-world solver",
+    "Manual and scripted fallback; no payment setup"
+  ],
+  "ui": {
+    "entry": "dist/index.mjs",
+    "pages": [
+      {
+        "route": "/apps/kirock-homes",
+        "label": "Kirock Homes",
+        "icon": "Search"
+      }
+    ],
+    "sidebar": {
+      "section": "Apps",
+      "order": 20
+    }
+  },
+  "backend": {
+    "type": "node",
+    "entryPoint": "backend/dist/server.mjs",
+    "port": "auto",
+    "healthCheck": "/health",
+    "routes": "/api/apps/kirock-homes"
+  },
+  "permissions": {
+    "api": [
+      "/apps/kirock-homes/api"
+    ],
+    "events": [],
+    "mcpTools": [],
+    "storage": true,
+    "cron": false,
+    "network": true
+  }
+}

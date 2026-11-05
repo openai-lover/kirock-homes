@@ -4,10 +4,12 @@ import { mkdirSync, writeFileSync, chmodSync } from 'node:fs';
 import { resolve } from 'node:path';
 import type { PublicSnapshot } from '../game/types';
 import { fallbackChatPlan, validateChatPlan, type ChatPlan, type RoutingInput } from './routing';
+import { generatePerformance } from './live-performance.server';
+import type { Performance } from './performance';
 
 export type ChatContext = RoutingInput & { snapshot: PublicSnapshot };
-export interface ChatProvider { readonly name: 'kiro' | 'compatible'; plan(context: ChatContext, signal: AbortSignal): Promise<unknown> }
-export type ChatAnswer = { plan: ChatPlan; mode: 'kiro'|'compatible'|'local'; reason?: 'unavailable'|'timeout'|'invalid'|'budget'|'pending' };
+export interface ChatProvider { readonly name: 'kiro' | 'compatible'; plan(context: ChatContext, signal: AbortSignal): Promise<unknown>; perform?(context: ChatContext, signal: AbortSignal):Promise<Performance> }
+export type ChatAnswer = { plan: ChatPlan; performance?: Performance; mode: 'kiro'|'compatible'|'local'; reason?: 'unavailable'|'timeout'|'invalid'|'budget'|'pending' };
 export function modelPayload(input: ChatContext) {
   // Deliberate allowlist. Never pass a draft, solution, photo, confession or server paths.
   return { locale:input.snapshot.locale, question:input.question, target:input.target,
@@ -19,6 +21,7 @@ const instruction = `You are Kirock, director of a comedy group-chat mystery. Re
 
 export class KiroChatProvider implements ChatProvider {
   readonly name = 'kiro' as const;
+  perform(input:ChatContext, signal:AbortSignal) { return generatePerformance(input,signal); }
   constructor(private binary: string, private home: string, private workdir: string) {}
   async plan(input: ChatContext, signal: AbortSignal): Promise<unknown> {
     const agents=resolve(this.workdir,'.kiro/agents');mkdirSync(agents,{recursive:true,mode:0o700});
@@ -65,6 +68,10 @@ export async function planWithFallback(provider:ChatProvider|null,input:ChatCont
   if(!provider)return {plan:fallbackChatPlan(input),mode:'local',reason:'unavailable'};
   const controller=new AbortController();let timer:ReturnType<typeof setTimeout>|undefined;
   try{
+    if(provider.perform && process.env.CHAT_PERFORMANCE === 'true') {
+      const performance=await Promise.race([provider.perform(input,controller.signal),new Promise<never>((_,reject)=>{timer=setTimeout(()=>{controller.abort();reject(new Error('timeout'));},timeoutMs);})]);
+      return {plan:fallbackChatPlan(input),performance,mode:provider.name};
+    }
     const raw=await Promise.race([provider.plan(input,controller.signal),new Promise<never>((_,reject)=>{timer=setTimeout(()=>{controller.abort();reject(new Error('timeout'));},timeoutMs);})]);
     return {plan:validateChatPlan(raw,input),mode:provider.name};
   }catch(error){return {plan:fallbackChatPlan(input),mode:'local',reason:controller.signal.aborted?'timeout':error instanceof TypeError||error instanceof SyntaxError?'invalid':'unavailable'};}

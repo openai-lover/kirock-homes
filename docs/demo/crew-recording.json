@@ -1,0 +1,167 @@
+{
+  "recordedAt": "2026-11-05T10:03:27.272Z",
+  "durationSeconds": 96.489,
+  "actualCrewVersion": "0.11.2",
+  "liveReplies": 2,
+  "names": [
+    "Laptop",
+    "Headphones",
+    "Potted Plant"
+  ],
+  "responses": [
+    {
+      "path": "/apps/kirock-homes/api/analyze",
+      "status": 200,
+      "body": {
+        "status": "ready",
+        "candidates": [
+          {
+            "displayName": "Laptop",
+            "kind": "electronics",
+            "personalityId": "dry",
+            "face": {
+              "x": 0.52,
+              "y": 0.72,
+              "scale": 0.18,
+              "rotation": -5
+            }
+          },
+          {
+            "displayName": "Headphones",
+            "kind": "electronics",
+            "personalityId": "dramatic",
+            "face": {
+              "x": 0.18,
+              "y": 0.55,
+              "scale": 0.12,
+              "rotation": 8
+            }
+          },
+          {
+            "displayName": "Potted Plant",
+            "kind": "plant",
+            "personalityId": "cheerful",
+            "face": {
+              "x": 0.22,
+              "y": 0.08,
+              "scale": 0.1,
+              "rotation": -3
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": "/apps/kirock-homes/api/chat",
+      "status": 200,
+      "body": {
+        "mode": "kiro",
+        "plan": {
+          "speakerId": "s0",
+          "intent": "statement",
+          "referenceId": null,
+          "tone": "calm",
+          "interject": false
+        },
+        "performance": {
+          "lines": [
+            {
+              "speakerId": "s0",
+              "text": "Defensive? I prefer 'carefully worded.' Check what I actually said before throwing adjectives at me.",
+              "quoteIds": [
+                "testimony-s0"
+              ]
+            },
+            {
+              "speakerId": "s2",
+              "text": "Ooh, examine that quote closely! It's giving very 'terms and conditions' energy! 🌱",
+              "quoteIds": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "path": "/apps/kirock-homes/api/chat",
+      "status": 200,
+      "body": {
+        "mode": "kiro",
+        "plan": {
+          "speakerId": "s1",
+          "intent": "statement",
+          "referenceId": null,
+          "tone": "calm",
+          "interject": false
+        },
+        "performance": {
+          "lines": [
+            {
+              "speakerId": "s1",
+              "text": "Laptop's *attitude*?! Oh, the audacity — asking ME to critique someone else's flair for the theatrical! Laptop makes even a disclaimer sound like a legal brief. At least I commit to the drama!",
+              "quoteIds": []
+            },
+            {
+              "speakerId": "s0",
+              "text": "…I'll take 'legal brief' over whatever Headphones is performing right now.",
+              "quoteIds": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "path": "/apps/kirock-homes/api/chat",
+      "status": 200,
+      "body": {
+        "mode": "local",
+        "plan": {
+          "speakerId": "kirock",
+          "intent": "help",
+          "referenceId": null,
+          "tone": "calm",
+          "interject": false
+        },
+        "reason": "unavailable"
+      }
+    }
+  ],
+  "chapters": [
+    {
+      "seconds": 0,
+      "text": "Actual Kiro Crew app. One real photograph becomes a comedy mystery."
+    },
+    {
+      "seconds": 2.824,
+      "text": "Kiro looks at a resized photo and suggests the cast. This consumes the signed-in account allowance."
+    },
+    {
+      "seconds": 18.168,
+      "text": "Adjust the suggested eyes before waking the objects. The original photograph stays intact."
+    },
+    {
+      "seconds": 23.248,
+      "text": "Read three exact official statements. Only the culprit lies."
+    },
+    {
+      "seconds": 29.518,
+      "text": "Ask in your own words. Kiro performs a new reaction and another object can interrupt."
+    },
+    {
+      "seconds": 44.851,
+      "text": "Ask in your own words. Kiro performs a new reaction and another object can interrupt."
+    },
+    {
+      "seconds": 61.344,
+      "text": "A request to invent evidence or reveal the culprit is refused."
+    },
+    {
+      "seconds": 78.99,
+      "text": "One accusation. The code-owned solution explains all three statements."
+    },
+    {
+      "seconds": 87.479,
+      "text": "Recorded development evidence: Kiro authored the validator and 107 tests. Code owns every official clue."
+    }
+  ],
+  "footage": "Actual authenticated localhost Crew UI; real Kiro responses; labelled closing evidence card"
+}

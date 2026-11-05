@@ -6,6 +6,7 @@ import { hash } from "../../../lib/server/share-store";
 import { sanitizeImage } from "../../../lib/server/image";
 import { failure, json, rateLimit, readJson, sameOrigin } from "../../../lib/server/http";
 import { isServiceError, ServiceError } from "../../../lib/server/errors";
+import { isLoopbackHost } from '../../../lib/kiro/runtime.server';
 
 export const runtime = "nodejs";
 function limit(value: string | undefined, fallback: number): number {
@@ -16,7 +17,7 @@ export async function POST(request: NextRequest) {
   try {
     sameOrigin(request); rateLimit("analyze", 30);
     const body = await readJson(request);
-    const provider = configuredProvider();
+    const provider = process.env.AI_PROVIDER === 'kiro' && !isLoopbackHost(request.headers.get('host')) ? null : configuredProvider();
     if (!provider) return json({ status: "manual", reason: "not_configured", candidates: [] });
     if (body.consent !== true) throw new ServiceError(400, "analysis_consent_required");
     if (typeof body.requestId !== "string" || !/^[A-Za-z0-9_-]{12,80}$/.test(body.requestId)) throw new ServiceError(400, "invalid_request_id");
@@ -29,7 +30,7 @@ export async function POST(request: NextRequest) {
       if (analysis.cached) result = analysis.cached as AnalysisResult;
       else if (analysis.pending) result = { status: "manual", reason: "pending", candidates: [] };
       else {
-        result = await analyzeWithFallback(provider, `data:image/jpeg;base64,${image.bytes.toString("base64")}`);
+        result = await analyzeWithFallback(provider, `data:image/jpeg;base64,${image.bytes.toString("base64")}`, process.env.AI_PROVIDER === 'kiro' ? 55000 : 8000);
         await store.finishAnalysis(id, result);
       }
     } catch (error) {

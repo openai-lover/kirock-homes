@@ -1,0 +1,6 @@
+{
+  "builtAt": "2026-11-05T13:06:30.711Z",
+  "source": "Shared source from the main Kirock Homes project; no separate mystery implementation.",
+  "runtime": "Node.js 24",
+  "backend": "Node built-ins only; prebuilt bundles included"
+}

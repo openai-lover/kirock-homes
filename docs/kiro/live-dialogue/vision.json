@@ -1,0 +1,41 @@
+{
+  "executedAt": "2026-11-05T09:58:30.276Z",
+  "elapsedMs": 9350,
+  "fixture": "tests/fixtures/photos/work-desk.jpg",
+  "status": "ready",
+  "candidates": [
+    {
+      "displayName": "Laptop",
+      "kind": "electronics",
+      "personalityId": "dry",
+      "face": {
+        "x": 0.55,
+        "y": 0.72,
+        "scale": 0.18,
+        "rotation": -5
+      }
+    },
+    {
+      "displayName": "Headphones",
+      "kind": "electronics",
+      "personalityId": "dramatic",
+      "face": {
+        "x": 0.18,
+        "y": 0.55,
+        "scale": 0.12,
+        "rotation": 8
+      }
+    },
+    {
+      "displayName": "Potted Plant",
+      "kind": "plant",
+      "personalityId": "cheerful",
+      "face": {
+        "x": 0.19,
+        "y": 0.1,
+        "scale": 0.1,
+        "rotation": -3
+      }
+    }
+  ]
+}

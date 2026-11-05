@@ -4,7 +4,7 @@ import { mkdirSync,chmodSync } from 'node:fs';
 import { dirname,resolve } from 'node:path';
 import type { ChatAnswer } from './provider.server';
 import { getRemoteChatBudget } from '../server/app-store';
-/** Stores only hashes and bounded plans, never player text/photos. */
+/** Stores request hashes and bounded responses for one hour. Generated responses may refer to chat; photos and raw questions are not stored. */
 export class ChatBudget {
  private db:DatabaseSync;
  constructor(path:string,private now:()=>number=Date.now){if(path!==':memory:')mkdirSync(dirname(resolve(path)),{recursive:true,mode:0o700});this.db=new DatabaseSync(path);if(path!==':memory:')chmodSync(path,0o600);this.db.exec('PRAGMA busy_timeout=5000; PRAGMA secure_delete=ON; CREATE TABLE IF NOT EXISTS chat_cache(id TEXT PRIMARY KEY, case_hash TEXT, answer TEXT, expires INTEGER); CREATE TABLE IF NOT EXISTS chat_budget(period TEXT PRIMARY KEY,used INTEGER);');}

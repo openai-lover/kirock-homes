@@ -9,7 +9,7 @@ const root = process.cwd();
 const stage = mkdtempSync(join(tmpdir(), 'room-suspects-source-'));
 const project = join(stage, 'kirock-homes');
 mkdirSync(project);
-const entries = ['src', 'public', 'tests', 'scripts', 'docs', 'reference', '.kiro',
+const entries = ['crew-app', 'src', 'public', 'tests', 'scripts', 'docs', 'reference', '.kiro',
   'package.json', 'package-lock.json', 'tsconfig.json', 'next.config.ts',
   'playwright.config.ts', '.env.example', '.gitignore', 'README.md',
   'KIRO_HANDOFF.md', 'LICENSE', 'AGENTS.md', 'vercel.json', '.vercelignore'];
@@ -17,7 +17,7 @@ for (const entry of entries) {
   if (!existsSync(join(root, entry))) throw new Error(`Missing release file: ${entry}`);
   cpSync(join(root, entry), join(project, entry), {
     recursive: true,
-    filter: (path) => !path.endsWith('.DS_Store') && !path.endsWith('.tsbuildinfo') && !['vercel-storage-review.png', 'youtube-upload-review.png', 'youtube-published.png'].includes(path.split('/').pop()),
+    filter: (path) => !path.split('/').includes('node_modules') && !path.endsWith('.DS_Store') && !path.endsWith('.tsbuildinfo') && !['vercel-storage-review.png', 'youtube-upload-review.png', 'youtube-published.png'].includes(path.split('/').pop()),
   });
 }
 const manifest = [];

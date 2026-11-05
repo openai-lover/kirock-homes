@@ -2,9 +2,9 @@
 
 **Your photo. A room full of suspects. One liar.**
 
-[Play online](https://kirock-homes.vercel.app) · [85-second demo](https://youtu.be/zGdqdS0ssVY) · [Source](https://github.com/openai-lover/kirock-homes)
+[Play online](https://kirock-homes.vercel.app) · [96-second Crew demo](https://youtu.be/7gknqGSknDk) · [Source](https://github.com/openai-lover/kirock-homes)
 
-The public demo uses Vercel Hobby and Turso Starter free storage. No card was added and no paid service was enabled. Public AI providers are disabled: manual photo casting and authored interactive chat work without an account. Live Kiro interpretation is demonstrated in the local recording and documented separately.
+The public demo uses Vercel Hobby and Turso Starter free storage. No card was added and no paid service was enabled. Public AI providers are disabled: manual photo casting and authored interactive chat work without an account. The optional Crew edition provides real photo recognition and generated dialogue using the player’s own Kiro allowance.
 
 사진 속 물건 셋이 눈을 뜨고, 당신과 킬록이 있는 단톡방에 들어옵니다. 사건 설명과 공식 증언을 하나씩 듣고 직접 질문하세요. 관련 물건이 답하고 다른 물건이 반론에 끼어듭니다. 마지막 지목은 한 번입니다.
 
@@ -16,7 +16,7 @@ The intro now prepares its photograph and character before the sweep, shows a br
 
 ## Run
 
-Use **Node.js 24 LTS** (the verified Vercel runtime); SQLite requires at least 22.13.0. Local verification used **Node 25.9.0**, Next.js **16.4.3**, React **19.3.1**, TypeScript **5.9.3** and the included `package-lock.json`. Production builds use the bundled Webpack (`next build --webpack`), because the Next 16.4.3 Turbopack adapter omitted runtime dependencies on Vercel.
+Use **Node.js 24 LTS** (the verified Vercel runtime); SQLite requires at least 22.13.0. The latest verification used **Node 24.19.0**, Next.js **16.4.3**, React **19.3.1**, TypeScript **5.9.3** and the included `package-lock.json`. Production builds use the bundled Webpack (`next build --webpack`), because the Next 16.4.3 Turbopack adapter omitted runtime dependencies on Vercel.
 
 ```bash
 npm ci
@@ -46,29 +46,29 @@ The browser suite uses installed macOS Chrome when available, otherwise Playwrig
 
 The photo can be expanded on mobile. English, 한국어, Español, Français, Deutsch, Português, 日本語, 简体中文, العربية and हिन्दी are available. The selected language persists in `localStorage`. Translations are authored static text; switching languages does not regenerate the case.
 
-## Actual Kiro connection and its limits
+## Optional live Kiro and Crew edition
 
-**Kiro was actually used for development and for a live game question.** Kiro CLI 2.37.0 authored the pure chat routing module, 84 focused tests, and three specification files. The recorded run exited 0. Codex integrated the group-chat UI, server adapters, photo story, localized dialogue and new logic family. [Exact attribution and records](docs/kiro/group-chat-README.md).
+**The optional [Kiro Crew app](https://github.com/openai-lover/kirock-homes-crew) now uses your own Kiro for real photo recognition and fresh character dialogue.** The [web edition](https://kirock-homes.vercel.app) remains an instant, account-free game with manual casting and scripted replies. [Installation guide](https://kirock-homes.vercel.app/crew).
 
-The runtime adapter reads the player's question, object roles, public statements and recent conversation. Kiro returns a strictly validated **speaker, intent, reference, tone and interjection choice**. The game renders authored lines and inserts official testimony verbatim. This is AI interpretation of free input with bounded responses, not unrestricted generative dialogue. It cannot invent alibis, change guilt, create a fourth clue, paraphrase testimony or disclose a hidden answer. Off-topic or unrecognized questions may get a repeated statement or Kirock's general guidance.
+Kiro identifies three photographed objects and approximate face positions; the player corrects them. With explicit chat consent, Kiro reads the question, public statements and recent conversation, generates one or two character reactions, then a separate Kiro call reviews them. Code validates speakers/references and inserts exact quotations. No private solution enters the model payload. The model could infer guilt from public clues, so semantic review is probabilistic, not a mathematical no-leak guarantee. Failed or rejected responses return scripted replies.
 
-The UI indicates whether a turn used Kiro or scripted replies. In the current local developer environment, Kiro is enabled via an unshipped `.env.local` pointing to the user's existing authenticated CLI. A real provider check completed in **6.138 seconds**; an actual Korean question was also exercised through the browser. This proves an authenticated call, not any particular credit balance, contest-credit approval, redemption or billing source.
+Kiro CLI 2.37.0 actually authored the performance validator, 107 tests and three specs. It also executed **131 engine/performance/integration tests**, including both 144-variant deduction families. Codex authored runtime integration, Crew packaging, UI and broader verification. [Actual records and precise attribution](docs/kiro/live-dialogue/README.md). Earlier routing-only and Kiro development records remain historical evidence.
 
-To configure your own **local** session, copy `.env.example` to `.env.local` and set:
+The real Crew UI recording includes successful photo casting, two generated/reviewed character turns, an adversarial request handled by scripted refusal, and a verdict. A separate five-question runtime check produced five accepted live turns. These are small observed checks, not a recognition benchmark or user study.
+
+Crew requires Node 24, official Crew 0.11.2+ and a signed-in CLI. Its backend binds to localhost, verifies Crew proxy signatures, caps attempts at 20 per UTC day, and permits one concurrent request. A chat attempt may consume two model calls. This is an attempt cap, not a currency guarantee. The app never purchases credits or enables overages. Runtime sessions deny all tools for dialogue; vision may read only its temporary JPEG. Kiro may retain its own session history; temporary images are removed by this adapter after the call.
+
+For local Next.js testing (not public hosting), set these in your unshipped `.env.local`:
 
 ```dotenv
+AI_PROVIDER=kiro
 CHAT_PROVIDER=kiro
+CHAT_PERFORMANCE=true
 KIRO_CLI_PATH=/absolute/path/to/kiro-cli
 KIRO_HOME=/absolute/path/to/your/authenticated/kiro/home
 ```
 
-Only the verified 2.37.0 V2 CLI flags are claimed. Authentication is performed directly with Kiro. Never copy another person's authenticated home or commit it. The game uses an isolated working directory, no tools, no repository resources and no MCP in runtime sessions. Player text still goes to Kiro and may be retained by its service/local session history according to its policies. The photo and private solution are not in the model payload.
-
-For a hosted game, provision a separate HTTPS Chat Completions-compatible account/model using `CHAT_PROVIDER=openai-compatible`, `CHAT_BASE_URL`, `CHAT_MODEL`, `CHAT_API_KEY`. That adapter is implemented but has not been live-tested with credentials. The Kiro adapter is limited to loopback Host requests; do not expose your developer CLI session as a public service.
-
-The model has 20 seconds; failure, invalid output or missing credentials returns an authored local reply. **Continue without AI** ends the player's wait. Request caps survive restarts: default 40/day, 200 total, 24 per case/hour. These count attempts, not credits or currency. Zero disables chargeable requests. Identical requests are deduplicated for one hour. The app cache stores hashes and validated plans, not questions or photos. Already-started calls can still count if the browser cancels.
-
-Optional **photo recognition is separate**: set all `AI_PROVIDER`, `AI_BASE_URL`, `AI_MODEL`, `AI_API_KEY` values in `.env.example`, and explicitly consent before sending a resized photo. Live vision recognition has not been tested with credentials; manual placement remains fully playable.
+The Kiro adapters are loopback-only. Never upload or share a Kiro login/session home. Public shared games keep frozen authored dialogue; the Crew edition does not publish photos or friend links.
 
 ## Fixed deduction, fair uncertainty
 

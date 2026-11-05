@@ -1,6 +1,7 @@
 import type { Locale, PublicSnapshot, SuspectId } from '../game/types';
 import type { ChatActor, ChatPlan } from './routing';
 import { uiText } from '../i18n/ui';
+import type { Performance } from './performance';
 const keys=['room','welcome','next','ask','placeholder','send','everyone','you','official','notes','accuse','back','typing','local','live','consent','consentDetail','continueOffline','compare','defend','detail','statement','interject','help','limit','photoTitle','photoLine','shutter','photo','wake','invite','locked','confirm'] as const;
 type Copy=Record<(typeof keys)[number],string>;
 const rows:Record<Locale,readonly string[]>={
@@ -36,3 +37,8 @@ export function renderChatPlan(snapshot:PublicSnapshot,plan:ChatPlan):ChatUttera
  return [first];
 }
 export function chatRules(locale:Locale){return uiText(locale,'Only the culprit’s official statement is false. The other two are true.');}
+export function renderChatAnswer(snapshot:PublicSnapshot,answer:{plan:ChatPlan;performance?:Performance}):ChatUtterance[]{
+ if(!answer.performance)return renderChatPlan(snapshot,answer.plan);
+ return answer.performance.lines.flatMap(line=>line.quoteIds.length?line.quoteIds.map((quoteId,i)=>({speakerId:line.speakerId,text:i===0?line.text:'',quoteId})): [{speakerId:line.speakerId,text:line.text}]);
+}
+export function performanceLabel(locale:Locale){return ({en:'Live Kiro dialogue · official evidence stays fixed',ko:'Kiro 실시간 대화 · 공식 증언은 고정',es:'Diálogo de Kiro · pruebas fijas',fr:'Dialogue Kiro · preuves fixes',de:'Kiro-Dialog · feste Beweise',pt:'Diálogo Kiro · provas fixas',ja:'Kiroの対話 · 公式証言は固定',zh:'Kiro实时对话 · 正式证词固定',ar:'حوار Kiro · الأدلة ثابتة',hi:'Kiro संवाद · आधिकारिक सबूत तय'})[locale];}

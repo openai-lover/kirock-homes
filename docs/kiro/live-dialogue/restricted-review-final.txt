@@ -1,0 +1,41 @@
+Now I'll execute the command exactly as specified:The shell tool rejected that exact command path. I can report what I read and what I cannot verify.
+
+---
+
+**Files read — observed content**
+
+`tests/engine.test.ts`
+- 9 top-level `test()` calls (no `describe`).
+- The first test iterates all 144 variants (2 storyIds × 6 role permutations × 2 factInverted × 6 displayOrders) and asserts exactly six worlds, one solution world, all three statements necessary, and correct rendering in all 10 locales. It asserts `checked === 144` and `renderedLocales === 1440` at the end.
+- Remaining 8 tests cover: lamp factSubjectId stability, seeded generation reproducibility, story selection without a lamp, public DTO field isolation, invalid template rejection, tampered draft rejection (23 mutation cases), copy-safety of validated drafts/snapshots, locale coverage and fallback behaviour.
+
+`tests/conditional-chat.test.ts`
+- 9 top-level `test()` calls.
+- First test: `'v2: all 144 conditional variants uniquely solve, every statement is necessary, all six worlds and ten locales agree'` — uses `templateVersion:2`, asserts `solve(draft.statements)` equals `[{culpritId:a, fact:!factInverted}]` (note the inversion relative to v1), asserts no `culprit_is` claims in v2, and `count === 144`.
+- Second test: v1 shares remain valid; v2 rejects tampered condition/target/version fields.
+- Remaining 7 tests cover: model payload isolation (no private fields), missing/malformed/hanging provider always yields `mode:'local'`, validated live plan makes the requested witness answer with an interjection, `ChatBudget` deduplication and expiry, bounded player input validation, all 10 locales supply every chat label, factual witness interrogation challenge text, and `addressedTarget` name-matching.
+
+`tests/performance.test.ts`
+- Authored by Kiro (2026-11-05), per file header comment.
+- Uses `describe`/`it` (node:test nested style).
+- Tests `validatePerformance` and `performanceReviewPassed` from `src/lib/chat/performance`.
+- ~90 individual `it()` assertions across these suites: top-level shape, forbidden top-level keys (10 fields), line shape, speakerId, target enforcement, repeated speakers, text length (1–240 accepted, 241 rejected, whitespace-only rejected), XSS/unsafe text (HTML tags, URLs, code fences, control characters), confession/verdict patterns in English and Korean (9 EN + 7 KO cases), forbidden fields inside lines, quoteIds (0–2 accepted, 3 rejected, unknown ID rejected, duplicate rejected, non-array rejected), unknown references, `performanceReviewPassed` (12 cases), and a round-trip integration test.
+
+`tests/live-performance.test.ts`
+- 4 top-level `test()` calls.
+- Tests `generatePerformance` and `performancePayload` from `src/lib/chat/live-performance.server.ts`.
+- Test 1: two-call flow (generate then review), verifies candidate is returned, `renderChatAnswer` output matches, no forbidden private keys in either call payload.
+- Test 2: six negative/malformed review shapes each throw `performance_rejected`.
+- Test 3: invalid target, unknown quoteId, and direct confession text each reject before the reviewer is called (calls === 1 for each).
+- Test 4: unavailable provider fails closed; `performancePayload` returns exactly 6 keys: `characters, conversation, evidence, locale, question, target`.
+
+`src/lib/chat/live-performance.server.ts`
+- Exports `PERFORMANCE_PROMPT`, `REVIEW_PROMPT`, `performancePayload`, `generatePerformance`.
+- Two-step flow: (1) call model with performance prompt → validate with `validatePerformance`; (2) call model with review prompt → check with `performanceReviewPassed`; throw `performance_rejected` if review fails.
+- `performancePayload` sends only: `locale`, `question`, `target`, `characters` (id/name/kind/personality), `evidence` (public statements), `conversation` (last 12 history items). No draft, no face data, no roleAssignment, no culpritId.
+
+---
+
+**Execution result**
+
+The shell tool refused to run the specified command (`<user-home>/.cache/codex-runtimes/…/node` is not in its allowed list). The test run output — pass/fail counts, timing, any assertion errors — was not observed. I cannot report those results.

@@ -1,0 +1,17 @@
+Let me read the relevant files first.Now let me check the existing directory structure for the chat folder and specs:Let me also check the existing group-chat-routing specs as a structural reference, and the live-dialogue spec directory:Now I have a clear picture of the codebase and conventions. Let me also quickly check the tsconfig and package.json for the project setup:Good. Now I have everything I need. Let me implement all three files.
+
+First, `src/lib/chat/performance.ts`:Now write the test file:Now run the tests:One failure: the code fence test string `'```\nalert(1)\n```'` contains a newline `\n` which is a control character (U+000A), so the control-character check fires first before the code-fence check. I need to reorder the checks — code fences before control characters, and also allow `\n` inside the text for the code-fence case so the test message is right. Actually the cleanest fix is to run the code-fence check before the control-character check:107/107 pass. Now write the three spec files:---
+
+**Summary**
+
+107/107 tests pass, exit 0.
+
+**Files written (5):**
+
+- `src/lib/chat/performance.ts` — pure TypeScript structural validator for AI-generated non-evidentiary character reactions. Exports `PerformanceLine`, `Performance`, `validatePerformance`, `performanceReviewPassed`. No imports from solver/generator/render/server-only/AI or any private case module.
+
+- `tests/performance.test.ts` — 107 `node:test` tests across 14 describe suites covering: valid round-trips, shape rejections, forbidden private-data fields (answer/culprit/confession/proof/solution/verdict/private*/secret*), target enforcement, repeated-speaker rejection, text length boundaries, XSS/HTML/URL/code-fence/control-character guards, the confession/verdict pattern guard (9 EN + 7 KO patterns), quoteIds range and membership, and all `performanceReviewPassed` cases.
+
+- `.kiro/specs/live-dialogue/requirements.md`, `design.md`, `tasks.md` — full spec with execution record.
+
+**One fix made during the run:** the code-fence check in `validatePerformance` was moved before the control-character check, because a multi-line fence string (`` ``` \n … ``` ``) contains U+000A and would otherwise trigger the less specific "control characters" error first.

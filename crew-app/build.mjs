@@ -1,0 +1,12 @@
+import {build} from 'esbuild';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {fileURLToPath} from 'node:url';
+import {dirname} from 'node:path';
+const app=dirname(fileURLToPath(import.meta.url));
+const prefix='/apps/kirock-homes/api/static';
+const paths={name:'crew-asset-paths',setup(b){b.onLoad({filter:/\.(tsx?|css)$/},async({path})=>{let contents=readFileSync(path,'utf8');if(path.endsWith('.css'))contents=contents.replaceAll("url('/","url('"+prefix+'/').replaceAll('url("/','url("'+prefix+'/');else contents=contents.replace(/(["'])\/(art|fonts)\//g,`$1${prefix}/$2/`).replaceAll("'/sample-desk.jpg'",`'${prefix}/sample-desk.jpg'`);return {contents,loader:path.endsWith('.css')?'css':path.endsWith('.tsx')?'tsx':'ts'};});}};
+await build({entryPoints:[app+'/ui/game.tsx'],outfile:app+'/ui/game/game.js',bundle:true,minify:true,format:'esm',platform:'browser',jsx:'automatic',alias:{'@':app+'/shared/src'},plugins:[paths],external:['/apps/*'],define:{'process.env.NODE_ENV':'"production"'}});
+await build({entryPoints:[app+'/ui/entry.tsx'],outfile:app+'/ui/dist/index.mjs',bundle:true,format:'esm',jsx:'automatic',external:['react','react/jsx-runtime']});
+await build({entryPoints:[app+'/backend/server.ts'],outfile:app+'/backend/dist/server.mjs',bundle:true,format:'esm',platform:'node',target:'node24',minify:false});
+writeFileSync(app+'/build-info.json',JSON.stringify({builtAt:new Date().toISOString(),source:'Shared source from the main Kirock Homes project; no separate mystery implementation.',runtime:'Node.js 24',backend:'Node built-ins only; prebuilt bundles included'},null,2));
+console.log('Crew app bundles built.');

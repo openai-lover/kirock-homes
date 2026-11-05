@@ -1,98 +1,57 @@
-# Kirock Homes: Room of Suspects — factual submission draft
+# Kirock Homes: Room of Suspects
 
-Updated on 2026-11-05 (Asia/Seoul). This is editable English submission material, not a submitted entry. The app, source repository and 85.56-second demo are published. This document is not a final Devpost submission; no user-study result or competition eligibility is claimed.
-
-- Play: https://kirock-homes.vercel.app
-- Source: https://github.com/openai-lover/kirock-homes
-- Video: https://youtu.be/zGdqdS0ssVY
-- Verification: [actual public-server results](production-validation.md)
-
- Actual Kiro CLI work is documented below. Current official rules were rechecked on 2026-11-05. The project deadline is December 4, 2026 at 2 PM PST (December 5 at 7 AM KST).
-
-Current localized title: **킬록 홈즈** (Korean), **Kirock Homes** (English), with **Room of Suspects** retained as the subtitle. The detective mascot is an unofficial fan adaptation, not an official Kiro character release or endorsement. [Current design](kirock-design.md).
-
-## Tagline
-
-Your room. Three suspects. One liar.
+Your room. Three suspects. One liar. Turn a real photo into a comedy mystery, question your belongings in a group chat, and optionally let your own Kiro perform the cast inside Kiro Crew.
 
 ## Inspiration
 
-A familiar desk can be more personal than a generic game scene. The idea was to let someone send a friend a tiny mystery inside an ordinary photograph: three recognizable belongings open their eyes and suddenly have opinions.
+A desk already has a cast of characters: a defensive laptop, theatrical headphones, a plant with suspiciously good vibes. We wanted the first moment to feel magical and funny: you photograph an ordinary room, familiar objects open their eyes, and suddenly you are in their group chat. “Kirock Homes” combines the detective reference with Kiro and the home where the mystery happens.
 
 ## What it does
 
-Kirock Homes: Room of Suspects is a short comedy deduction game. Players try a licensed sample desk or upload their own photo, select three objects, and place expressive SVG faces on them. After awakening, players hear three official statements, question each object, and hear another object's objection. Players type questions in a familiar group chat. The public demo routes questions to authored replies and interjections without paid AI. In the separately verified local Kiro mode shown in the video, Kiro interprets the question and recent conversation to select a witness, response intent and another object’s interjection. Authored replies preserve the evidence. They make one accusation after investigating. Only the culprit's official statement is false; the other two are true. A wrong answer still reveals the solution and its explanation.
+Try the instant web game or upload a photograph. Wake three objects, hear the incident and three official statements one at a time, question the cast, and make one final accusation. Correct and wrong guesses both receive a complete explanation. The original photo stays intact; SVG eyes, mouths, glances and expressions bring the objects to life. A magnifying-glass opening and living-photo story introduce the idea. This is photo augmentation, not camera-tracked AR.
 
-The full-screen opening sweeps a magnifying glass across a real desk photograph, then introduces Kirock. Its single bottom-left skip control is available immediately. The optional Story screen plays a 15-second living-photo loop: a shutter, waking eyes, a mug demanding a lawyer, the keyboard asking for a coaster, and a question that starts the mystery. Players can pause, step through, or enter the actual game using the same image. It is photo augmentation, not camera-tracked AR.
+There are two ways to play. The public website needs no account and uses manual casting and authored interactive replies. The optional **Kiro Crew app** runs locally with the player's own Kiro account: Kiro identifies objects in a resized photo, suggests approximate face positions and personalities, and generates fresh reactions to the player's typed question and recent conversation. Another relevant object can interrupt. The player can correct faces and turn AI off at any time. The app does not purchase credits or configure payment.
 
-The game supports English, Korean, Spanish, French, German, Portuguese, Japanese, Simplified Chinese, Arabic and Hindi. English is the default; a language choice is saved for later visits, and Arabic uses RTL text direction. It also supports captions, optional synthesized sound effects, reduced motion, and keyboard interaction. Photo sharing requires a visible preview and consent. On the public Vercel/Turso deployment and the included local server, a friend link preserves the same photograph, characters, testimony, dialogue, and answer, with an independent play session, expiration, and creator deletion.
+The latest 96-second demo is actual Crew gameplay: successful photo recognition, a visible face correction, two live generated/reviewed replies, an adversarial request handled by scripted refusal, and a final verdict. The ending card is labelled recorded development evidence, not a live terminal capture.
 
-## How it is built
+## How we built it
 
-The application uses Next.js and TypeScript with CSS/SVG face animation. A pure TypeScript reasoning engine enumerates six possible worlds: three culprits multiplied by two event states. It accepts a case only when one complete world survives and removing any one statement leaves at least two possible culprits. Two fictional story settings support the preserved v1 template and new v2 conditional alibis. All 144 permutations per version retain unique solutions and testimony necessity.
+Next.js, TypeScript, React, CSS and SVG power the web game. A pure TypeScript deduction engine enumerates exactly six worlds: three culprits times two event states. Every approved case has exactly one solution, only the culprit's official statement is false, and removing any statement leaves at least two possible culprits. Both 144-variant template families are checked across ten languages. Role shuffling preserves the fact and object being discussed.
 
-Official statements, answers, confessions, and explanations come from code and authored static catalogues in ten languages. No translation API is used, and switching language preserves the case and investigation progress. Optional AI can suggest object candidates, approximate face placement, and approved personalities. It cannot write official testimony or decide guilt. Missing credentials, timeouts, or malformed responses fall back to manual casting and authored dialogue. Live runtime Kiro question interpretation was verified on 2026-11-05, including an actual browser question. Vision recognition and the hosted compatible chat adapter have not been live-tested with credentials.
+Official testimony, guilt, confession and explanation come from code. AI cannot edit them. Generated dialogue is deliberately non-evidentiary character performance, with exact evidence inserted separately as code-owned quotations. A structural validator and a separate Kiro semantic review reject unsafe output; failures fall back to authored dialogue. Semantic review is probabilistic, not a proof: a model can infer an answer from public evidence, so we do not claim perfect semantic leak prevention.
 
-New shared cases are reconstructed and verified on the server, then frozen in all ten languages. Older links retain their stored text: if the requested language is unavailable, the server returns an available stored version and the UI identifies its language. Missing translations are never regenerated. The local SQLite adapter runs on a persistent Node host; the public deployment uses a remote Turso/libSQL adapter. Public responses expose only replay material; the first accusation is recorded atomically, and repeated requests return its original result. The public HTTPS deployment, durable storage, authenticated daily cleanup and immediate expiry checks are configured. The owner should still monitor service limits and job failures.
+Crew uses the same engine and photo/chat UI, an installable manifest and prebuilt bundles. Its Node backend verifies signed Crew proxy requests, binds to loopback, permits one in-flight request and caps attempts at 20 per UTC day. A generated turn makes two model calls. Runtime dialogue has no tools; photo analysis can read only its temporary JPEG. The personal Kiro login is never shipped or exposed as a public AI endpoint.
 
-## Current group-chat Kiro contribution
+The public web deployment uses Vercel Hobby and Turso Starter. Opt-in friend links freeze the photograph, cast, evidence, authored dialogue and answer. Each friend has an independent session; the server withholds the solution until accusation, locks the first verdict, and enforces deletion and seven-day expiry. Crew play does not publish photos or create friend links.
 
-Kiro CLI 2.37.0 actually authored the isolated chat-routing validator/fallback, 84 focused tests and three spec files. The run exited 0. Codex implemented the runtime adapter, fixed evidence contract, chat UI, v2 logic and broader verification. A real runtime Kiro check completed in 6.138 seconds; it returns a bounded plan, not unrestricted dialogue prose. [Exact records](kiro/group-chat-README.md). No contest-credit balance or redemption was verified.
+## How we used Kiro
 
-## Development provenance (earlier work)
+Kiro CLI 2.37.0 actually authored the new performance validator, 107 focused tests and three specification files, then fixed an initial failing test and passed all 107. Kiro subsequently executed 131 engine/performance/integration tests, including both deduction families. Actual prompts, redacted tool events, failures, corrections and file hashes are in `docs/kiro/live-dialogue/`; the root `.kiro` directory is included.
 
-The original game, solver, sharing server, photo editor, generated visual assets, cross-examination scripts and UI integration were produced with **Codex**. After the user completed sign-in, **Kiro CLI 2.37.0** actually read the source, wrote the manual hypothesis builder and React board, authored tests and specification/steering files, and ran targeted hypothesis plus engine regression tests.
+Earlier real Kiro work includes the hypothesis builder, detective guidance, secondary language UI, decorative SVG props and chat-routing validator/fallback with 84 focused tests. Those runs have their own attribution and failure records. Codex created the original game, solver, sharing server, assets and UI, then integrated the live runtime and packaged the Crew app. Codex work is not attributed to Kiro. No unused Kiro hook or IDE workflow is claimed.
 
-The task addressed the first version's weak gameplay loop: reading three statements and clicking an answer. Codex added scripted confrontations; Kiro added the player-controlled deduction scratchpad. [Development provenance](kiro-usage.md) links the prompt, output, exact test evidence and file hashes. `.kiro/specs/detective-hypotheses/` and `.kiro/steering/game-invariants.md` were created in the actual Kiro run. No Kiro hook, IDE-native spec workflow, or Kiro browser verification is claimed.
+## Challenges and what we learned
 
-Kiro later implemented the six-stage detective guidance and aside component. In the [ten-language expansion](kiro/ten-languages-README.md), it authored or extended six source/test files: the secondary UI catalogue, detective stage copy, three UI components and focused tests. The first test command failed on a French string quote; after Kiro corrected it, the same command passed **19 tests**. Kiro wrote requirements/design, then the service throttled the response stream and the process ended with **exit code 1**, before a final report or tasks checklist. Codex wrote the observed tasks record and owns the main UI, game-content translations, server changes, RTL integration and broader validation. Completed files and focused tests are real contributions; the interrupted agent run is not described as an end-to-end success.
+The hardest problem was allowing spontaneous comedy without allowing spontaneous evidence. We separated the fixed logical case from character performance, kept quoted statements exact, removed the private solution from model inputs, and added a second review. Early generated responses failed validation or were over-rejected; we retained those failed runs and narrowed the prompts. A five-question real runtime check then produced five accepted turns, while the actual Crew UI demo also demonstrates a safe fallback.
 
-On November 4, Kiro authored a seven-kind decorative SVG prop component and three accompanying spec files. Its initial typecheck found a JSX namespace error; Kiro repaired it and the same command then returned exit 0. The agent run completed with exit 0. Codex corrected a comment and redundant cast, integrated the props, generated the new entrance/material assets and performed the production/browser verification. [Recorded run](kiro/attraction-run.json).
+Integration checks caught an incorrect Crew bundle path, a proxy prefix mismatch, a photo timeout too short for Kiro, and a consent assumption in an older test. All were corrected before the final verification. A generated Kiro review overstated its test scope; we kept that initial report and accepted only the later actual execution output as evidence.
 
-The [official Kiroween 2026 rules](https://kiroween.devpost.com/rules) require actual Kiro use, a root `.kiro` directory and a write-up. This records the contribution performed; it does not guarantee judging or eligibility.
+## Accomplishments
 
-## Challenges addressed in the implementation
+The delivered main project passes 284 unit/server/solver tests, type checking, a production build, and 63 Chromium browser tests. Crew has additional backend authentication/budget checks and real photo/dialogue evidence. English is the default; ten languages, Arabic RTL, keyboard input, captions, mute and reduced motion are supported. Licensed alternate photos exercise landscape/portrait and correct/wrong verdict paths.
 
-- Maintaining a fixed event subject when witness roles change. A statement about a lamp must keep referring to that lamp even when another object speaks.
-- Keeping the photographed object recognizable while aligning faces to normalized image coordinates after resizing and rotation.
-- Preventing character comedy and AI output from altering the deductive rules or signaling guilt before the verdict.
-- Preserving one case across friend visits while withholding private solution material from public responses.
-- Ensuring repeated accusation requests cannot change a recorded answer, and deleting stored images alongside their case data.
+These checks are not a user study or a recognition benchmark. Physical iPhone/Android testing and native-speaker review of every translation have not been performed. AI face positions can need correction. Free hosting and Kiro quotas remain external limits.
 
-## Evidence to attach
+## What's next
 
-Use [the current preflight validation record](preflight-validation.md) for exact executed checks and outcomes: 173 current unit/server/solver tests and the earlier 63-test browser suite passed; production API and manual mobile checks are recorded separately, including two different licensed real photographs and small mobile layouts. [Earlier validation](validation-results.md) retains its historical scope and does not establish later results. Include only results tied to the delivered revision. The automated fixtures and simulated browser viewports do not establish native-speaker review, physical-device compatibility, recognition accuracy, or human enjoyment.
+Observe consenting players to refine the timing, comedy and difficulty; expand the bank of code-verified case templates; and improve approximate object placement while retaining manual control. The public game remains accessible without an account, while interested players can install the optional Crew edition.
 
-The sample photograph is a licensed Pexels image by Elena Golovchenko. [Asset attribution](assets.md) identifies its license, the Codex-generated decorative images and local font licenses. SVG faces are implemented in source. [Development provenance](kiro-usage.md) distinguishes actual Codex and Kiro contributions.
+## Links
 
-## What remains
+- Play: https://kirock-homes.vercel.app
+- Main source: https://github.com/openai-lover/kirock-homes
+- Crew app source (same GitHub owner): https://github.com/openai-lover/kirock-homes-crew
+- Demo: https://youtu.be/7gknqGSknDk
+- Install: https://kirock-homes.vercel.app/crew
 
-- Review the recorded Kiro contribution for the submission write-up. A hook remains unperformed and must not be claimed.
-- Monitor the existing free public deployment and its scheduled cleanup; live share/delete/expiry endpoint checks passed.
-- Verify a chosen real AI account/model only if the optional recognition feature is advertised as live; retain manual mode regardless.
-- Two additional real photos completed the automated portrait/landscape flows. Physical iPhone and Android interaction testing remains unperformed.
-- Observe consenting human players and report actual completion, understanding, timing, and humor feedback without invented metrics.
-- Review the published source, video and English draft before final Devpost submission.
-- Confirm current contest eligibility, entry requirements, and project submission details, then submit through the user's own account. Participant registration was observed as complete; the user reported submitting the credit application. Credit receipt/approval/payment and project submission were not independently confirmed. [Registration and credits record](kiro-credits-2026.md).
-
-## Published demo — recorded locally
-
-[Review video](demo/kirock-homes-review.webm), [English captions](demo/kirock-homes-review.en.srt), and [recording provenance](demo/recording.json). Actual local browser gameplay: opening, living-photo story, upload of a different licensed landscape photo, manual casting, three statements, a typed question, a real Kiro response and final verdict. A labelled closing card summarizes preserved Kiro development evidence; it is not a new terminal run. Container duration: 85.56 seconds at 1280 × 900. Chrome playback was verified through the end. No audio narration is claimed. The recording is public on [YouTube](https://youtu.be/zGdqdS0ssVY), on @SLIME-CEO.
-
-## Optional 2:45 storyboard — longer version not recorded
-
-This is an optional longer recording plan; the shorter real recording above is already available. Record the actual final app and recorded Kiro contribution; label fixtures, cuts and time compression. Do not show private photos, credentials or hidden answer data before the reveal.
-
-| Time | Actual screen to record | Suggested English narration / caption |
-| --- | --- | --- |
-| 0:00–0:08 | First SVG eyes open on a recognizable object | “An ordinary desk. Then the keyboard gets a mouth.” |
-| 0:08–0:22 | Title and sample/local-photo entry | “Kirock Homes turns a familiar photo into a short mystery.” |
-| 0:22–0:40 | Upload, choose three objects, adjust faces | “Choose three objects. Place their faces. Wake them up.” |
-| 0:40–1:15 | Photo shutter, awakening, three statements and a typed question with a reply/interjection | “The objects join your group chat. Ask a question, then compare their exact words.” |
-| 1:15–1:35 | Final accusation, reaction, three-step proof | “One accusation. A fair answer, even when you get it wrong.” |
-| 1:35–1:48 | Confirm photo sharing; open the same case in an independent browser | “A friend plays the same case, with their own decision.” Label local-host footage if no public deployment exists. |
-| 1:48–2:18 | Actual Kiro group-chat spec, routing module and recorded 84-test output | Explain the bounded routing contract and show the actual runtime result. Distinguish Kiro-authored routing from Codex integration. Do not claim a hook, unrestricted generated dialogue or Kiro browser test. |
-| 2:18–2:35 | Executed solver/browser checks and a genuine result record | Describe what was tested and its limits. Include human findings only after a real study. |
-| 2:35–2:45 | Final game screen and verified public app address, if deployed | “Your room. Three suspects. One liar.” |
-
-Korean note: 이 문서는 제출 초안과 **아직 녹화하지 않은** 영상 구성안입니다. Kiro의 실제 가설 보드·탐정 안내·10개 언어 보조 UI 개발 기록은 있습니다. 이전 10개 언어 Kiro 실행은 집중 테스트 19개 통과 후 서비스 제한으로 종료 코드 1이 발생했습니다. 11월 4일 새 소품 컴포넌트 실행은 타입 오류 수정과 검사 통과 후 종료 코드 0으로 완료됐습니다. 공개 배포·GitHub 소스·YouTube 영상 게시를 완료했습니다. 사용자 실험·실기기 검증은 수행하지 않았고, 작품 최종 제출·크레딧 승인을 확인한 기록도 없습니다.
+The detective mascot is an independent, unofficial Kiro-inspired adaptation. Photograph/font/image licenses and authorship are documented in `docs/assets.md`. No official endorsement or award is claimed.

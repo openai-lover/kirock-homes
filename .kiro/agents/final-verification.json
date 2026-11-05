@@ -1,0 +1,90 @@
+{
+  "name": "final-verification",
+  "description": "Kiro final audit; configured by Codex",
+  "prompt": "Execute exactly this command once and report actual test counts. Do not read files or use any other commands: /Users/kyumin/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node --import tsx --conditions=react-server --test tests/engine.test.ts tests/conditional-chat.test.ts tests/performance.test.ts tests/live-performance.test.ts",
+  "tools": [
+    "read",
+    "shell"
+  ],
+  "allowedTools": [],
+  "resources": [],
+  "mcpServers": {},
+  "includeMcpJson": false,
+  "toolsSettings": {
+    "fs_read": {
+      "allowedPaths": [
+        "/Users/kyumin/Documents/ChatGPT/kiro/tests/engine.test.ts",
+        "/Users/kyumin/Documents/ChatGPT/kiro/tests/performance.test.ts",
+        "/Users/kyumin/Documents/ChatGPT/kiro/tests/live-performance.test.ts",
+        "/Users/kyumin/Documents/ChatGPT/kiro/src/lib/chat/live-performance.server.ts"
+      ],
+      "denyByDefault": true
+    },
+    "execute_bash": {
+      "allowedCommands": [
+        "^/Users/kyumin/\\.cache/codex\\-runtimes/codex\\-primary\\-runtime/dependencies/node/bin/node\\ \\-\\-import\\ tsx\\ \\-\\-conditions=react\\-server\\ \\-\\-test\\ tests/engine\\.test\\.ts\\ tests/conditional\\-chat\\.test\\.ts\\ tests/performance\\.test\\.ts\\ tests/live\\-performance\\.test\\.ts$"
+      ],
+      "denyByDefault": true
+    }
+  },
+  "permissions": {
+    "rules": [
+      {
+        "capability": "fs_read",
+        "match": [
+          "/Users/kyumin/Documents/ChatGPT/kiro/tests/engine.test.ts",
+          "/Users/kyumin/Documents/ChatGPT/kiro/tests/conditional-chat.test.ts",
+          "/Users/kyumin/Documents/ChatGPT/kiro/tests/performance.test.ts",
+          "/Users/kyumin/Documents/ChatGPT/kiro/tests/live-performance.test.ts",
+          "/Users/kyumin/Documents/ChatGPT/kiro/src/lib/chat/live-performance.server.ts"
+        ],
+        "effect": "allow"
+      },
+      {
+        "capability": "fs_read",
+        "exclude": [
+          "/Users/kyumin/Documents/ChatGPT/kiro/tests/engine.test.ts",
+          "/Users/kyumin/Documents/ChatGPT/kiro/tests/conditional-chat.test.ts",
+          "/Users/kyumin/Documents/ChatGPT/kiro/tests/performance.test.ts",
+          "/Users/kyumin/Documents/ChatGPT/kiro/tests/live-performance.test.ts",
+          "/Users/kyumin/Documents/ChatGPT/kiro/src/lib/chat/live-performance.server.ts"
+        ],
+        "effect": "deny"
+      },
+      {
+        "capability": "shell",
+        "match": [
+          "/Users/kyumin/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node --import tsx --conditions=react-server --test tests/engine.test.ts tests/conditional-chat.test.ts tests/performance.test.ts tests/live-performance.test.ts"
+        ],
+        "effect": "allow"
+      },
+      {
+        "capability": "shell",
+        "exclude": [
+          "/Users/kyumin/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node --import tsx --conditions=react-server --test tests/engine.test.ts tests/conditional-chat.test.ts tests/performance.test.ts tests/live-performance.test.ts"
+        ],
+        "effect": "deny"
+      },
+      {
+        "capability": "fs_write",
+        "effect": "deny"
+      },
+      {
+        "capability": "web_fetch",
+        "effect": "deny"
+      },
+      {
+        "capability": "web_search",
+        "effect": "deny"
+      },
+      {
+        "capability": "mcp",
+        "effect": "deny"
+      },
+      {
+        "capability": "subagent",
+        "effect": "deny"
+      }
+    ]
+  }
+}

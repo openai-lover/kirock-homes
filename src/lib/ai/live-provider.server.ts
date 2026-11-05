@@ -1,5 +1,6 @@
 import "server-only";
 import type { VisionProvider } from "./provider";
+import { KiroVisionProvider } from './kiro-vision.server';
 
 /** Optional Chat Completions-compatible provider; an operator must choose a vision-capable model. */
 export class CompatibleVisionProvider implements VisionProvider {
@@ -35,6 +36,7 @@ export class CompatibleVisionProvider implements VisionProvider {
 }
 
 export function configuredProvider(env: Record<string, string | undefined> = process.env): VisionProvider | null {
+  if (env.AI_PROVIDER === 'kiro' && env.KIRO_CLI_PATH) return new KiroVisionProvider();
   if (env.AI_PROVIDER !== "openai-compatible" || !env.AI_API_KEY || !env.AI_MODEL || !env.AI_BASE_URL) return null;
   try { if (new URL(env.AI_BASE_URL).protocol !== "https:") return null; } catch { return null; }
   return new CompatibleVisionProvider({ baseUrl: env.AI_BASE_URL, apiKey: env.AI_API_KEY, model: env.AI_MODEL });

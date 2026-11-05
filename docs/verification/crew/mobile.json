@@ -1,0 +1,38 @@
+{
+  "executedAt": "2026-11-05T13:06:37.963Z",
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "keyboardSend": true,
+      "scriptedFallback": true,
+      "composerVisible": true,
+      "escapeRestoresFocus": true
+    },
+    {
+      "width": 390,
+      "height": 800,
+      "keyboardSend": true,
+      "scriptedFallback": true,
+      "composerVisible": true,
+      "escapeRestoresFocus": true
+    },
+    {
+      "width": 768,
+      "height": 800,
+      "keyboardSend": true,
+      "scriptedFallback": true,
+      "composerVisible": true,
+      "escapeRestoresFocus": true
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "keyboardSend": true,
+      "scriptedFallback": true,
+      "composerVisible": true,
+      "escapeRestoresFocus": true
+    }
+  ],
+  "limitation": "Chromium simulated viewports, not physical phones."
+}

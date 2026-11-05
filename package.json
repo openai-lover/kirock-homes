@@ -1,6 +1,6 @@
 {
   "name": "room-of-suspects",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "engines": {
     "node": "24.x"
@@ -13,7 +13,8 @@
     "test": "node --import tsx --conditions=react-server --test tests/*.test.ts",
     "test:e2e": "playwright test",
     "cleanup": "node --env-file-if-exists=.env.local --import tsx --conditions=react-server scripts/cleanup.ts",
-    "package": "node scripts/package.mjs"
+    "package": "node scripts/package.mjs",
+    "build:crew": "node scripts/build-crew.mjs"
   },
   "dependencies": {
     "@libsql/client": "0.18.0",

@@ -1,0 +1,5 @@
+5b13bb704480704fb8342e3fdbf36d47a5a73751253ce38aac6efcaa6f686181  src/lib/chat/performance.ts
+57e36500c49e30950528ec706e0b1852acd959d97d9fd2fa9dc452927090e666  tests/performance.test.ts
+41a586977df0d39e3d58829354db40d203eaf36c0e4b3304900988de141b4f01  .kiro/specs/live-dialogue/requirements.md
+f3b181ea02ec5df219ecb5421613f9718c89aa6d8f420132847363d6ebf56b4e  .kiro/specs/live-dialogue/design.md
+bcf80563521ea2b4d07c6a9784f0cf6e7ad84f17304f4b0ecf202aee7c9eb7a9  .kiro/specs/live-dialogue/tasks.md

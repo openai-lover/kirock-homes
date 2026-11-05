@@ -23,7 +23,7 @@ export async function POST(request:NextRequest){
   input.target=addressedTarget(input.question,input.target,snapshot.suspects);
   const context={...input,suspects:snapshot.suspects,snapshot};
   // Opt-in sends only text. Offline mode never calls a provider or consumes a budget.
-  let provider=body.aiConsent===true?chatProvider():null;
+  let provider=body.aiConsent===true&&typeof body.shareId!=='string'?chatProvider():null;
   if(provider?.name==='kiro'&&!['127.0.0.1','localhost','[::1]'].includes(new URL(`http://${request.headers.get('host')}`).hostname))provider=null;
   let answer:ChatAnswer;
   if(!provider)answer=await planWithFallback(null,context);
@@ -33,7 +33,7 @@ export async function POST(request:NextRequest){
    const budget=getChatBudget();const result=await budget.begin(id,caseHash,cap(process.env.CHAT_DAILY_LIMIT,40),cap(process.env.CHAT_TOTAL_LIMIT,200));
    if(result.cached)answer=result.cached;
    else if(result.reason)answer={plan:fallbackChatPlan(context),mode:'local',reason:result.reason};
-   else {answer=await planWithFallback(provider,context);await budget.finish(id,answer);}
+   else {answer=await planWithFallback(provider,context,provider.name==='kiro'&&process.env.CHAT_PERFORMANCE==='true'?55000:20000);await budget.finish(id,answer);}
    // Check again after a slow model response. Deleted/expired shares never return cached dialogue.
    if(typeof body.shareId==='string')await getAppStore().getPublic(body.shareId,body.locale);
   }
