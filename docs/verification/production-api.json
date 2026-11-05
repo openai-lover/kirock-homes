@@ -1,0 +1,24 @@
+{
+  "verifiedAt": "2026-11-05T08:40:51.275Z",
+  "url": "https://kirock-homes.vercel.app",
+  "passed": [
+    "Unauthenticated public home",
+    "Explicit photo publication consent enforced",
+    "Real photo saved to remote storage with secure owner cookie",
+    "All ten languages preserve statements and dialogue; public responses omit solution",
+    "Shared photograph matches sanitized image exactly and is not publicly cached",
+    "Concurrent and repeated accusation keeps first verdict and exact explanation",
+    "Friend has independent play and cannot use another player session",
+    "No AI key: authored chat and manual photo selection remain available",
+    "Ownership enforced; deletion removes case, photograph and play session",
+    "Expired cloud case immediately refuses photo, case, play, accusation and chat",
+    "Authenticated production cleanup physically removes expired rows"
+  ],
+  "failures": 0,
+  "usesPaidAI": false,
+  "fixture": "work-desk.jpg",
+  "notes": [
+    "Expiry tested by aging only a fixture row; natural seven-day passage and scheduled cron invocation not observed.",
+    "Authorized cleanup endpoint invoked directly."
+  ]
+}

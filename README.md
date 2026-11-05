@@ -2,6 +2,10 @@
 
 **Your photo. A room full of suspects. One liar.**
 
+[Play online](https://kirock-homes.vercel.app) · [85-second demo](https://youtu.be/zGdqdS0ssVY) · [Source](https://github.com/openai-lover/kirock-homes)
+
+The public demo uses Vercel Hobby and Turso Starter free storage. No card was added and no paid service was enabled. Public AI providers are disabled: manual photo casting and authored interactive chat work without an account. Live Kiro interpretation is demonstrated in the local recording and documented separately.
+
 사진 속 물건 셋이 눈을 뜨고, 당신과 킬록이 있는 단톡방에 들어옵니다. 사건 설명과 공식 증언을 하나씩 듣고 직접 질문하세요. 관련 물건이 답하고 다른 물건이 반론에 끼어듭니다. 마지막 지목은 한 번입니다.
 
 A photo becomes a group-chat mystery. Wake three objects, hear the case one message at a time, type questions, compare their replies and make one accusation. English is the default; ten languages, Arabic RTL, keyboard controls, captions, mute and reduced motion are included.
@@ -12,7 +16,7 @@ The intro now prepares its photograph and character before the sweep, shows a br
 
 ## Run
 
-Use **Node.js 24 LTS** (the Vercel target); SQLite requires at least 22.13.0. Actual execution used **Node 25.9.0**, Next.js **16.4.3**, React **19.3.1**, TypeScript **5.9.3** and the included `package-lock.json`.
+Use **Node.js 24 LTS** (the verified Vercel runtime); SQLite requires at least 22.13.0. Local verification used **Node 25.9.0**, Next.js **16.4.3**, React **19.3.1**, TypeScript **5.9.3** and the included `package-lock.json`. Production builds use the bundled Webpack (`next build --webpack`), because the Next 16.4.3 Turbopack adapter omitted runtime dependencies on Vercel.
 
 ```bash
 npm ci
@@ -76,7 +80,7 @@ New cases use version 2, **conditional alibis**, instead of one witness simply n
 
 The local SQLite adapter runs on one persistent Node host. Vercel uses the remote Turso/libSQL adapter selected by `TURSO_DATABASE_URL` and `TURSO_AUTH_TOKEN`. The owner must review the exact photo and approve sharing. A shared case freezes the photo, faces, official statements, authored character lines, interrogation material and answer in its supported languages. Each friend gets an independent play session. Free questions are individual conversations about that fixed material, not additional official evidence. Public responses contain no answer, confession, structural claims or explanation before accusation. Repeated accusations return the first recorded verdict.
 
-Links expire in seven days. Owner-cookie deletion removes the photo and case. Startup/hourly cleanup removes expired data while the server runs; use `npm run cleanup` under an external scheduler if continuous deletion is required while the game process is stopped. A stopped computer cannot perform cleanup. Copies saved by recipients cannot be recalled. Deletion authority cannot be recovered from another device.
+Links expire in seven days. Owner-cookie deletion removes the photo and case. Locally, startup/hourly cleanup removes expired data while the server runs. Vercel rejects expired links immediately and uses a daily authenticated cleanup plus cleanup on new shares to remove expired rows. Outages may delay physical cleanup; provider backups follow the provider's retention. A stopped computer cannot perform local cleanup. Copies saved by recipients cannot be recalled. Deletion authority cannot be recovered from another device.
 
 **127.0.0.1 is local only.** See [Vercel deployment](docs/vercel-deployment.md) for the remote storage adapter, cleanup scheduler and production checks. Serverless deployments fail closed if storage credentials are missing; they never use disposable local files for shared cases.
 
@@ -86,7 +90,8 @@ Links expire in seven days. Owner-cookie deletion removes the photo and case. St
 
 ## Source and evidence
 
-- [Current validation and unrun checks](docs/preflight-validation.md)
+- [Public deployment validation and unrun checks](docs/production-validation.md)
+- [Earlier full browser preflight](docs/preflight-validation.md)
 - [Design and interaction contract](docs/group-chat-design.md)
 - [Kiro execution, prompt and file hashes](docs/kiro/group-chat-README.md)
 - [Photo-first story and unused artwork exploration](docs/group-chat-art.md)
