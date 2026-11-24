@@ -290,18 +290,18 @@ export const UI_MESSAGES = {
     "ar": "غرفة المشتبه بهم",
     "hi": "संदिग्धों का कमरा"
   },
-  "Kirock, a little ghost detective with a deerstalker hat and magnifying glass": {
-    "en": "Kirock, a little ghost detective with a deerstalker hat and magnifying glass",
-    "ko": "탐정 모자와 망토를 입고 작은 돋보기를 든 흰 유령 탐정",
-    "es": "Kirock, un pequeño fantasma detective con gorra y lupa",
-    "fr": "Kirock, petit détective fantôme avec sa casquette et sa loupe",
-    "de": "Kirock, ein kleiner Geisterdetektiv mit Detektivmütze und Lupe",
-    "pt": "Kirock, um pequeno detetive fantasma com chapéu e lupa",
-    "ja": "探偵帽をかぶり、虫眼鏡を持った小さな幽霊探偵Kirock",
-    "zh": "戴着猎鹿帽、拿着放大镜的小幽灵侦探 Kirock",
-    "ar": "Kirock، محقق شبح صغير بقبعة تحرٍّ وعدسة مكبرة",
-    "hi": "Kirock, जासूसी टोपी और आवर्धक शीशे वाला छोटा भूत-जासूस"
-  },
+  "Kirock, a detective seen only in silhouette": {
+    "en": "Kirock, a detective seen only in silhouette",
+    "ko": "실루엣으로 등장하는 탐정 킬록",
+    "es": "Kirock, una silueta de detective",
+    "fr": "Kirock, une silhouette de détective",
+    "de": "Kirock, ein Detektiv im Schatten",
+    "pt": "Kirock, uma silhueta de detetive",
+    "ja": "シルエットだけを見せる探偵キロック",
+    "zh": "只露剪影的侦探基洛克",
+    "ar": "كيروك، محقق لا يظهر منه سوى ظلّه",
+    "hi": "किरॉक, परछाईं में दिखने वाला जासूस"
+},
   "Your room. Three suspects. One liar.": {
     "en": "Your room. Three suspects. One liar.",
     "ko": "내 방. 용의자 셋. 거짓말 하나.",

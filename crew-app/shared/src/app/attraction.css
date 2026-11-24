@@ -1,0 +1,167 @@
+/* A playable detective attraction: hardware indicates action, paper carries evidence. */
+:root{--bg:#101d25;--paper:#f5e9ce;--ink:#293239;--gold:#edc57c;--accent:#803e39;--muted:#60686b;--line:#cfc2a7}
+body{background:#101d25}
+.game-content{position:relative;isolation:isolate;min-height:100svh}
+.attraction-scene{position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(#101d25e8,#101d25f5),url('/art/attraction-street.webp') center top/cover no-repeat}
+.attraction-scene.at-entry{background:linear-gradient(180deg,#081b2580 0%,#081b2520 45%,#101d2599 85%,#101d25 100%),url('/art/attraction-street.webp') center top/cover no-repeat}
+.attraction{max-width:1460px;padding-inline:clamp(24px,6.5vw,96px)}
+.detective-prop{width:32px;height:32px;flex-shrink:0;display:block}
+.attraction .topbar{min-height:100px;border-bottom:1px solid #b9914a55;position:relative}
+.attraction .brand{gap:12px;text-shadow:0 2px 4px #000;font-size:19px}
+.attraction .brand strong{font-size:22px}
+.attraction .brand-monogram{width:54px;height:56px;color:#f0cd89;background:linear-gradient(140deg,#304a49,#152c31);border:1px solid #c6a66a;border-radius:50% 50% 42% 42%;box-shadow:inset 0 0 0 4px #10292e,0 3px 0 #071319,0 6px 14px #0006}
+.attraction .brand-monogram .detective-prop{width:43px;height:43px}
+.attraction .settings{gap:9px}
+.attraction .settings button{border:1px solid #a18554;border-radius:30px;background:linear-gradient(#334b4e,#1a3036);color:#e8ddc2;box-shadow:inset 0 0 0 3px #152a2e,0 3px 0 #07151b;padding:11px 14px}
+.attraction .settings button[aria-pressed=true]{background:linear-gradient(#d9bb7b,#ba914f);color:#263334;box-shadow:inset 0 0 0 3px #e7cf9844,0 2px 0 #543e23}
+.attraction .settings button:hover:not(:disabled){border-color:#f4ce88;background:#385158;color:#fff3d6}
+.attraction .settings button[aria-pressed=true]:hover{background:#e8ca90;color:#263334}
+.attraction .language-setting select{border:1px solid #b49a69;border-radius:7px;background:#192d32;color:#f5e9ce;box-shadow:inset 0 0 0 3px #0c2227,0 3px 0 #07151b;padding-block:12px;min-height:48px}
+.attraction button,.attraction .button-link{transition:background-color .16s,border-color .16s,box-shadow .16s,transform .16s}
+.attraction button:active:not(:disabled),.attraction .button-link:active{transform:translateY(2px)}
+.attraction .actor:active:not(:disabled){transform:none}
+.attraction .landing{padding-top:48px;gap:42px 70px;max-width:1240px}
+.attraction .intro{max-width:440px;position:relative;z-index:2}
+.attraction .agency-role{display:inline-flex;align-items:center;gap:10px;border-block:1px solid #c2a56b8c;padding:9px 0;font-size:12px;color:#f8dca4;margin-bottom:25px;text-shadow:0 2px 5px #000}
+.attraction .agency-role:before,.attraction .agency-role:after{content:'✦';font-size:10px}
+.attraction .game-title{color:#f5e2b1;text-shadow:0 2px 0 #775f37,0 5px 2px #06181d,0 9px 30px #000;letter-spacing:-2px;font-size:106px}
+.attraction .game-subtitle{color:#edca89;text-shadow:0 2px 6px #000;font-size:29px}
+.attraction .tagline{font-size:27px;text-shadow:0 2px 5px #000}
+.attraction .intro-copy{color:#e0e0d3;font-size:14px;text-shadow:0 2px 5px #000;max-width:350px}
+.attraction .intro .small-note{color:#d5d7c9;text-shadow:0 1px 4px #000}
+.attraction .detective-host{position:absolute;inset-inline-start:calc(50% - 76px);top:180px;width:270px;z-index:3}
+.attraction .intro{position:static}
+.attraction .intro .detective-host{position:absolute}
+.attraction .detective-host img{filter:drop-shadow(0 18px 13px #020d15aa)}
+.attraction .detective-greeting{font-size:21px;max-width:220px;color:#f8ebd1;text-shadow:0 2px 8px #000;margin-top:10px}
+.attraction .entry-actions{gap:12px;max-width:355px}
+.attraction .entry-actions .primary,.attraction .entry-actions .secondary{min-height:88px;position:relative;isolation:isolate;border:0;background:transparent;padding:20px 35px;color:#292b23;font-size:15px;line-height:1.5;gap:14px;filter:drop-shadow(0 6px 4px #0007);border-radius:15px;box-shadow:none}
+.attraction .entry-actions .primary:before,.attraction .entry-actions .secondary:before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background-repeat:no-repeat;background-position:center}
+.attraction .entry-actions .primary:after,.attraction .entry-actions .secondary:after{content:'';position:absolute;inset:10px 18px;background:#dbb56c;z-index:-2;border-radius:7px;pointer-events:none}
+.attraction .entry-actions .secondary:after{background:#f3e4c7}
+.attraction .entry-actions .primary:before{background-image:url('/art/attraction-brass.webp');background-size:100% 145%}
+.attraction .entry-actions .secondary:before{background-image:url('/art/attraction-ticket.webp');background-size:100% 100%}
+.attraction .entry-actions .primary:hover:not(:disabled),.attraction .entry-actions .secondary:hover:not(:disabled){background:transparent;box-shadow:none;transform:translateY(-2px);filter:drop-shadow(0 8px 7px #0008) brightness(1.08)}
+.attraction .entry-actions .primary:active:not(:disabled),.attraction .entry-actions .secondary:active:not(:disabled){transform:translateY(3px);filter:drop-shadow(0 2px 2px #0008)}
+.attraction .entry-actions .detective-prop{width:31px;height:31px;color:#5d431e}
+.attraction .entry-actions .button-label{font-size:15px;flex:1;min-width:0;text-align:start}
+.attraction .entry-actions .primary:is(:hover,:focus-visible) .detective-prop{animation:bell-tip .4s ease-in-out 2}
+.attraction .opening-replay{color:#ead8b6;gap:10px;margin-top:12px;padding:8px 12px;border:1px solid #a1855470;background:#112830aa;box-shadow:0 3px 0 #07151b;border-radius:4px}
+.attraction .opening-replay:hover:not(:disabled){background:#284248;color:#ffe4ac}
+.attraction .opening-replay .detective-prop{width:22px;height:22px}
+.attraction .photo-exhibit{max-width:335px;margin-top:16px;filter:drop-shadow(0 18px 24px #0009);z-index:1}
+.attraction .case-invitation:before,.attraction .case-invitation:after{content:'';position:absolute;width:1px;height:55px;top:-40px;background:#d8bc81;z-index:-1;box-shadow:1px 0 #291f14}
+.attraction .case-invitation:before{inset-inline-start:25%;transform:rotate(18deg)}
+.attraction .case-invitation:after{inset-inline-end:25%;transform:rotate(-18deg)}
+.attraction .invitation-tab{background:linear-gradient(#e1c38d,#bfa066);border:1px solid #f4d59b;box-shadow:inset 0 0 0 3px #8c6e3c44;border-radius:9px 17px 0 0;min-height:43px;color:#3e3528;padding-inline:16px}
+.attraction .desk-preview{background:#eee0bd;border:5px solid #3c3027;padding:16px;border-radius:0 5px 8px 8px;box-shadow:inset 0 0 0 1px #ad8b52,0 0 0 1px #b48d53,0 6px 0 #171d1c;position:relative}
+.attraction .invitation-heading{border-bottom:1px solid #bda77c;padding-bottom:11px;margin-bottom:12px;font-family:var(--display);font-size:21px;font-weight:700;gap:8px}
+.attraction .desk-preview .photo-stage{box-shadow:0 0 0 3px #faf2da,0 2px 6px #34251766;border-radius:1px}
+.attraction .preview-suspects{gap:5px;margin-top:17px}
+.attraction .preview-suspects button{background:linear-gradient(#fff6dc,#e1cca0);color:#39392d;border:1px solid #b49b6a;border-radius:4px 4px 8px 8px;box-shadow:inset 0 0 0 2px #fff4cf,0 3px 0 #b8a17b;padding:9px 4px;font-size:11px;gap:4px}
+.attraction .preview-suspects button>span{width:20px;height:20px;border-radius:50%;border:1px solid #a78a51;display:grid;place-items:center;flex-shrink:0;font-size:16px;line-height:1;background:#fff6df}
+.attraction .preview-suspects button[aria-pressed=true]{background:#23494b;color:#fff1cd;box-shadow:inset 0 0 0 2px #41615a,0 1px 0 #162b2c;transform:translateY(2px)}
+.attraction .preview-suspects button[aria-pressed=true]>span{color:#fff1cd;background:#31585a;border-color:#bfac76}
+.attraction .preview-banter{margin-top:4px;padding:17px 3px 4px;min-height:110px}
+.attraction .preview-banter p{font-size:22px}
+.attraction .preview-banter strong{color:#7b5428}
+.attraction .preview-banter small{color:#60645c}
+.attraction .agency-method{position:relative;margin-top:12px;padding:24px 28px;border:1px solid #a58a594d;background:#10262be8;border-radius:5px;box-shadow:inset 0 0 0 5px #12313755,0 6px 25px #0004;gap:28px}
+.attraction .agency-method li>span{width:33px;height:37px;flex-shrink:0;border:1px solid #ad925d;border-radius:50% 50% 40% 40%;display:grid;place-items:center;font-size:23px;background:#1f373b}
+.attraction .agency-method strong{color:#f3e4c7;font-size:23px}
+.attraction .agency-method p{color:#cbd4cb}
+.attraction footer{color:#d1cbb9}
+
+/* Inside the attraction, each control has a distinct physical role. */
+.attraction .primary{border:1px solid #a98342;background:linear-gradient(135deg,#f0d497,#c6a05c);color:#2e332b;box-shadow:inset 0 0 0 3px #fbe4ad66,0 4px 0 #806037,0 6px 10px #161e2026;border-radius:7px;padding:16px 18px;min-height:56px}
+.attraction .primary:hover:not(:disabled){background:linear-gradient(135deg,#f8e0aa,#dbb970);border-color:#735c37;box-shadow:inset 0 0 0 3px #fff0cb88,0 4px 0 #806037,0 9px 16px #161e2030}
+.attraction .primary:disabled{opacity:.5;box-shadow:inset 0 0 0 3px #fbe4ad44,0 2px 0 #b49b75;filter:saturate(.5)}
+.attraction .secondary,.attraction .casting-tools button,.attraction .hypothesis-reset,.attraction .ai-option>button,.attraction .shared-link>button{background:linear-gradient(#fff8e6,#e8d7b4);border:1px solid #b59d71;color:#3b3d32;box-shadow:inset 0 0 0 3px #fff6dd,0 3px 0 #bfa982;border-radius:4px;padding:13px 16px}
+.attraction .secondary:hover:not(:disabled),.attraction .casting-tools button:hover:not(:disabled),.attraction .hypothesis-reset:hover,.attraction .ai-option>button:hover:not(:disabled),.attraction .shared-link>button:hover:not(:disabled){background:#fff3d3;border-color:#826b45;box-shadow:inset 0 0 0 3px #fff9e9,0 3px 0 #b29970}
+.attraction .case-heading-mark{background:linear-gradient(#3b504d,#1b3033);border-color:#bb9a5e;box-shadow:inset 0 0 0 4px #10292d,0 3px 0 #07151b;border-radius:8px}
+.attraction .case-heading h1{text-shadow:0 3px 5px #0008;color:#f5e7c8}
+.attraction .case-journey{border-color:#a4844b66;gap:27px}
+.attraction .case-journey li{color:#c5d0c8;position:relative}
+.attraction .case-journey b{width:27px;height:29px;display:grid;place-items:center;border:1px solid #9e855b;border-radius:50%;font-size:19px;background:#1c353b}
+.attraction .case-journey [aria-current=step]{color:#f6d79b;border-color:#e7c17c}
+.attraction .case-journey [aria-current=step] b{background:#d6b16e;color:#263537;border-color:#f5dda6;box-shadow:0 0 12px #f0b84c22}
+.attraction .scene-column{border:1px solid #92734b;background:#172b30;padding:18px;border-radius:6px;box-shadow:inset 0 0 0 5px #243b3c,0 8px 20px #0005}
+.attraction .scene-label{color:#dcc7a2;letter-spacing:.02em}
+.attraction .scene-column .photo-stage{border:1px solid #ead8af;box-shadow:0 0 0 3px #0d1e25}
+.attraction .caption-tag{color:#c8c9b9}
+.attraction .evidence-column{background:#f5e9ce;border:1px solid #d7bf8e;border-radius:6px 6px 12px 5px;box-shadow:6px 6px 0 #dfc99f,8px 8px 0 #66553d,0 12px 30px #0005;position:relative}
+.attraction .casebook-heading{background:linear-gradient(#314847,#20383c);color:#ecd49f;border:1px solid #bb9b63;box-shadow:inset 0 0 0 3px #172d31;margin-top:-1px;position:relative;padding-block:15px;border-radius:6px 6px 0 0}
+.attraction .casebook-heading:before{content:'';position:absolute;top:-13px;left:calc(50% - 25px);width:50px;height:22px;border:2px solid #b49458;background:linear-gradient(90deg,#a78449,#edcf91,#b08e50);border-radius:8px 8px 3px 3px;box-shadow:0 3px 3px #0005}
+.attraction .casebook-heading>.detective-prop{width:27px;height:27px}
+.attraction .detective-aside-mascot{width:60px;height:65px;filter:drop-shadow(0 3px 2px #58452c22)}
+.attraction .detective-aside{border-bottom-style:dashed;padding-bottom:23px}
+.attraction .case-note{background:#eaddc058;padding:13px 15px;border-left-color:#8e5540}
+.attraction .testimonies{gap:13px}
+.attraction .testimony{background:#fffbf0;border:1px solid #cdbb95;border-radius:3px;box-shadow:0 3px 0 #decaa2;padding:17px;overflow:visible}
+.attraction .testimony:before{content:'';position:absolute;inset-inline-end:11px;top:-5px;width:26px;height:7px;background:#a17f43;border:1px solid #cfb77b;border-radius:3px;box-shadow:0 2px 2px #0002}
+.attraction .testimony:hover:not(:disabled){background:#fff6db;border-color:#997c48;box-shadow:0 4px 0 #c8af7e;transform:translateY(-1px)}
+.attraction .testimony.active{border-color:#80613d;background:#fff7e4;box-shadow:inset 4px 0 #b18a47,0 3px 0 #c5ac7f}
+.attraction .testimony.heard:not(.active){background:#f3eddc}
+.attraction .witness>b,.attraction .suspect-options b,.attraction .cast-tabs b{box-shadow:inset 0 0 0 2px #fff7dc,0 0 0 1px #ae9667;width:27px;height:27px}
+.attraction .testimony.heard .witness>span{border:1px solid #70816a;border-radius:50%;height:25px;width:25px;display:grid;place-items:center;transform:rotate(-9deg);background:#e4e9d7}
+.attraction .question-list{gap:12px}
+.attraction .question-list>button{border:1px solid #c1aa80;border-radius:4px;background:#fffae9;box-shadow:0 3px 0 #dfcba5;padding:15px}
+.attraction .question-list>button:hover:not(:disabled){background:#fff3d6;border-color:#8f754a;transform:translateY(-1px)}
+.attraction .question-list>button[aria-pressed=true]{background:#f4e5bf;border-color:#8f6c3c;box-shadow:inset 4px 0 #9c773d,0 2px 0 #c2a773}
+.attraction .question-number{color:#7c5934;border-right:1px dashed #bc9e6c;padding-inline-end:10px;font-size:27px}
+.attraction .question-status{width:27px;height:31px;display:grid;place-items:center;border:1px solid #b19a72;border-radius:50% 50% 42% 42%;background:#e6d7b7;color:#786345;font-size:22px}
+.attraction .rebuttal-button{border:1px solid #aa7060;background:linear-gradient(#935047,#713a36);box-shadow:inset 0 0 0 3px #bd887344,0 4px 0 #502d2b;color:#fff1da;padding:16px 18px;border-radius:6px}
+.attraction .rebuttal-button:hover:not(:disabled){background:#9b5549;border-color:#d39476}
+.attraction .rebuttal-button>span{border:1px solid #e1b293;border-radius:50%;width:27px;height:27px;display:grid;place-items:center;line-height:1}
+.attraction .dialogue-turn.objection>span>b{border:2px solid #97574b;border-radius:3px;padding:5px 8px;transform:rotate(-4deg);box-shadow:inset 0 0 0 1px #c9988866;font-size:11px;line-height:1.4}
+.attraction .detective-note{background:#fff7df;border:1px solid #d7c49a;border-top:3px solid #c5a463;border-radius:2px;box-shadow:2px 3px 0 #e1cda5}
+.attraction .hypothesis-card{background:#fff9e7;border:1px solid #cfbc94;box-shadow:0 3px 0 #decca9;border-radius:3px;padding-top:22px}
+.attraction .hypothesis-card:before{content:'';position:absolute;width:22px;height:6px;top:6px;left:calc(50% - 11px);background:#b39559;border-radius:2px;box-shadow:0 1px 1px #73592c55}
+.attraction .hypothesis-card:hover:not([aria-pressed=true]){background:#fff1cf;border-color:#9b7c44}
+.attraction .hypothesis-card[aria-pressed=true]{background:#e8e0cf;color:#6b6b5e;border:1px dashed #a59578;box-shadow:none}
+.attraction .hypothesis-card:has(.hypothesis-last-label){background:#ecedd7;border:2px solid #6b7e54;padding-top:21px}
+.attraction .hypothesis-status{font-size:11px}
+.attraction .suspect-options button,.attraction .cast-tabs button{background:#fff8e4;border:1px solid #c0a36f;box-shadow:inset 0 0 0 2px #fffdf2,0 3px 0 #ccb483;border-radius:5px}
+.attraction .suspect-options button[aria-pressed=true],.attraction .cast-tabs button[aria-pressed=true]{background:#254749;color:#f7edcf;border:1px solid #718367;padding:10px;box-shadow:inset 0 0 0 2px #405b50,0 1px 0 #122f33;transform:translateY(2px)}
+.attraction .cast-tabs button[aria-pressed=true]{padding:12px 6px}
+.attraction .casting-panel input:not([type=checkbox]):not([type=range]),.attraction .casting-panel select,.attraction .theory-row select,.attraction .shared-link input{background:#fffaf0;border:1px solid #bba57f;box-shadow:inset 0 2px 4px #66533315;border-radius:3px;color:#273339}
+.attraction .sliders input{accent-color:#8d6934}
+.attraction .text-button{color:#785137;border-bottom:1px solid #b99a6b;border-radius:0;text-decoration:none}
+.attraction .text-button:hover:not(:disabled){background:#ead8af}
+.attraction .verdict-tag{border:3px double currentColor;padding:8px 15px;transform:rotate(-4deg);border-radius:4px;font-family:var(--display);font-size:24px;box-shadow:2px 3px 0 #a9755533;margin-bottom:23px}
+.attraction .verdict-tag .detective-prop{display:inline-block;width:27px;height:27px;vertical-align:middle;margin-inline-end:8px}
+.attraction .proof li>span{width:29px;height:29px;border:1px solid #b09059;border-radius:50%;text-align:center;background:#e8d7b2;font-size:23px}
+.attraction .share-dialog{background:#f5e9ce;border:1px solid #bba078;box-shadow:0 25px 80px #0009,inset 0 0 0 7px #f9f0d9;border-radius:5px;padding-top:40px}
+.attraction .share-dialog:before{content:'';position:absolute;top:10px;left:14px;right:14px;border-top:1px dashed #ba9e70}
+.attraction .share-dialog .close{background:#e8d4ab;border:1px solid #ad8950;border-radius:50%;width:44px;height:44px;top:17px;inset-inline-end:17px;padding:0;line-height:1;z-index:2;box-shadow:0 2px 0 #9c7d4e}
+.attraction .shared-link{background:#e6e5ce;border:1px solid #b6b697;box-shadow:inset 0 0 0 4px #f2efda}
+.attraction .owner-tools button{border:1px solid #a68a5a;background:#223b40;color:#f1ddba;box-shadow:inset 0 0 0 3px #122a2e,0 3px 0 #0a161d}
+.attraction .notice{background:#f1dfb9;border:1px solid #bc9560;border-inline-start:4px solid #8b4b3d;color:#2b3638}
+
+/* The entrance sequence shares the same location and prop language. */
+.opening-sequence.attraction-opening{--opening-paper:#12242a;--opening-ink:#f5e2b1;--opening-accent:#edc57c;background:linear-gradient(90deg,#0a1d2ac7,#10252d66),url('/art/attraction-street.webp') center/cover no-repeat}
+.opening-sequence.attraction-opening:after{content:'';position:absolute;inset:16px;border:1px solid #d7b77855;pointer-events:none;z-index:0}
+.attraction-opening .opening-title{text-shadow:0 3px 0 #715536,0 8px 18px #000}
+.attraction-opening .opening-line{color:#f0e2c8;text-shadow:0 2px 7px #000}
+.attraction-opening .opening-detective{color:#f7d591;text-shadow:0 2px 5px #000}
+.opening-sequence.attraction-opening .opening-enter{border:0;background:transparent url('/art/attraction-brass.webp') center/100% 145% no-repeat;color:#302e21;min-height:64px;min-width:200px;padding:18px 35px;filter:drop-shadow(0 4px 3px #0006);font-weight:700}
+.opening-sequence.attraction-opening .opening-enter:hover{background-color:transparent;filter:drop-shadow(0 5px 4px #0009) brightness(1.1)}
+.opening-sequence.attraction-opening .opening-enter{isolation:isolate;background-image:none}
+.opening-sequence.attraction-opening .opening-enter:before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:url('/art/attraction-brass.webp') center/100% 145% no-repeat}
+.opening-sequence.attraction-opening .opening-enter:after{content:'';position:absolute;inset:8px 15px;z-index:-2;pointer-events:none;background:#dbb56c;border-radius:6px}
+.opening-sequence.attraction-opening .opening-skip{background:#132c32e8;color:#f8e5bc;border:1px solid #ad8e55;box-shadow:inset 0 0 0 3px #30463b66,0 3px 0 #09181f;border-radius:5px}
+.opening-sequence.attraction-opening .opening-character{filter:drop-shadow(0 20px 18px #03151c99)}
+.opening-sequence.attraction-opening .opening-progress{background:#d3ae6a33}
+@keyframes bell-tip{0%,100%{transform:rotate(0)}30%{transform:rotate(-10deg)}70%{transform:rotate(9deg)}}
+
+@media(max-width:1200px) and (min-width:901px){.attraction{padding-inline:50px}.attraction .landing{gap:40px}.attraction .intro{max-width:355px}.attraction .game-title{font-size:91px}.attraction .photo-exhibit{max-width:290px}.attraction .detective-host{width:210px;inset-inline-start:calc(50% - 75px);top:190px}.attraction .detective-greeting{max-width:185px;font-size:18px}.attraction .entry-actions{max-width:315px}.attraction .entry-actions .primary,.attraction .entry-actions .secondary{padding-inline:29px}.attraction .entry-actions .button-label{font-size:14px}.attraction .preview-suspects button{font-size:10px}.attraction .preview-suspects button>span{width:16px;height:16px;font-size:13px}.attraction .agency-method{padding:22px;gap:20px}}
+@media(max-width:900px) and (min-width:681px){.attraction{padding-inline:30px}.attraction .landing{gap:30px}.attraction .intro{max-width:340px}.attraction .game-title{font-size:77px}.attraction .agency-heading{position:relative;padding-bottom:160px}.attraction .intro .detective-host{inset-inline-start:auto;inset-inline-end:0;top:208px;width:160px}.attraction .detective-greeting{display:none}.attraction .photo-exhibit{max-width:300px}.attraction .game-subtitle{font-size:25px}.attraction .entry-actions .primary,.attraction .entry-actions .secondary{padding-inline:28px;min-height:85px}.attraction .entry-actions .button-label{font-size:13px}.attraction .preview-suspects button{font-size:10px;gap:3px}.attraction .preview-suspects button>span{width:16px;height:16px;font-size:13px}.attraction .agency-method{padding:20px;gap:15px}.attraction .agency-method li{gap:9px}.attraction .agency-method li>span{width:26px;height:31px;font-size:20px}.attraction .agency-method strong{font-size:20px}}
+@media(max-width:680px){
+ .attraction{padding-inline:22px}.attraction .topbar{min-height:86px;gap:9px}.attraction .brand{gap:8px}.attraction .brand-monogram{width:42px;height:46px}.attraction .brand-monogram .detective-prop{width:33px;height:33px}.attraction .settings{gap:6px}.attraction .settings button{min-width:44px;padding:10px}.attraction .language-setting select{max-width:130px;min-height:46px;padding:10px 20px 10px 9px;font-size:11px}.attraction-scene.at-entry{background:linear-gradient(#081b2555,#101d25d9 680px,#101d25 1150px),url('/art/attraction-street.webp') 40% 0/auto 850px no-repeat}
+ .attraction .landing{padding-top:28px;gap:43px}.attraction .intro{max-width:440px}.attraction .agency-heading{position:relative;min-height:235px;margin-bottom:22px;padding:0}.attraction .agency-role{font-size:10px;gap:6px;padding:8px 0;margin-bottom:22px;max-width:100%}.attraction .game-title{font-size:66px;max-width:58%;letter-spacing:-1.5px}.attraction .game-subtitle{font-size:22px;max-width:58%}.attraction .intro .detective-host{inset-inline-start:auto;inset-inline-end:-7px;top:72px;width:48%;max-width:180px}.attraction .detective-greeting{display:none}.attraction .tagline{font-size:25px}.attraction .intro-copy{font-size:14px;max-width:100%}.attraction .entry-actions{max-width:100%;gap:12px}.attraction .entry-actions .primary,.attraction .entry-actions .secondary{min-height:88px;padding:20px 30px;gap:9px}.attraction .entry-actions .button-label{font-size:14px}.attraction .entry-actions .detective-prop{width:28px;height:28px}.attraction .photo-exhibit{width:100%;max-width:350px;margin-top:18px}.attraction .desk-preview{padding:15px;border-width:4px}.attraction .invitation-heading{font-size:20px}.attraction .preview-suspects button{font-size:11px;min-height:48px}.attraction .preview-banter p{font-size:23px}.attraction .agency-method{padding:23px 20px;gap:25px;margin-top:0}.attraction .agency-method li{gap:16px}.attraction .agency-method strong{font-size:25px}.attraction .agency-method p{font-size:13px}.attraction .agency-method li>span{width:32px;height:36px}.attraction .case-heading h1{font-size:32px}.attraction .case-journey{gap:7px}.attraction .case-journey b{width:25px;height:27px}.attraction .scene-column{padding:14px}.attraction .casebook-heading{padding-block:14px}.attraction .evidence-column{box-shadow:3px 4px 0 #dfc99f,5px 6px 0 #66553d,0 12px 22px #0005}.attraction .detective-aside-mascot{width:51px;height:58px}.attraction .question-list>button{padding:12px}.attraction .testimony{padding:16px 13px}.attraction .testimony-file>summary{font-size:27px}.attraction .caption p{font-size:24px}.attraction .primary{padding:15px}.attraction .share-dialog{padding:42px 22px 26px}.attraction .share-dialog h2{font-size:29px;padding-inline-end:35px}.attraction .share-dialog .close{width:44px;height:44px}.opening-sequence.attraction-opening{background-position:40% center}.opening-sequence.attraction-opening:after{inset:9px}.opening-sequence.attraction-opening .opening-enter{min-height:54px;min-width:174px;padding:15px 28px}.attraction-opening .opening-line{font-size:24px}
+ html[lang=ko] .attraction .game-title{font-size:52px;letter-spacing:-3px}html[lang=ko] .attraction .game-subtitle{font-size:17px}html[lang=ko] .attraction .tagline{font-size:20px}html[lang=ko] .attraction .agency-method strong{font-size:19px}html[lang=ko] .attraction .preview-banter p{font-size:18px}html[lang=ko] .attraction .caption p{font-size:18px}html[lang=ko] .attraction .case-heading h1{font-size:28px}
+}
+@media(max-width:370px){.attraction .settings{gap:4px}.attraction .language-setting select{max-width:112px}.attraction .game-title{font-size:63px}.attraction .entry-actions .button-label{font-size:13px}.attraction .entry-actions .primary,.attraction .entry-actions .secondary{padding-inline:29px}}
+@media(prefers-reduced-motion:reduce){.attraction *,.attraction *:before,.attraction *:after{animation:none!important;transition:none!important}}
+@media(max-width:1200px){.attraction .entry-actions .primary,.attraction .entry-actions .secondary{padding-inline:36px}}
+.attraction.reduced *,.attraction.reduced *:before,.attraction.reduced *:after{animation:none!important;transition:none!important}

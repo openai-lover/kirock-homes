@@ -35,7 +35,7 @@
 .chat-typing{color:#667e70;font-size:12px;padding-inline-start:42px}.chat-typing>span{font-size:18px;letter-spacing:3px}.case-chat .chat-typing button{display:block;border:0;background:transparent;font-size:11px;text-decoration:underline;padding:3px 0}
 .chat-notes{position:absolute;z-index:5;inset:78px 10px 10px;background:#fffdf5;border:1px solid #d4ddce;box-shadow:0 8px 26px #182e3225;border-radius:12px;padding:20px;overflow-y:auto}.chat-notes>strong{font-size:18px}.chat-notes>p{font-size:12px;color:#6f796a}.chat-notes blockquote{margin:16px 0;padding:0 0 0 12px;border-inline-start:2px solid #d5ac57}.chat-notes blockquote p{margin-top:5px}
 .chat-accusation-overlay{position:absolute;z-index:10;inset:0;background:#17333299;display:flex;align-items:center;justify-content:center;padding:18px;backdrop-filter:blur(4px)}.chat-accusation-dialog{max-width:380px;width:100%;max-height:100%;overflow:auto;background:#f8faf4;border-radius:18px;padding:25px}.chat-accusation-dialog h2{font-size:22px;color:#285d60;margin:0 0 10px}.chat-accusation-dialog>p{font-size:12px;color:#637568}.chat-suspect-choices{display:grid;gap:8px;margin:20px 0}.case-chat .chat-suspect-choices button{display:flex;align-items:center;gap:10px;text-align:start;min-height:54px}.case-chat .chat-suspect-choices button[aria-pressed=true]{background:#d7edce;border:2px solid #285d60}.case-chat .chat-cancel{display:block;margin:12px auto 0;background:none;border:0}
-.chat-resolution{padding-top:12px}.chat-case-seal{display:block;width:40px;height:40px;border:2px solid #517b68;color:#517b68;font-size:25px;border-radius:50%;text-align:center;margin:0 auto 10px}.chat-resolution h2,.chat-resolution h3{text-align:center;color:#23484a}.chat-resolution h2{font-size:22px;margin:5px 0}.chat-resolution h3{font-size:16px;margin:5px 0 20px}.chat-proof{padding-inline-start:22px;font-size:13px;line-height:1.8}.chat-proof li{padding-inline-start:4px;margin-bottom:13px}.chat-result-actions{display:grid;gap:8px}.chat-result-actions .button-link,.chat-result-actions .primary{background:#285d60;color:white;border-radius:8px;padding:12px;box-shadow:none;font-size:13px}.chat-result-actions .primary::before,.chat-result-actions .primary::after{content:none}.chat-result-actions .shared-link{background:#fff;border:1px solid #ceddcf;padding:12px;border-radius:8px}.chat-result-actions input{max-width:100%;background:#fff;color:#223b3c}
+.chat-resolution{padding-top:12px}.chat-case-seal{display:block;width:54px;height:54px;object-fit:contain;margin:0 auto 9px}.chat-resolution h2,.chat-resolution h3{text-align:center;color:#23484a}.chat-resolution h2{font-size:22px;margin:5px 0}.chat-resolution h3{font-size:16px;margin:5px 0 20px}.chat-proof{padding-inline-start:22px;font-size:13px;line-height:1.8}.chat-proof li{padding-inline-start:4px;margin-bottom:13px}.chat-result-actions{display:grid;gap:8px}.chat-result-actions .button-link,.chat-result-actions .primary{background:#285d60;color:white;border-radius:8px;padding:12px;box-shadow:none;font-size:13px}.chat-result-actions .primary::before,.chat-result-actions .primary::after{content:none}.chat-result-actions .shared-link{background:#fff;border:1px solid #ceddcf;padding:12px;border-radius:8px}.chat-result-actions input{max-width:100%;background:#fff;color:#223b3c}
 @media(max-width:760px){.app.chat-app{padding:9px 10px 0}.chat-app .topbar{margin:0 0 9px;min-height:42px}.chat-app .brand img{width:35px;height:35px}.chat-app .brand .logo-wordmark{font-size:20px}.chat-app .settings{gap:3px}.chat-app .settings button{min-width:32px;min-height:32px;padding:5px}.chat-app .language-setting select{max-width:90px}.room-chat-layout{display:flex;flex-direction:column;height:calc(var(--chat-viewport-height,100dvh) - 100px);min-height:0;border-radius:14px;max-height:none}.chat-scene-column{height:146px;flex:0 0 146px;padding:0;display:block;background:#162c34}.chat-scene-column .photo-stage{position:absolute;height:100%;width:auto;left:50%;transform:translateX(-50%);max-width:100%;border-radius:0}.chat-scene-column .photo-stage[data-photo-orientation=landscape]{height:100%;width:auto;max-width:100%}.chat-scene-title{top:12px;inset-inline-start:13px;font-size:10px;width:75px;flex-wrap:wrap}.chat-scene-caption{bottom:10px;left:auto;right:9px;width:77px;display:block;text-align:center}.chat-scene-caption img{width:36px;height:36px;margin:auto}.chat-scene-caption p{font-size:10px;line-height:1.4}.case-chat{flex:1;min-height:0}.chat-header{padding:10px 12px;gap:7px}.chat-header h1{font-size:15px}.chat-header p{font-size:10px}.chat-header .chat-avatar{width:33px;height:33px}.chat-log{padding:14px 12px 18px}.chat-message{max-width:97%;gap:6px;margin-bottom:14px}.chat-avatar{width:29px;height:29px;flex-basis:29px}.object-avatar .face{inset:2px;width:25px;height:25px}.chat-bubble{padding:9px 11px;font-size:13px}.chat-bubble blockquote p{font-size:13px}.chat-composer{padding:8px 10px}.chat-input-row textarea{font-size:16px;min-height:35px}.chat-suggestions{margin-bottom:6px}.chat-bottom{padding-top:3px}.chat-log .chat-date{margin-bottom:12px}.chat-app>footer{font-size:9px;margin-top:7px}.chat-notes{inset:62px 7px 7px}.chat-next{padding:10px 12px}.chat-primary{font-size:13px!important}.chat-resolution h2{font-size:19px}}
 @media(max-height:720px) and (max-width:760px){.chat-scene-column{height:108px;flex-basis:108px}.room-chat-layout{min-height:0}.chat-suggestions{display:none}.chat-scene-title{max-width:64px}}
 @media(prefers-reduced-motion:reduce){.case-chat *,.chat-scene-column *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
@@ -67,3 +67,23 @@
 }
 
 .chat-app .brand{color:#f4eedf}
+
+/* A new case note is passed into the conversation once, when its bubble mounts. */
+@media (prefers-reduced-motion: no-preference) {
+  [data-motion="full"] .chat-message[data-speaker="kirock"] .kirock-avatar {
+    transform-origin: 22% 82%;
+    animation: pass-case-slip .43s cubic-bezier(.2,.8,.24,1) both;
+  }
+  [data-motion="full"] .chat-case-seal {
+    animation: close-case-seal .32s cubic-bezier(.18,.75,.25,1) both;
+  }
+}
+@keyframes pass-case-slip {
+  from { opacity: 0; transform: translateY(5px) rotate(-14deg); }
+  to { opacity: 1; transform: translateY(0) rotate(0); }
+}
+@keyframes close-case-seal {
+  from { opacity: 0; transform: scale(1.18) rotate(-9deg); }
+  78% { opacity: 1; transform: scale(.96) rotate(2deg); }
+  to { opacity: 1; transform: scale(1) rotate(0); }
+}

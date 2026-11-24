@@ -12,7 +12,7 @@ Try the instant web game or upload a photograph. Wake three objects, hear the in
 
 There are two ways to play. The public website needs no account and uses manual casting and authored interactive replies. The optional **Kiro Crew app** runs locally with the player's own Kiro account: Kiro identifies objects in a resized photo, suggests approximate face positions and personalities, and generates fresh reactions to the player's typed question and recent conversation. Another relevant object can interrupt. The player can correct faces and turn AI off at any time. The app does not purchase credits or configure payment.
 
-The latest 96-second demo is actual Crew gameplay: successful photo recognition, a visible face correction, two live generated/reviewed replies, an adversarial request handled by scripted refusal, and a final verdict. The ending card is labelled recorded development evidence, not a live terminal capture.
+The video shows actual gameplay with an uploaded photograph, authored chat and a final accusation. English captions are visible throughout the demonstration. A separate closing sequence quotes the laptop and plant exactly as they answered in a recorded November 5 Kiro Crew session.
 
 ## How we built it
 
@@ -32,7 +32,7 @@ Earlier real Kiro work includes the hypothesis builder, detective guidance, seco
 
 ## Challenges and what we learned
 
-The hardest problem was allowing spontaneous comedy without allowing spontaneous evidence. We separated the fixed logical case from character performance, kept quoted statements exact, removed the private solution from model inputs, and added a second review. Early generated responses failed validation or were over-rejected; we retained those failed runs and narrowed the prompts. A five-question real runtime check then produced five accepted turns, while the actual Crew UI demo also demonstrates a safe fallback.
+The hardest problem was allowing spontaneous comedy without allowing spontaneous evidence. We separated the fixed logical case from character performance, kept quoted statements exact, removed the private solution from model inputs, and added a second review. Early generated responses failed validation or were over-rejected; we retained those failed runs and narrowed the prompts. A five-question real runtime check then produced five accepted turns, and the recorded Crew session also exercised a scripted fallback.
 
 Integration checks caught an incorrect Crew bundle path, a proxy prefix mismatch, a photo timeout too short for Kiro, and a consent assumption in an older test. All were corrected before the final verification. A generated Kiro review overstated its test scope; we kept that initial report and accepted only the later actual execution output as evidence.
 
@@ -51,7 +51,7 @@ Observe consenting players to refine the timing, comedy and difficulty; expand t
 - Play: https://kirock-homes.vercel.app
 - Main source: https://github.com/openai-lover/kirock-homes
 - Crew app source (same GitHub owner): https://github.com/openai-lover/kirock-homes-crew
-- Demo: https://youtu.be/7gknqGSknDk
+- Demo: https://youtu.be/Ezcmo5bG6t8
 - Install: https://kirock-homes.vercel.app/crew
 
-The detective mascot is an independent, unofficial Kiro-inspired adaptation. Photograph/font/image licenses and authorship are documented in `docs/assets.md`. No official endorsement or award is claimed.
+Kirock appears as a human silhouette and a gloved hand. Both illustrations were generated from original text descriptions. Photograph/font/image licenses and authorship are documented in `docs/assets.md`. No official endorsement or award is claimed.

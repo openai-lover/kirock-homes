@@ -1,0 +1,78 @@
+/* A character-led title screen. Evidence keeps the existing notebook layout. */
+.kirock-logo{display:flex;align-items:center;justify-content:center;direction:ltr}
+.kirock-logo img{display:block;object-fit:contain;flex-shrink:0}
+.kirock-logo .logo-name{font-family:var(--display);font-weight:600;line-height:.86;letter-spacing:-2px;color:#f5e2b1;margin:0;text-shadow:0 2px 0 #735e37,0 6px 18px #07151b;overflow-wrap:normal;word-break:normal}
+.kirock-logo .logo-name>span{display:block}
+.logo-hero{gap:10px;max-width:100%;margin-inline:auto}
+.logo-hero img{width:244px;height:244px;filter:drop-shadow(0 12px 12px #0005)}
+.logo-hero .logo-name{font-size:94px;text-align:start;white-space:nowrap}
+.logo-compact{gap:8px}
+.logo-compact img{width:54px;height:54px}
+.logo-compact .logo-name{font-size:23px;letter-spacing:-.4px;line-height:.88;text-align:start}
+.attraction .topbar{min-height:82px;border-bottom:0}
+.attraction .settings .setting-label{display:none}
+.attraction .settings button{width:44px;height:44px;padding:10px}
+.attraction .language-setting select{min-height:44px}
+.attraction-scene.at-entry{background:linear-gradient(#081b2570,#081b2550 65%,#101d25ee),url('/art/attraction-street.webp') center/cover no-repeat}
+.attraction:has(.start-screen){min-height:100svh;display:flex;flex-direction:column}
+.attraction .start-screen{width:100%;max-width:760px;flex:1;display:flex;flex-direction:column;justify-content:center;margin:0 auto;padding:24px 0 32px;gap:22px}
+.attraction .start-screen .intro{max-width:none;width:100%;position:static;text-align:center}
+.attraction .start-screen .tagline{font-size:25px;line-height:1.4;font-weight:500;margin:24px auto 22px;max-width:600px;color:#ece3cc;text-shadow:0 2px 6px #06171c}
+.attraction .start-screen .entry-actions{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:660px;margin:auto}
+.attraction .start-screen .entry-actions button{min-height:82px;padding:17px 34px}
+.attraction .start-screen .entry-actions .button-label{font-size:14px}
+.attraction .entry-extras{display:flex;justify-content:center;align-items:start;flex-wrap:wrap;gap:8px 30px}
+.attraction .entry-preview{max-width:100%;min-width:0}
+.attraction .entry-preview summary{list-style:none;display:flex;gap:9px;align-items:center;justify-content:center;cursor:pointer;min-height:44px;padding:8px 4px;color:#e6d2aa;font-size:12px;width:max-content;max-width:100%;margin:auto;border-bottom:1px solid transparent}
+.attraction .entry-preview summary::-webkit-details-marker{display:none}
+.attraction .entry-preview summary:hover{border-color:#ad8d54;color:#fff0cf}
+.attraction .entry-preview .game-icon{width:17px;height:17px}
+.attraction .disclosure-chevron{font-size:19px;line-height:1}
+.attraction .entry-preview[open]{flex-basis:100%}
+.attraction .entry-preview[open] .disclosure-chevron{transform:rotate(180deg)}
+.attraction .entry-extras .opening-replay{margin:0;min-height:44px;padding:8px 4px;background:none;box-shadow:none;border:0;border-bottom:1px solid transparent;border-radius:0;color:#c4c9bc;font-size:12px}
+.attraction .entry-extras .opening-replay:hover{border-color:#ad8d54;color:#fff0cf;background:none}
+.attraction .start-screen .photo-exhibit{position:relative;margin:26px auto 0;width:100%;max-width:335px;filter:drop-shadow(0 12px 18px #0005)}
+.attraction .start-screen .case-invitation:before,.attraction .start-screen .case-invitation:after{display:none}
+.attraction .entry-footer{display:flex;justify-content:center;align-items:center;margin:0;padding:14px 0 22px;min-height:44px;border:0;font-size:11px;color:#aebbb8}
+.attraction .entry-footer>span{display:none}
+.attraction .entry-footer a{display:inline-flex;align-items:center;min-height:44px}
+.attraction .shared-entry{max-width:980px;display:grid;grid-template-columns:1fr 335px;gap:55px;align-items:center}
+.attraction .shared-entry .logo-hero{flex-direction:column;gap:0}
+.attraction .shared-entry .logo-hero img{width:185px;height:185px}
+.attraction .shared-entry .logo-name{font-size:58px;text-align:center}
+.attraction .shared-entry .logo-name>span{display:inline}
+.attraction .shared-entry .entry-actions{grid-template-columns:1fr;max-width:335px}
+@media(max-width:680px){
+ .attraction .topbar{min-height:70px}.logo-compact img{width:44px;height:44px}.logo-compact .logo-name{display:none}
+ .attraction .start-screen{padding:10px 0 12px;gap:12px}.logo-hero{flex-direction:column;gap:7px}.logo-hero img{width:184px;height:184px}.logo-hero .logo-name{font-size:51px;text-align:center;letter-spacing:-1.7px;line-height:1}.logo-hero .logo-name>span{display:inline}
+ .attraction .start-screen .tagline{font-size:20px;line-height:1.4;margin:17px auto 20px;max-width:320px}
+ .attraction .start-screen .entry-actions{grid-template-columns:1fr;gap:8px;max-width:355px}.attraction .start-screen .entry-actions button{min-height:72px;padding:14px 36px}.attraction .start-screen .entry-actions .button-label{font-size:14px}
+ .attraction .entry-extras{gap:3px 20px}.attraction .entry-extras .opening-replay,.attraction .entry-preview summary{font-size:11px}
+ .attraction .entry-footer{padding:4px 0 8px}.attraction .shared-entry{display:flex;gap:20px}.attraction .shared-entry .logo-hero img{width:150px;height:150px}.attraction .shared-entry .logo-name{font-size:47px}
+ html[lang=ko] .logo-hero .logo-name{font-size:44px;letter-spacing:-2.5px}html[lang=ko] .attraction .start-screen .tagline{font-size:18px}
+}
+@media(max-height:700px) and (max-width:680px){
+ .attraction .start-screen{padding-top:0;gap:8px}.logo-hero img{width:142px;height:142px}.logo-hero .logo-name{font-size:45px}.attraction .start-screen .tagline{margin:12px auto;font-size:19px}.attraction .start-screen .entry-actions button{min-height:64px;padding-block:10px}.attraction .entry-footer{padding-block:0}
+ html[lang=ko] .logo-hero .logo-name{font-size:39px}
+}
+@media(max-width:360px){.attraction .entry-extras{column-gap:16px}.attraction .start-screen .entry-actions .button-label{font-size:13px}}
+
+/* Text-only entry controls share an exact horizontal and vertical center. */
+.attraction .start-screen .entry-actions button{position:relative;display:grid;grid-template-columns:minmax(0,1fr);justify-content:stretch;place-items:center;gap:0;text-align:center;padding:16px 28px;min-height:82px}
+.attraction .start-screen .entry-actions .button-label{width:100%;min-width:0;font-size:18px;line-height:1.35;white-space:normal;text-align:center;overflow-wrap:anywhere}
+
+.attraction .entry-extras .opening-replay,.attraction .entry-preview summary{font-size:14px;justify-content:center;text-align:center}
+@media(max-width:680px){.attraction .start-screen .entry-actions button{min-height:74px;padding:15px 24px}.attraction .start-screen .entry-actions .button-label{font-size:17px}.attraction .entry-extras{gap:6px 20px}}
+
+@media(max-width:680px){
+ .attraction[data-phase=casting] .case-heading{padding:12px 0 16px}
+ .attraction .casting-layout{gap:16px}
+ .attraction .casting-layout .scene-column{position:sticky;top:env(safe-area-inset-top,0px);z-index:6;align-self:start;display:flex;flex-direction:column;align-items:center;background:#14242c;padding:8px 0}
+ .attraction .casting-layout .photo-stage{width:auto;height:min(34dvh,280px);max-width:100%;border-radius:6px}
+ .attraction .casting-layout .photo-stage[data-photo-orientation=landscape]{width:100%;height:auto;max-height:280px}
+ .attraction .casting-layout .photo-help{font-size:11px;line-height:1.5;margin:9px 0 0;text-align:center}
+ .attraction .casting-layout .evidence-column{padding-inline:12px}
+ .attraction .casting-panel input:not([type=checkbox]):not([type=range]),.attraction .casting-panel select{font-size:16px}
+ .attraction[data-short-viewport=true] .casting-layout .photo-stage{height:125px;width:auto}
+}

@@ -20,7 +20,7 @@ Executed on macOS, Node 24, Kiro CLI 2.37.0 and official Kiro Crew 0.11.2. These
 | Crew mobile/keyboard | 360, 390, 768 and 1280 × 800: visible composer, keyboard send, fallback and Escape focus restoration passed |
 | Tool isolation probe | A controlled random canary file was not read or returned; no tool calls occurred. Unexpected prose was rejected by strict JSON parsing |
 
-Evidence is in `docs/kiro/live-dialogue`, `docs/demo/crew-recording.json`, and `docs/verification/crew/mobile.json`. The new public recording is https://youtu.be/7gknqGSknDk. Earlier validation records remain historical rather than being silently rewritten.
+Evidence is in `docs/kiro/live-dialogue`, `docs/demo/crew-recording.json`, and `docs/verification/crew/mobile.json`. The original Crew recording was published on November 5. The current submission video is listed in the main README. Earlier validation records remain historical rather than being silently rewritten.
 
 Public API results are in `docs/verification/production-crew-release.json`. This final rerun did not retrieve production secrets or force database timestamps. Earlier physical cleanup/expiry execution remains in `docs/verification/production-api.json`; expiry is also covered by the server suite. The YouTube English subtitle track was visibly published on November 5.
 

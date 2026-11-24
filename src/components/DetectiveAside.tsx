@@ -7,7 +7,7 @@
  * Ten-language extension: Kiro (2026-10-31). Added es / fr / de / pt / ja / zh / ar / hi
  * to the heading via the secondary-ui catalogue; detective-voice.ts handles stage copy.
  *
- * A compact, purely presentational aside that pairs the /art/kirolock-homes.png
+ * A compact, purely presentational aside that pairs the /art/detective-glove.webp
  * mascot image (72 × 72, decorative) with stage-scoped detective guidance.
  * Receives stage and locale as props; holds no state and makes no network requests.
  *
@@ -17,9 +17,6 @@
  * Class names (detective-aside, detective-aside-mascot, detective-aside-copy,
  * detective-aside-title, detective-aside-line) and the data-testid/data-stage
  * attributes are defined here; all styling is Codex's responsibility.
- *
- * The image filename /art/kirolock-homes.png is intentionally historical and does
- * not reflect the current "Kirock" brand spelling — it is not an error to fix.
  *
  * Attribution note: The inherited application (engine, Game.tsx, CSS, server routes,
  * CrossExamination.tsx) is Codex work. The hypothesis board module and component are
@@ -77,11 +74,10 @@ export default function DetectiveAside({ stage, locale }: DetectiveAsideProps) {
         - aria-hidden="true" prevents the empty alt from creating a redundant
           focusable element in some AT implementations.
         - Explicit width/height prevent layout shift (CLS).
-        - The filename kirolock-homes.png is historical; see file header note.
       */}
       <img
         className="detective-aside-mascot"
-        src="/art/kirolock-homes.png"
+        src="/art/detective-glove.webp"
         alt=""
         aria-hidden="true"
         width={72}

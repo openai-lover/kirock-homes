@@ -41,7 +41,7 @@ export default function OpeningSequence({enabled,locale,reduced,replayKey,onVisi
   // The first frame is a branded poster, including when a resource never arrives.
   const deadline=setTimeout(start,3000);
   const fonts=document.fonts?Promise.allSettled([document.fonts.load('500 80px Cormorant'),document.fonts.load('400 50px "Nanum Myeongjo"')]):Promise.resolve();
-  void Promise.allSettled([prepare('/sample-desk.jpg','photo'),prepare('/art/kirock-case-invitation.webp','character'),prepare('/art/attraction-street.webp'),fonts]).then(start);
+  void Promise.allSettled([prepare('/sample-desk.jpg','photo'),prepare('/art/detective-silhouette.webp','character'),prepare('/art/attraction-street.webp'),fonts]).then(start);
   return()=>{active=false;clearTimeout(deadline);};
  },[stage]);
  useEffect(()=>{const changed=()=>setHidden(document.hidden);changed();document.addEventListener('visibilitychange',changed);return()=>document.removeEventListener('visibilitychange',changed);},[]);
@@ -62,7 +62,7 @@ export default function OpeningSequence({enabled,locale,reduced,replayKey,onVisi
  }}>
   <OpeningLens/>
   <div className="opening-poster" data-testid="opening-poster" aria-hidden="true"><p>{locale==='ko'?'킬록 홈즈':'Kirock Homes'}</p><span>⌕</span></div>
-  <div className="opening-composition"><div className="opening-copy"><h1 className="opening-title">{locale==='ko'?'킬록':'Kirock'}<br/>{locale==='ko'?'홈즈':'Homes'}</h1><p className="opening-line" id="opening-line">“{copy.line}”</p></div><div className="opening-arrival" aria-hidden="true">{!characterFailed&&<img data-testid="opening-character" className="opening-character" src="/art/kirock-case-invitation.webp" alt="" width={960} height={960} fetchPriority="high" onError={()=>setCharacterFailed(true)}/>}</div></div>
+  <div className="opening-composition"><div className="opening-copy"><h1 className="opening-title">{locale==='ko'?'킬록':'Kirock'}<br/>{locale==='ko'?'홈즈':'Homes'}</h1><p className="opening-line" id="opening-line">“{copy.line}”</p></div><div className="opening-arrival" aria-hidden="true">{!characterFailed&&<img data-testid="opening-character" className="opening-character" src="/art/detective-silhouette.webp" alt="" width={960} height={960} fetchPriority="high" onError={()=>setCharacterFailed(true)}/>}</div></div>
   <button ref={skipRef} className="opening-enter" data-testid="opening-skip" onClick={()=>finish(true)}><span>{copy.skip}</span></button>
   {stage!=='still'&&<div className="opening-progress" aria-hidden="true"><span/></div>}
  </section>;

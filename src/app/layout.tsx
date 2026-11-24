@@ -5,7 +5,7 @@ import './entry.css';
 export const metadata: Metadata = {
   title: 'Kirock Homes — Room of Suspects | 킬록 홈즈',
   applicationName: 'Kirock Homes',
-  description: 'Your room. Three suspects. One liar. Turn your photo into a cozy comedy mystery with Kirock, your resident ghost detective.',
+  description: 'Your room. Three suspects. One liar. Turn your photo into a cozy comedy mystery with Kirock, a detective seen only in silhouette.',
   openGraph: {
     title: 'Kirock Homes — Room of Suspects',
     siteName: 'Kirock Homes',

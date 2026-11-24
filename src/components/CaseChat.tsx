@@ -27,7 +27,7 @@ export default function CaseChat(p:Props){
  useEffect(()=>{if(accusing)dialog.current?.querySelector<HTMLButtonElement>('button')?.focus();},[accusing]);
  function avatar(id:ChatActor|'player'){
   if(id==='player')return null;
-  if(id==='kirock')return <img className="chat-avatar kirock-avatar" src="/art/kirock-logo-small.webp" alt="" width="36" height="36"/>;
+  if(id==='kirock')return <img className="chat-avatar kirock-avatar" src="/art/detective-glove.webp" alt="" width="36" height="36"/>;
   const s=p.snapshot.suspects.find(s=>s.id===id)!;
   return <span className="chat-avatar object-avatar" aria-hidden="true" style={{backgroundImage:`url(${JSON.stringify(p.scene)})`,backgroundPosition:`${s.face.x*100}% ${s.face.y*100}%`}}><Face/></span>;
  }
@@ -84,7 +84,7 @@ export default function CaseChat(p:Props){
    {pending&&<>{bubble({speakerId:'player',text:pending},'pending-question')}<div className="chat-typing" role="status"><span aria-hidden="true">•••</span> {copy.typing}<button onClick={offline}>{copy.continueOffline}</button></div></>}
    {unavailable&&<p role="alert">{t('This case has expired or was deleted.')}</p>}
    {turns.length>=30&&<p role="status">{copy.limit}</p>}
-   {p.result&&<div className="chat-resolution" data-testid="chat-resolution"><span className="chat-case-seal" aria-hidden="true">✓</span><h2>{t(p.result.correct?'You got it!':'An innocent object!')}</h2><h3>{uiText(locale,'The culprit is {name}.',{name:name(p.result.culpritId)})}</h3>{p.verdictReady?<>{bubble({speakerId:p.result.culpritId,text:p.result.confession},'confession')}<ol className="chat-proof" data-testid="verdict-proof">{p.result.proofSteps.map((text,i)=><li key={i}>{text}</li>)}</ol></>:<p role="status">{p.verdictMessage??t('Loading the verdict in this language…')}</p>}{p.resultActions}</div>}
+   {p.result&&<div className="chat-resolution" data-testid="chat-resolution"><img className="chat-case-seal" src="/art/verdict-seal.webp" width="54" height="54" alt=""/><h2>{t(p.result.correct?'You got it!':'An innocent object!')}</h2><h3>{uiText(locale,'The culprit is {name}.',{name:name(p.result.culpritId)})}</h3>{p.verdictReady?<>{bubble({speakerId:p.result.culpritId,text:p.result.confession},'confession')}<ol className="chat-proof" data-testid="verdict-proof">{p.result.proofSteps.map((text,i)=><li key={i}>{text}</li>)}</ol></>:<p role="status">{p.verdictMessage??t('Loading the verdict in this language…')}</p>}{p.resultActions}</div>}
   </div>
   {!ready?<div className="chat-next"><button className="chat-primary" onClick={next} data-testid="chat-continue">{p.phase==='awakening'?copy.invite:copy.next}<span aria-hidden="true">↓</span></button></div>:!locked&&<div className="chat-composer">
    {turns.length===0&&<div className="chat-suggestions">{(['compare','defend'] as const).map(k=><button key={k} onClick={()=>void send(copy[k])} disabled={!!pending||unavailable}>{copy[k]}</button>)}</div>}

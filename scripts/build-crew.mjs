@@ -4,5 +4,7 @@ import {resolve} from 'node:path';
 const app=resolve('crew-app');
 mkdirSync(app+'/shared/src/app',{recursive:true});mkdirSync(app+'/ui/game',{recursive:true});mkdirSync(app+'/assets',{recursive:true});
 for(const part of ['components','lib'])cpSync('src/'+part,app+'/shared/src/'+part,{recursive:true});
-cpSync('src/app/globals.css',app+'/shared/src/app/globals.css');cpSync('public',app+'/ui/game',{recursive:true});cpSync('public/art/kirock-logo-mark.png',app+'/assets/icon.png');cpSync('LICENSE',app+'/LICENSE');
+cpSync('src/app/globals.css',app+'/shared/src/app/globals.css');rmSync(app+'/ui/game/art',{recursive:true,force:true});cpSync('public',app+'/ui/game',{recursive:true});cpSync('LICENSE',app+'/LICENSE');
+cpSync('src/app/attraction.css',app+'/shared/src/app/attraction.css');
+cpSync('src/app/entry.css',app+'/shared/src/app/entry.css');
 await import('../crew-app/build.mjs');

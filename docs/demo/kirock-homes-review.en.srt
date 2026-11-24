@@ -1,27 +1,31 @@
 1
-00:00:00,000 --> 00:00:09,625
-Actual localhost gameplay. Licensed stock photo; no personal images.
+00:00:00,277 --> 00:00:09,915
+Kirock Homes. Take a photo and invite three suspects into a group chat.
 
 2
-00:00:09,725 --> 00:00:24,237
+00:00:10,015 --> 00:00:24,502
 One real photograph. The objects wake up.
 
 3
-00:00:24,337 --> 00:00:31,793
+00:00:24,602 --> 00:00:32,049
 Upload another real desk photograph and place three faces.
 
 4
-00:00:31,893 --> 00:00:46,775
+00:00:32,149 --> 00:00:46,982
 The photograph stays intact as the objects join your group chat.
 
 5
-00:00:46,875 --> 00:01:02,674
+00:00:47,082 --> 00:00:56,072
 Ask a question. The addressed witness answers; another object can interject.
 
 6
-00:01:02,774 --> 00:01:15,621
+00:00:56,172 --> 00:01:09,104
 Three fixed statements. One false statement. One final accusation.
 
 7
-00:01:15,721 --> 00:01:24,633
-Recorded development evidence — a summary card, not a new Kiro run.
+00:01:09,204 --> 00:01:20,561
+Optional Crew edition. These are exact responses from a previously recorded Kiro session.
+
+8
+00:01:20,661 --> 00:01:29,064
+The public web game uses authored replies. Find the Kiro records and optional Crew app in the repository.

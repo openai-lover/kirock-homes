@@ -1,42 +1,46 @@
 {
-  "recordedAt": "2026-11-05T07:18:37.804Z",
-  "durationSeconds": 84.733,
+  "recordedAt": "2026-11-24T06:59:52.121Z",
+  "durationSeconds": 89.164,
   "viewport": {
     "width": 1280,
     "height": 900
   },
   "footage": "Actual localhost browser interaction, plus a labelled closing evidence card",
-  "runtimeReplyLabel": "Kiro interpreted this question",
+  "runtimeReplyLabel": "Scripted replies",
   "photo": "Jep Gambardella / Pexels, tests/fixtures/photos/work-desk.jpg",
   "published": false,
   "chapters": [
     {
-      "seconds": 0,
-      "text": "Actual localhost gameplay. Licensed stock photo; no personal images."
+      "seconds": 0.277,
+      "text": "Kirock Homes. Take a photo and invite three suspects into a group chat."
     },
     {
-      "seconds": 9.725,
+      "seconds": 10.015,
       "text": "One real photograph. The objects wake up."
     },
     {
-      "seconds": 24.337,
+      "seconds": 24.602,
       "text": "Upload another real desk photograph and place three faces."
     },
     {
-      "seconds": 31.893,
+      "seconds": 32.149,
       "text": "The photograph stays intact as the objects join your group chat."
     },
     {
-      "seconds": 46.875,
+      "seconds": 47.082,
       "text": "Ask a question. The addressed witness answers; another object can interject."
     },
     {
-      "seconds": 62.774,
+      "seconds": 56.172,
       "text": "Three fixed statements. One false statement. One final accusation."
     },
     {
-      "seconds": 75.721,
-      "text": "Recorded development evidence — a summary card, not a new Kiro run."
+      "seconds": 69.204,
+      "text": "Optional Crew edition. These are exact responses from a previously recorded Kiro session."
+    },
+    {
+      "seconds": 80.661,
+      "text": "The public web game uses authored replies. Find the Kiro records and optional Crew app in the repository."
     }
   ]
 }

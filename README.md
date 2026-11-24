@@ -2,7 +2,7 @@
 
 **Your photo. A room full of suspects. One liar.**
 
-[Play online](https://kirock-homes.vercel.app) · [96-second Crew demo](https://youtu.be/7gknqGSknDk) · [Source](https://github.com/openai-lover/kirock-homes)
+[Play online](https://kirock-homes.vercel.app) · [Watch the gameplay demo](https://youtu.be/Ezcmo5bG6t8) · [Source](https://github.com/openai-lover/kirock-homes)
 
 The public demo uses Vercel Hobby and Turso Starter free storage. No card was added and no paid service was enabled. Public AI providers are disabled: manual photo casting and authored interactive chat work without an account. The optional Crew edition provides real photo recognition and generated dialogue using the player’s own Kiro allowance.
 
@@ -86,7 +86,7 @@ Links expire in seven days. Owner-cookie deletion removes the photo and case. Lo
 
 ## Submission review
 
-[Actual local demo video](docs/demo/kirock-homes-review.webm) (85.56 seconds), [English captions](docs/demo/kirock-homes-review.en.srt), and [English submission draft](docs/submission.md) are included. The recording shows a different real photo and a live Kiro-interpreted question; it is [published on YouTube](https://youtu.be/zGdqdS0ssVY). The [public source repository](https://github.com/openai-lover/kirock-homes) is available. The final Devpost submission is separate from publishing these materials.
+The [gameplay recording](docs/demo/kirock-homes-review.webm) shows an alternate desk photograph, authored chat and the verdict, followed by separately labelled quotations from the November 5 Kiro Crew run. [English captions](docs/demo/kirock-homes-review.en.srt), the [YouTube video](https://youtu.be/Ezcmo5bG6t8) and the [submission text](docs/submission.md) accompany it.
 
 ## Source and evidence
 
@@ -99,6 +99,6 @@ Links expire in seven days. Owner-cookie deletion removes the photo and case. Lo
 - [Sample photo, fonts and artwork licenses](docs/assets.md)
 - [Original supplied plan](reference/KIROWEEN_2026_PLAN.md)
 
-The Kirock mascot is an unofficial fan adaptation, not an official Kiro release or endorsement. Contest entry registration and credit application are separate from project submission, credit approval and redemption; see [recorded credit status](docs/kiro-credits-2026.md).
+The detective appears in silhouette and passes a clue with a gloved hand. Both illustrations were generated from text descriptions. See [artwork provenance](docs/assets.md). Contest entry registration and credit application are separate from project submission, credit approval and redemption; see [recorded credit status](docs/kiro-credits-2026.md).
 
 The project’s original source code is available under the [MIT License](LICENSE). Elena Golovchenko’s sample desk photograph is distributed under the [Pexels License](https://www.pexels.com/license/). Third-party photographs, fonts and dependencies retain their own licenses. See [asset credits and license details](docs/assets.md). The final archive excludes `.env.local`, authenticated sessions, personal photos, databases, `node_modules`, `.next` and local test caches. `npm run package` writes `dist/KIROCK_HOMES_SOURCE.zip` and a SHA-256 source manifest.

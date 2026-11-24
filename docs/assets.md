@@ -13,55 +13,17 @@
 
 The game adds original SVG eyes/mouths as independent overlays. The three visible sample objects are a glass cup, a black desk lamp, and a keyboard. Approximate face centers in normalized photo coordinates are cup `(0.661, 0.723)`, lamp `(0.312, 0.250)`, and keyboard `(0.379, 0.782)`. Final display placement is controlled by the sample configuration in the source.
 
-## Current generated artwork and interface materials
+## The resident detective
 
-The current entry on 2026-11-05 combines a compact Kirock character logo with live localized lettering, a one-line premise and two actions. The gaslit entrance and brass/paper materials remain; the sample case folder is now available through an optional disclosure. Codex generated the three new scene/material assets and previously generated the pose using the existing mascot as an identity reference. The game never calls an image-generation service at runtime. Buttons, labels, testimony, photographs and animated SVG faces remain separate live interface elements.
+Kirock is a human detective seen only from behind, wearing a deerstalker and high collar. A gloved hand passes a folded clue slip in the chat. Codex generated both transparent originals on November 24, 2026 using only text. The name plays on Kiro, Sherlock and the homes where the cases take place.
 
-| File | Purpose |
-| --- | --- |
-| `story-biscuit.webp` / `.png` | Four-panel comic atlas / preserved generated master; [exact prompt and provenance](story-art.md) |
-| `kirock-logo-mark.webp` / `.png` | Current mascot logo / preserved generated master |
-| `kirock-logo-small.webp` | 128px header derivative |
-| `attraction-street.webp` / `.png` | Current gaslit entrance scene / generated master |
-| `attraction-brass.webp` / `.png` | Blank brass action material / generated master |
-| `attraction-ticket.webp` / `.png` | Blank paper ticket material / generated master |
-| `kirock-case-invitation.webp` | Transparent case-offering pose retained in the opening |
-| `kirock-case-invitation.png` | Original generated pose master, retained in the source package |
-| `kirolock-homes.png` | Existing unofficial ghost detective guide, still used in the game notebook; original filename retained |
-| `suspect-trio.png` | Decorative object illustration during awakening |
+The masters are `public/art/detective-silhouette.png` and `public/art/detective-glove.png`. The opening, compact logo, chat and Crew icon use local derivatives. The verdict uses a separately generated red wax seal with a key impression, shown after either outcome. See the [generation prompts](detective-silhouette-art.md).
 
-Entry buttons combine generated blank material skins with live HTML labels and solid-color image-failure fallbacks. Other controls use CSS metal, paper, clips and stamps. The case folder, notebook and progress markers remain HTML/CSS. All displayed interface text remains real text. The player's original photograph remains intact, with independent SVG faces on its own coordinate plane. Utility symbols and the editable faces remain code-native SVG for crisp scaling and accessible interactions.
+The old ghost-inspired artwork and four-panel atlas were retired on November 24. Dated development notes describe those earlier versions. The Kiro execution logs retain their original dates and authorship. The replacement art is Codex work.
 
-See [the current entry design](simple-entry-design.md), [logo prompt/provenance](simple-entry-art.md), [new scene/material prompts](themepark-art.md), [pose provenance](detective-art.md), and [font sources](sherlock-fonts.md). Visual integration and generated bitmap art are Codex work. Kiro actually authored the decorative SVG prop component and its specs; Codex reviewed and integrated it. The [development record](kiro-usage.md) distinguishes both contributions.
+## Scenes, materials and photo animation
 
-The optional Story prologue uses a single generated 2×2 atlas, displayed one panel at a time with localized HTML speech balloons and narration. It is introductory fiction, never evidence. Codex generated and integrated this art with the built-in image tool; there is no new Kiro execution associated with it. See [comic design](story-design.md) and [art record](story-art.md).
-
-### Preserved earlier artwork
-
-The following generated assets remain in `public/art/` as part of the project's prior visual work. Their presence in the source package does not mean that the current interface uses their button skins or background.
-
-| File | Purpose |
-| --- | --- |
-| `baker-street-study.webp` | Historical Victorian consulting-room background; no longer displayed |
-| `baker-street-study.png` | Original generated study master from that earlier redesign |
-| `midnight-desk.png` | Earlier painted desk background |
-| `primary-plaque.png` | Earlier orange enamel button skin |
-| `paper-label.png` | Earlier cream secondary button skin |
-| `detective-lens.png` | Earlier ordinary eye-free magnifier; transparent surrounding canvas |
-
-The Victorian study and brass-and-leather CSS buttons belong to the [earlier consulting-room design](sherlock-design.md). The study's exact prompt and provenance remain in [the historical study art record](sherlock-art.md). The initial magnifier with an eye was rejected by the user and is excluded. Other earlier prompts and tool provenance are in [UI prompts](art-prompts-ui.md), [trio prompt](art-prompts-hero.md), and [replacement magnifier prompt](art-prompts-lens.md). No music or recorded voices are bundled. Sound effects are synthesized locally. Private uploaded photos are excluded from the release.
-
-### Kirock Homes detective mascot
-
-- Original pose: `public/art/kirolock-homes.png`, 1254 × 1254 px RGBA PNG with transparent alpha; still used by the in-game detective aside.
-- Identity reference: the official ghost shown on [Kiro About](https://kiro.dev/about/) and its [about-banner-ghost.png](https://kiro.dev/images/about-banner-ghost.png), checked 2026-10-31. The downloaded reference itself is not bundled.
-- The original pose was generated through **Codex's built-in image generation tool**, using the official ghost as a reference and adding a detective cap, cape, teal scarf, notebook and ordinary magnifying glass. [Exact original prompt and provenance](art-prompts-kirolock.md).
-- The full-body opening pose, `public/art/kirock-case-invitation.png`, was generated by Codex from that original pose. It replaces the notebook with a closed case folder and retains an ordinary magnifying glass. The transparent 960-pixel WebP derivative, `public/art/kirock-case-invitation.webp`, is used by the application. [Exact new prompt and provenance](detective-art.md).
-- This is a project-specific **unofficial fan adaptation**, not an official Kiro mascot release or endorsement. The underlying Kiro character/reference is not claimed as an original project creation or relicensed as MIT.
-- This artwork is not Kiro CLI output. Kiro's actual code contribution remains the separately recorded hypothesis-board implementation; see [development provenance](kiro-usage.md).
-- Original pose SHA-256: `66622fa3f5cc4b7c45a840f101007bc5e89430a7309b4df96ca85ebf14f43d67`.
-
-See [the attraction design](themepark-design.md) for the detective's invitation and case notebook, and [the Kirock branding record](kirock-design.md) for localized names. The [earlier branding record](kirolock-branding.md), original generation prompt and asset filename preserve their historical spelling.
+The entrance uses generated gaslit street, brass and paper textures made by Codex. Buttons have live HTML labels. The living-photo story and its English and Korean GIFs show the licensed sample photograph with independent SVG faces and the gloved hand. Other preserved materials include the earlier Victorian study, blank button textures, an eye-free magnifier and the decorative object trio. See [scene and texture prompts](themepark-art.md), [the study](sherlock-art.md) and [the trio](art-prompts-hero.md).
 
 ## Fonts
 

@@ -31,7 +31,7 @@ export default function StoryComic({locale,reduced,onClose,onSample,onPhoto}:Pro
    {beat>0&&ACTORS.map((actor,i)=><div key={i} className={`story-actor ${speaker===i?'story-speaking':''}`} data-testid={`story-face-${i}`} style={{left:`${actor.x}%`,top:`${actor.y}%`,width:`${actor.w}%`}}><Face index={i} talking={speaker===i}/></div>)}
    {speaker!==undefined&&<div key={beat} className={`story-bubble story-bubble-${speaker}`} data-testid="story-bubble"><span>{names[speaker]}</span><p>{copy.lines[beat===2?0:beat===3?1:3]}</p></div>}
    {beat===4&&<div className="story-player-question" data-testid="story-question"><span aria-hidden="true">↗</span>{copy.lines[2]}</div>}
-   {beat===5&&<div className="story-handoff"><img src="/art/kirock-logo-small.webp" width={76} height={76} alt="Kirock Homes"/><p>{copy.lines[4]}</p></div>}
+   {beat===5&&<div className="story-handoff"><img src="/art/detective-glove.webp" width={76} height={76} alt="Kirock Homes"/><p>{copy.lines[4]}</p></div>}
    {beat===1&&!still&&<div className="story-flash" aria-hidden="true"/>}
    <div className="story-headline" aria-live={paused?'polite':'off'} aria-atomic="true"><p key={beat}>{copy.headings[beat]}</p></div>
   </div><div className="story-film-controls"><div className="story-playback"><button data-testid="story-pause" onClick={()=>setPaused(!paused)} aria-label={paused?copy.play:copy.pause}><span aria-hidden="true">{paused?'▶':'Ⅱ'}</span></button><button data-testid="story-next" onClick={next}>{beat===5?copy.replay:copy.next}<span aria-hidden="true">{beat===5?'↺':'›'}</span></button></div><div className="story-timeline" aria-hidden="true">{STORY_BEATS.map((_,i)=><span key={i} className={i<=beat?'seen':''}/>)}</div></div></div>

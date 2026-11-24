@@ -2,7 +2,7 @@
 
 **Your room. Three suspects. One liar.** A real photograph becomes a comedy group-chat mystery inside Kiro Crew.
 
-[Play the instant web edition](https://kirock-homes.vercel.app) · [Main project](https://github.com/openai-lover/kirock-homes) · [Actual Crew demo](https://youtu.be/7gknqGSknDk)
+[Play the instant web edition](https://kirock-homes.vercel.app) · [Main project](https://github.com/openai-lover/kirock-homes) · [Gameplay demo and recorded Crew dialogue](https://youtu.be/Ezcmo5bG6t8)
 
 ## Install
 
