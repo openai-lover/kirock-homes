@@ -47,3 +47,7 @@ npm test
 The lockfile pins build dependencies. The running backend uses Node built-ins; React is bundled into the isolated game iframe and the thin outer entry uses Crew's React runtime. `shared/src/` comes from the main project (`npm run build:crew` there); it is not a second deduction engine. Backend tests exercise HMAC authentication, stale/tampered requests, consent, fallback, concurrency, duplicate caching and daily limits without using real credits.
 
 The main repository contains exhaustive solver, UI, real Kiro call and browser evidence. Kiro authored `shared/src/lib/chat/performance.ts`, 107 focused tests (in the main repo) and associated specs; Codex authored runtime integration, Crew packaging and broader verification. Earlier Kiro contributions remain individually documented in the main project. This is an unofficial independent app, not an official Kiro character release or endorsement.
+
+## License and credits
+
+The project’s original source code is available under the [MIT License](LICENSE). Elena Golovchenko’s sample desk photograph is distributed under the [Pexels License](https://www.pexels.com/license/). Third-party photographs, fonts and dependencies retain their own licenses. See [asset credits and license details](CREDITS.md).

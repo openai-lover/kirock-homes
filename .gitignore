@@ -7,6 +7,13 @@ test-results/
 playwright-report/
 *.tsbuildinfo
 dist/
+# Crew ships these two prebuilt entry points for direct installation.
+!crew-app/backend/dist/
+!crew-app/ui/dist/
+crew-app/backend/dist/*
+crew-app/ui/dist/*
+!crew-app/backend/dist/server.mjs
+!crew-app/ui/dist/index.mjs
 *.zip
 .DS_Store
 next-env.d.ts

@@ -19,9 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-Third-party asset notice:
-The sample photograph at public/sample-desk.jpg is by Elena Golovchenko and
-remains licensed separately under the Pexels License. It is not relicensed
-under the MIT License above. See docs/assets.md for attribution and terms.
-Other third-party dependencies retain their respective licenses.
